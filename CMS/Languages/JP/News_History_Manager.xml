@@ -1,0 +1,41 @@
+﻿<root>
+  <item Index="0">ニュースのタイプ</item>
+  <item Index="1">作成者</item>
+  <item Index="2">タグ</item>
+  <item Index="3">作成日</item>
+  <item Index="4">変更日</item>
+  <item Index="5">変更者</item>
+  <item Index="6">アップロード日</item>
+  <item Index="7">締め切り日</item>
+  <item Index="8">レベル１のカテゴリコード</item>
+  <item Index="9">アルバムコード</item>
+  <item Index="10">写真</item>
+  <item Index="11"> 写真を選択</item>
+  <item Index="12">写真だけ</item>
+  <item Index="13"> アップロード中にエラーが発生した</item>
+  <item Index="14">ユーザー、それともネットワックのため、アップロードが中断しました</item>
+  <item Index="15">写真のデータが重すぎ</item>
+  <item Index="16">状態</item>
+  <item Index="17">状態 0</item>
+  <item Index="18">状態 1</item>
+  <item Index="19">状態 2</item>
+  <item Index="20">状態 3</item>
+  <item Index="21">状態 4</item>
+  <item Index="22">一応ロック</item>
+  <item Index="23">いいえ</item>
+  <item Index="24">はい</item>
+  <item Index="25">言語</item>
+  <item Index="26">話題</item>
+  <item Index="27">引用</item>
+  <item Index="28">概要</item>
+  
+  <item Index="29">変更</item>
+  <item Index="30">削除</item>
+  <item Index="31">コード</item>
+
+  <item Index="32">ヒストリー</item>
+  <item Index="33">ヒストリー追加 </item>
+  <item Index="34">ヒストリー変更</item>
+  <item Index="35">削除してもよろしいですか ?</item>
+
+</root>

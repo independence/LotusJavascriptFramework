@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+    FillRoomsDataToDropdowList("#Div_ListIDRoom", "{$T.RoomProperties.IDRoom}");
+</script>
+<div>
+    <div id="element-box">
+        <div class="m">
+            <div class="col width-45" style="width: 100%  !important">
+                <fieldset>
+                    <legend>Sửa RoomProperties</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_RoomProperties"
+                    name="frmUpd_RoomProperties" onsubmit="return false;">
+                    <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.RoomProperties.ID}" />
+                      <table class="admintable" width="100%">
+                                <tr>
+                                    <td class="key" style="width:130px">
+                                        IDRoom
+                                    </td>
+                                    <td class="paramlist_key" >
+                           
+                                        <div id = "Div_ListIDRoom" name= "Div_ListIDRoom">
+                                        </div>
+                            
+                                     </td>
+                                     <td></td>
+                                     <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        Status
+                                    </td>
+                                    <td class="paramlist_key" style="width:165px">
+                                        <select id="txt_Status" name="txt_Status">
+                                            <option value="0" {#if $T.RoomProperties.Status == 0} selected="selected"  {#/if}>Status 0 </option>
+                                            <option value="1" {#if $T.RoomProperties.Status == 1} selected="selected"  {#/if}>Status 1 </option>
+                                            <option value="2" {#if $T.RoomProperties.Status == 2} selected="selected"  {#/if}>Status 2 </option>
+                                            <option value="3" {#if $T.RoomProperties.Status == 3} selected="selected"  {#/if}>Status 3 </option>
+                                            <option value="4" {#if $T.RoomProperties.Status == 4} selected="selected"  {#/if}>Status 4 </option>
+                                        </select>
+                                    </td>
+                                    <td class="key" style="width:130px">
+                                        Disable
+                                    </td>
+                                    <td class="paramlist_key">
+                                       <select id="txt_Disable" name="txt_Disable">
+                                            <option value="false"  {#if $T.RoomProperties.Disable == false} selected="selected"  {#/if}>Enable </option>
+                                            <option value="true"   {#if $T.RoomProperties.Disable == true} selected="selected"  {#/if}>Disable </option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="key">
+                                        Giá trị thuộc tính
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_Value" name="txt_Value" value="{$T.RoomProperties.Value}"/>
+                                    </td>
+                                    <td class="key">
+                                        Kiểu thuộc tính
+                                    </td>
+                                    <td class="paramlist_key">
+             
+                                        <select id="txt_ValueType" name="txt_ValueType">
+                                            <option value="1"  {#if $T.RoomProperties.ValueType == 1} selected="selected"  {#/if}>Trang bị cơ bản của phòng</option>
+                                            <option value="2"  {#if $T.RoomProperties.ValueType == 2} selected="selected"  {#/if}>Trang bị cao cấp của phòng</option>
+                                            <option value="3"  {#if $T.RoomProperties.ValueType == 3} selected="selected"  {#/if}>Ảnh của phòng</option>
+                                            <option value="4"  {#if $T.RoomProperties.ValueType == 4} selected="selected"  {#/if}>Ảnh của thuộc tính</option>
+                                            <option value="5"  {#if $T.RoomProperties.ValueType == 5} selected="selected"  {#/if}>Khác </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   <td class="paramlist_key_bold" colspan="4">TIẾNG VIỆT</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        Tên thuộc tính
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_NameAttrLang1" name="txt_NameAttrLang1" value="{$T.RoomProperties.NameAttrLang1}" />
+                                    </td>
+                                    <td class="key">
+                                         Ghi chú 
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_NoteLang1" name="txt_NoteLang1" value="{$T.RoomProperties.NoteLang1}" />
+                                    </td>
+                                </tr>
+                        
+                                <tr>
+                                   <td class="paramlist_key_bold" colspan="4">TIẾNG ANH</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        Tên thuộc tính
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_NameAttrLang2" name="txt_NameAttrLang2" value="{$T.RoomProperties.NameAttrLang2}"/>
+                                    </td>
+                                    <td class="key">
+                                         Ghi chú 
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_NoteLang2" name="txt_NoteLang2" value="{$T.RoomProperties.NoteLang2}"/>
+                                    </td>
+                                </tr>
+                               <tr>
+                                   <td class="paramlist_key_bold" colspan="4">NGÔN NGỮ THỨ 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        Tên thuộc tính
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_NameAttrLang3" name="txt_NameAttrLang3" value="{$T.RoomProperties.NameAttrLang3}"/>
+                                    </td>
+                                    <td class="key">
+                                         Ghi chú 
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_NoteLang3" name="txt_NoteLang3" value="{$T.RoomProperties.NoteLang3}"/>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                        <td class="key">
+                                            Image
+                                        </td>
+                                        <td class="paramlist_key">
+                                            <label for="image_file">
+                                                Chọn file ảnh</label>
+                                            <input type="file" name="image_file" id="image_file" onchange="fileSelected();" />
+                                            <input type="button" value="Upload" onclick="startUploading('frmUpd_RoomProperties','ROOMS_IMAGE','txt_Image',true,-1,-1,true)" />
+                                            <input type="hidden" id="txt_Image" name="txt_Image" value="{$T.RoomProperties.Image}"/>
+                                        </td>
+                                        <td class="paramlist_key" colspan="2">
+                                            <div style="">
+                        
+                                            <div id="fileinfo">
+                                                <div id="filename">
+                                                </div>
+                                                <div id="filesize">
+                                                </div>
+                                                <div id="filetype">
+                                                </div>
+                                                <div id="filedim">
+                                                </div>
+                                            </div>
+                                            <img id="preview" src="/Uploads/Rooms/{$T.RoomProperties.Image}" />
+                                            </div>
+
+                                            <div style="float:left; width:50%">
+                                             <div id="error">Chỉ chọn file ảnh</div>
+                                             <div id="error2"> Có lỗi trong quá trình upload file</div>
+                                             <div id="abort">Upload đã được ngừng bởi người dùng hoặc do đường truyền</div>
+                                             <div id="warnsize">Kích thước ảnh quá lớn</div>    
+                                            <div id="progress_info">
+                                                <div id="progress">
+                                                </div>
+                                                <div id="progress_percent">
+                                                    &nbsp;</div>
+                                                <div class="clear_both">
+                                                </div>
+                                                <div>
+                                                    <div id="speed">
+                                                        &nbsp;</div>
+                                                    <div id="remaining">
+                                                        &nbsp;</div>
+                                                    <div id="b_transfered">
+                                                        &nbsp;</div>
+                                                    <div class="clear_both">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" id="upload_response" />
+                                                <input type="hidden" id="txt_OldImage" name="txt_OldImage" value="{$T.RoomProperties.Image}" />
+
+                            
+                                            </div>
+                                           </div>
+                        
+                                       </td>
+                                    </tr>
+                       
+                            </table>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+</div>

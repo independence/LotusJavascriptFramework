@@ -1,0 +1,25 @@
+﻿<root>
+  <item Index="0">権限のコード</item>
+  <item Index="1">権限の名</item>
+  <item Index="2">リンク</item>
+  <item Index="3">種類</item>
+  <item Index="4">種類 0</item>
+  <item Index="5">種類 1</item>
+  <item Index="6">種類 2</item>
+  <item Index="7">種類 3</item>
+  <item Index="8">種類 4</item>
+  <item Index="9">状態</item>
+  <item Index="10">状態 0</item>
+  <item Index="11">状態 1</item>
+  <item Index="12">状態 2</item>
+
+  <item Index="13">変更</item>
+  <item Index="14">削除</item>
+  <item Index="15">コード</item>
+  <item Index="16">ロック</item>
+
+  <item Index="17">許可の詳細</item>
+  <item Index="18">許可の詳細を追加</item>
+  <item Index="19">許可の詳細を変更</item>
+  <item Index="20">削除してもよろしいですか ?</item>
+</root>

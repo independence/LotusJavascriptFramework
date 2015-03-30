@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+    Init_Dialog_Upd();
+</script>
+<div>
+    <div id="element-box">
+        <div class="col width-45" style="width: 100% !important">
+            <fieldset>
+                <legend>Sửa Customers</legend>
+                <form action="" method="post" enctype="multipart/form-data" id="frmUpd_Customers"
+                name="frmUpd_Customers" onsubmit="return false;">
+                <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.Customers.ID}" />
+                    <input type="hidden" id="txt_Type" name="txt_Type" value="2" />
+                <table class="admintable" width="100%">
+                    <tr>
+                        <td class="key" style="width:20%">
+                            {$P.Lang[0].Text}
+                        </td>
+                        <td class="paramlist_key" style="width:30%">
+                            <input type="text" id="txt_Name" name="txt_Name" value="{$T.Customers.Name}" />
+                        </td>
+                        <td class="key"  style="width:20%">
+                           {$P.Lang[1].Text}
+                        </td>
+                        <td class="paramlist_key"  style="width:30%">
+                        <select id="txt_Disable" name="txt_Disable">
+                            <option value="false"  {#if $T.Customers.Disable == false} selected="selected"  {#/if}>{$P.Lang[2].Text} </option>
+                            <option value="true"   {#if $T.Customers.Disable == true} selected="selected"  {#/if}>{$P.Lang[3].Text} </option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key" >
+                            {$P.Lang[4].Text}
+                        </td>
+                        <td class="paramlist_key" >
+                            <input type="text" id="txt_Birthday" name="txt_Birthday" value="{$T.Customers.Birthday}" />
+                        </td>
+
+                        <td class="key" >
+                            {$P.Lang[5].Text}
+                        </td>
+                        <td class="paramlist_key" >
+                            <input type="text" id="txt_Tel" name="txt_Tel"  value="{$T.Customers.Tel}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key" >
+                            {$P.Lang[6].Text}
+                        </td>
+                        <td class="paramlist_key" >
+                            <input type="text" id="txt_CMT" name="txt_CMT" value="{$T.Customers.CMT}" />
+                        </td>
+                        <td class="key" >
+                           {$P.Lang[7].Text}
+                        </td>
+                        <td class="paramlist_key" >
+                            <input type="text" id="txt_Visa" name="txt_Visa" value="{$T.Customers.Visa}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                           {$P.Lang[11].Text}
+                        </td>
+                        <td class="paramlist_key" colspan="3">
+                        <select id="txt_Status" name="txt_Status">
+                            <option value="0" {#if $T.Customers.Status == 0} selected="selected"  {#/if}>{$P.Lang[12].Text} </option>
+                            <option value="1" {#if $T.Customers.Status == 1} selected="selected"  {#/if}>{$P.Lang[13].Text} </option>
+                            <option value="2" {#if $T.Customers.Status == 2} selected="selected"  {#/if}>{$P.Lang[14].Text} </option>
+                            <option value="3" {#if $T.Customers.Status == 3} selected="selected"  {#/if}>{$P.Lang[15].Text}</option>
+                            <option value="4" {#if $T.Customers.Status == 4} selected="selected"  {#/if}>{$P.Lang[16].Text} </option>
+                        </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="key">
+                             {$P.Lang[8].Text}
+                        </td>
+                        <td class="paramlist_key" colspan="3">
+                            <input type="text" id="txt_Note" name="txt_Note" value="{$T.Customers.Note}"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                             {$P.Lang[9].Text}
+                        </td>
+                        <td class="paramlist_key" colspan="3">
+                            <input type="text" id="txt_Info" name="txt_Info" class="txt_Info" value="{$T.Customers.Info}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            {$P.Lang[10].Text}
+                        </td>
+                        <td class="paramlist_key" colspan="3">
+                            <textarea id="txt_Description" name="txt_Description" class="txt_Description" rows="5"
+                                cols="50" style="width: 100%; height: 100%">{$T.Customers.Description}</textarea>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>

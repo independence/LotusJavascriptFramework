@@ -1,0 +1,72 @@
+﻿
+$(function () {
+
+    jQuery.fn.LotusCheckList = function (options) {
+        var settings = $.extend({}, { default: 0 }, options);
+        var DataName = settings.DataName;
+        var URL = settings.URL;
+        var Col_Title = settings.Col_Title;
+        var Col_Key = settings.Col_Key;
+       
+        var Div = settings.Div;
+
+        var KeyFocus = settings.KeyFocus;
+
+
+        
+        var Data = settings.Data;
+        if ((typeof (Data) === 'undefined') && (Data === null)) {
+            if ((typeof (URL) === 'undefined') && (URL === null)) {
+                alert("Chưa gán nguồn dữ liệu");
+            }
+            else {
+                Data = LoadData(URL);
+            }
+        }
+        else {
+           
+            
+            if (settings.Data.length >= 1) {
+            var shtml  = "<div class='Lotus_Scrollbar'><div class='Checklistbox'>";
+                shtml += "<input type='Checkbox' value='0' name='{0}[]'><label >Tất cả</label></br>".format(DataName);;
+                shtml += "{#foreach $T as Row}".format(Col_Key);
+
+                $(settings.Focus).each(function (ii, item1) {
+                        shtml += "{#if $T.Row.{0} == $P.data[{2}].{1}}".format(Col_Key, KeyFocus,ii);
+                        shtml += "<input type='Checkbox' checked='checked' value='{$T.Row.{0}}' name='{2}[]' style='margin-right:5px;'/><label style='margin-top:-3'>{$T.Row.{1}} </label></br>".format(Col_Key, Col_Title, DataName);
+                        shtml += "{#/if}";
+                });
+
+                    shtml += "{#/for}";
+                    shtml += "</div></div>";
+                    
+               
+            }
+            else {
+                
+            }
+           
+            //Div_ListIDRoom
+            //alert(IDTable);
+
+            $(Div).setTemplate(shtml);
+            
+            $(Div).setParam('data', settings.Focus ); //sys_NumLang : trong file SystemConfig.js
+            $(Div).processTemplate(Data);
+     
+            $(Div).html(shtml);
+           
+            //alert(JSON.stringify(settings.Data));
+
+        }
+        
+
+
+    }
+
+});
+
+function LoadData(url) {
+
+    alert(url);
+}

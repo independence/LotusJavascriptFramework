@@ -1,0 +1,2599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85FE1AC2-FE13-4C0F-A5B6-FDF35C0BAAA6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Library\DLLs\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tài liệu web\ver 2.0_19-11-9-2013\Library\DLLs\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tài liệu web\ver 2.0_19-11-9-2013\Library\DLLs\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Reporting, Version=4.2.10.1221, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Adomd, Version=4.2.10.1221, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Telerik.Reporting.Adomd.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Service, Version=4.2.10.1221, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Telerik.Reporting.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=4.2.10.1221, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Telerik.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Design, Version=2010.2.831.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2010.2.831.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CheckLogin.aspx" />
+    <Content Include="CMS.aspx" />
+    <Content Include="CSS\Backup\CSSBackEnd\css\demo.css" />
+    <Content Include="CSS\Backup\CSSBackEnd\css\font-awesome.css" />
+    <Content Include="CSS\Backup\CSSBackEnd\css\style.css" />
+    <Content Include="CSS\Backup\CSSBackEnd\font\fontawesome-webfont.svg" />
+    <Content Include="CSS\Backup\CSSBackEnd\images\bg.jpg" />
+    <Content Include="CSS\Backup\CSSBackEnd\images\bg2.jpg" />
+    <Content Include="CSS\Backup\CSSBackEnd\images\bg3.jpg" />
+    <Content Include="CSS\Backup\CSSBackEnd\images\blurred.jpg" />
+    <Content Include="CSS\Backup\CSSBackEnd\images\noise.png" />
+    <Content Include="CSS\Backup\CSSBackEnd\images\wood_pattern.jpg" />
+    <Content Include="CSS\Backup\CSSBackEnd\js\jquery.placeholder.min.js" />
+    <Content Include="CSS\Backup\CSSBackEnd\js\modernizr.custom.63321.js" />
+    <Content Include="CSS\Backup\FrondendStyle.css" />
+    <Content Include="CSS\Backup\general.css" />
+    <Content Include="CSS\Backup\icon.css" />
+    <Content Include="CSS\Backup\ie6.css" />
+    <Content Include="CSS\Backup\ie7.css" />
+    <Content Include="CSS\Backup\login.css" />
+    <Content Include="CSS\Backup\menu.css" />
+    <Content Include="CSS\Backup\niceforms-default.css" />
+    <Content Include="CSS\Backup\norounded.css" />
+    <Content Include="CSS\Backup\rounded.css" />
+    <Content Include="CSS\Backup\style.css" />
+    <Content Include="CSS\Backup\system.css" />
+    <Content Include="CSS\Backup\Systembackend.css" />
+    <Content Include="CSS\Backup\template.css" />
+    <Content Include="CSS\Backup\theme.css" />
+    <Content Include="CSS\Backup\Treeview.css" />
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\elfinder.css" />
+    <Content Include="CSS\fancybox.css" />
+    <Content Include="CSS\font.css" />
+    <Content Include="CSS\font\icomoon.svg" />
+    <Content Include="CSS\fullcalendar.css" />
+    <Content Include="CSS\ie.css" />
+    <Content Include="CSS\plugins.css" />
+    <Content Include="CSS\reset.css" />
+    <Content Include="CSS\styles.css" />
+    <Content Include="CSS\ui_custom.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error1.htm" />
+    <Content Include="JS\Common\Anytime\Anytime.compressed.js" />
+    <Content Include="JS\Common\Anytime\Anytime.css" />
+    <Content Include="JS\Common\Anytime\Anytime.js" />
+    <Content Include="JS\Common\Anytime\anytimetz.js" />
+    <Content Include="JS\Common\CheckInput.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\adapters\jquery.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\build-config.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\ckeditor.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\config.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\contents.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\af.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ar.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\bg.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\bn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\bs.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\cs.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\cy.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\da.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\de.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\el.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\en-au.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\en-ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\en-gb.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\en.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\eo.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\es.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\et.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\eu.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\fa.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\fi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\fo.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\fr-ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\fr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\gl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\gu.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\he.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\hi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\hr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\hu.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\id.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\is.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\it.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ja.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ka.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\km.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ko.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ku.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\lt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\lv.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\mk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\mn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ms.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\nb.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\nl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\no.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\pl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\pt-br.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\pt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ro.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ru.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\si.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\sk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\sl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\sq.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\sr-latn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\sr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\sv.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\th.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\tr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\tt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\ug.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\uk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\vi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\zh-cn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\lang\zh.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\icons.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\preview\preview.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\tableresize\dev\tableresize.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\tableresize\samples\tableresize.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\ajax.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\api.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\appendto.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\datafiltering.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\divreplace.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\index.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\inlineall.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\inlinebycode.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\jquery.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\readonly.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\replacebyclass.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\replacebycode.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\sample.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\sample.js" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\tabindex.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\uicolor.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\uilanguages.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\dialog.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\editor.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\icons.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\close.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\styles.js" />
+    <Content Include="JS\Common\Common.js" />
+    <Content Include="JS\Common\ddaccordion.js" />
+    <Content Include="JS\Common\Flexigrid-table\css\flexigrid.pack.css" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\bg.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\btn-sprite.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\ddn.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\dn.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\fhbg.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\first.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\hl.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\last.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\line.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\load.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\load.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\magnifier.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\next.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\prev.gif" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\up.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\uup.png" />
+    <Content Include="JS\Common\Flexigrid-table\css\images\wbg.gif" />
+    <Content Include="JS\Common\Flexigrid-table\demo\images\accept.png" />
+    <Content Include="JS\Common\Flexigrid-table\demo\images\add.png" />
+    <Content Include="JS\Common\Flexigrid-table\demo\images\close.png" />
+    <Content Include="JS\Common\Flexigrid-table\demo\images\coffee.png" />
+    <Content Include="JS\Common\Flexigrid-table\demo\images\edit.png" />
+    <Content Include="JS\Common\Flexigrid-table\demo\images\flash.png" />
+    <Content Include="JS\Common\Flexigrid-table\demo\index.html" />
+    <Content Include="JS\Common\Flexigrid-table\demo\sample.html" />
+    <Content Include="JS\Common\Flexigrid-table\demo\style.css" />
+    <Content Include="JS\Common\Flexigrid-table\js\flexigrid.js" />
+    <Content Include="JS\Common\Flexigrid-table\js\flexigrid.pack.js" />
+    <Content Include="JS\Common\GreenSock\greensock.js" />
+    <Content Include="JS\Common\GreenSock\jquery.selectBox.js" />
+    <Content Include="JS\Common\GreenSock\minified\easing\EasePack.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\jquery.gsap.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\AttrPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\BezierPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\ColorPropsPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\CSSPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\CSSRulePlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\DirectionalRotationPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\EaselPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\EndArrayPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\KineticPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\RaphaelPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\RoundPropsPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\ScrollToPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\TextPlugin.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\TimelineLite.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\TimelineMax.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\TweenLite.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\TweenMax.min.js" />
+    <Content Include="JS\Common\GreenSock\minified\utils\Draggable.min.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\easing\EasePack.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\jquery.gsap.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\AttrPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\BezierPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\ColorPropsPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\CSSPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\CSSRulePlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\DirectionalRotationPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\EaselPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\EndArrayPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\KineticPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\RaphaelPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\RoundPropsPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\ScrollToPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\TEMPLATE_Plugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\TextPlugin.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\TimelineLite.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\TimelineMax.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\TweenLite.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\TweenMax.js" />
+    <Content Include="JS\Common\GreenSock\uncompressed\utils\Draggable.js" />
+    <Content Include="JS\Common\jqLunarDatepicker\jqLunarDatepicker.js" />
+    <Content Include="JS\Common\jqLunarDatepicker\jqTimepicker.js" />
+    <Content Include="JS\Common\jqLunarDatepicker\StyleLunarDatepicker.css" />
+    <Content Include="JS\Common\jqLunarDatepicker\TestLunarCalendar.aspx" />
+    <Content Include="JS\Common\jquery-migrate-1.2.1.js" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\Gruntfile.js" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\jquery-1.9.1.js" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\animated-overlay.gif" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-icons_222222_256x240.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-icons_454545_256x240.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-icons_888888_256x240.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\themes\jquery-ui.css" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="JS\Common\jquery-ui-1.10.3\ui\jquery-ui.js" />
+    <Content Include="JS\Common\LunarCalendar.js" />
+    <Content Include="JS\Common\RedMinsk.Library.js" />
+    <Content Include="JS\Common\Go.Music.Class.js" />
+    <Content Include="JS\Common\Go.Music.Paging.js" />
+    <Content Include="JS\Common\jquery-2.0.0.js" />
+    <Content Include="JS\Common\jquery-jtemplates.js" />
+    <Content Include="JS\Common\jquery.cookie.js" />
+    <Content Include="JS\Common\jquery.jField-1.0.1.js" />
+    <Content Include="JS\Common\jquery.swfupload.js" />
+    <Content Include="JS\Common\JSON.js" />
+    <Content Include="JS\Common\json2.js" />
+    <Content Include="JS\Common\swfobject.js" />
+    <Content Include="JS\FRAMEWORK\BussinessLogic\Contents_CategoryLevel1BO.js" />
+    <Content Include="JS\FRAMEWORK\CMS.Theme.ProcessInit.js" />
+    <Content Include="JS\Common\UploadHTML5\css\main.css" />
+    <Content Include="JS\Common\UploadHTML5\index.html" />
+    <Content Include="JS\Common\UploadHTML5\js\UploadHTML5.js" />
+    <Content Include="JS\Common\UploadHTML5\upload.php" />
+    <Content Include="JS\Common\wdCalendar\css\alert.css" />
+    <Content Include="JS\Common\wdCalendar\css\calendar.css" />
+    <Content Include="JS\Common\wdCalendar\css\colorselect.css" />
+    <Content Include="JS\Common\wdCalendar\css\dailog.css" />
+    <Content Include="JS\Common\wdCalendar\css\dp.css" />
+    <Content Include="JS\Common\wdCalendar\css\dropdown.css" />
+    <Content Include="JS\Common\wdCalendar\css\Error.css" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\bot.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\close.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\corners.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\cornersBlue.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\help.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\important.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\info.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\title.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\alert\title1.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\bgs\CardHeadbg.jpg" />
+    <Content Include="JS\Common\wdCalendar\css\images\bgs\CardHeadbg.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\bgs\ch.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\bgs\headbg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\bgs\minus1.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\bgs\plus1.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\bubble_combined.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\combined.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\grid.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\gridth.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\headbg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\indicator_web20_working.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\load-bg.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\calendar\tbg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\app-form.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\headbg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\left-corners.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\left-right.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\right-corners.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\tool-sprites.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\dailog\top-bottom.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\dp\btn-arrow-light.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\dp\btn-arrow.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\dropdown\dropdown.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\dropdown\dropdownhover.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\home\logo.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\home\toolbarbg.jpg" />
+    <Content Include="JS\Common\wdCalendar\css\images\home\top_bg.jpg" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\add.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\appt.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\au.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Btn.Close.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cacheClear.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal-day.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal-month.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal-proc.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal-rsc-perm.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal-week.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal-wk-week.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cal.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\calendar.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\calwrkwk.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\canmtg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\circle_animation.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\clndr.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\clndrsmll.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\cn.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\date.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\date_add.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\date_reflash.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\delete.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\edit.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\folder_user.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\group.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\group_add.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\hk.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\ico1.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\indicator.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Item.Add.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Item.Delete.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Item.Edit.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Item.Input.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Item.Save.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\Item.Search.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\msg_center.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\msg_email.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\msg_im.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\msg_mobile.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\mtgreq-cancel.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\mtgreq.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\mtgrsp-accept.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\mtgrsp-decline.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\mtgrsp-tent.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\pgrs-sm.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\resultset_next.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\resultset_previous.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\rowdelete.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\table.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\table_c.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\table_copy.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\table_r.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\table_refresh.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\tick.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\turnback.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\us.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\icons\view.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\card.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\glass-bg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\hd-sprite.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\headbg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\information.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\left-btn.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\right-btn.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\table.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\table_c.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\tbg.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\share\tool-sprites.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\validation\accept.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\validation\exclamation.png" />
+    <Content Include="JS\Common\wdCalendar\css\images\validation\tooltop.gif" />
+    <Content Include="JS\Common\wdCalendar\css\images\validation\warning.gif" />
+    <Content Include="JS\Common\wdCalendar\css\main.css" />
+    <Content Include="JS\Common\wdCalendar\src\jquery.js" />
+    <Content Include="JS\Common\wdCalendar\src\jquery.min.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\Common.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\datepicker_lang_AU.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\datepicker_lang_HK.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\datepicker_lang_US.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.alert.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.calendar.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.colorselect.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.datepicker.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.dropdown.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.form.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.ifrmdailog.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\jquery.validate.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\wdCalendar_lang_AU.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\wdCalendar_lang_HK.js" />
+    <Content Include="JS\Common\wdCalendar\src\Plugins\wdCalendar_lang_US.js" />
+    <Content Include="JS\ForEachPage\Process_Files.js" />
+    <Content Include="JS\ForEachPage\Process_Albums.js" />
+    <Content Include="JS\ForEachPage\Process_CategoryLevel1.js" />
+    <Content Include="JS\ForEachPage\Process_CategoryLevel2.js" />
+    <Content Include="JS\ForEachPage\Process_Configs.js" />
+    <Content Include="JS\ForEachPage\Process_Customers.js" />
+    <Content Include="JS\ForEachPage\Process_ExtendProperties.js" />
+    <Content Include="JS\ForEachPage\Process_Halls.js" />
+    <Content Include="JS\ForEachPage\Process_Images.js" />
+    <Content Include="JS\ForEachPage\Process_Languages.js" />
+    <Content Include="JS\ForEachPage\Process_Contents.js" />
+    <Content Include="JS\ForEachPage\Process_News_History.js" />
+    <Content Include="JS\ForEachPage\Process_PermitDetails.js" />
+    <Content Include="JS\ForEachPage\Process_Permits.js" />
+    <Content Include="JS\ForEachPage\Process_PermitUserMappings.js" />
+    <Content Include="JS\ForEachPage\Process_Rooms.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_001.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_002.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_003.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_004.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_005.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_006.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_007.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_008.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_009.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListCategoryLevel1_ByCodeCategoryLevel2_010.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_001.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_002.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_003.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_004.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_005.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_006.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_007.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_008.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_009.js" />
+    <Content Include="JS\ForEachPage\Process_SelectListContents_ByCodeCategoryLevel1_010.js" />
+    <Content Include="JS\ForEachPage\Process_Services.js" />
+    <Content Include="JS\ForEachPage\Process_SystemUsers.js" />
+    <Content Include="JS\ForEachPage\Process_VIPCustomers.js" />
+    <Content Include="JS\ForEachPage\Process_VIPHalls.js" />
+    <Content Include="JS\FRAMEWORK\BussinessLogic\AlbumsBO.js" />
+    <Content Include="JS\FRAMEWORK\BussinessLogic\CategoryLevel1BO.js" />
+    <Content Include="JS\FRAMEWORK\BussinessLogic\CategoryLevel2BO.js" />
+    <Content Include="JS\FRAMEWORK\BussinessLogic\ContentsBO.js" />
+    <Content Include="JS\FRAMEWORK\BussinessLogic\FilesBO.js" />
+    <Content Include="JS\FRAMEWORK\CommonType.js" />
+    <Content Include="JS\FRAMEWORK\Core.Language.js" />
+    <Content Include="JS\FRAMEWORK\Include.JS.Base.js" />
+    <Content Include="JS\FRAMEWORK\Include.JS.Extend.js" />
+    <Content Include="JS\FRAMEWORK\Include.JS.Framework.js" />
+    <Content Include="JS\FRAMEWORK\Include.JS.Library.js" />
+    <Content Include="JS\FRAMEWORK\SystemConfig.js" />
+    <Content Include="JS\LIBRARY\charts\bar.js" />
+    <Content Include="JS\LIBRARY\charts\bar_side.js" />
+    <Content Include="JS\LIBRARY\charts\chart.js" />
+    <Content Include="JS\LIBRARY\charts\chart_side.js" />
+    <Content Include="JS\LIBRARY\charts\hBar.js" />
+    <Content Include="JS\LIBRARY\charts\hBar_side.js" />
+    <Content Include="JS\LIBRARY\charts\pie.js" />
+    <Content Include="JS\LIBRARY\charts\updating.js" />
+    <Content Include="JS\LIBRARY\files\bootstrap.js" />
+    <Content Include="JS\LIBRARY\files\functions.js" />
+    <Content Include="JS\ForEachPage\Process_Login.js" />
+    <Content Include="JS\LIBRARY\files\roundLoader.js" />
+    <Content Include="JS\LIBRARY\Go.Music.Class.js" />
+    <Content Include="JS\LIBRARY\Go.Music.Library.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.CheckList.css" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.CheckList.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Loading.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Editor.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.DataTable.js" />
+    <Content Include="JS\LIBRARY\JCache.js" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\css\smoothness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\js\jquery-1.9.1.js" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="JS\LIBRARY\jquery-ui-1.10.3\jquery-ui-1.10.3\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="JS\LIBRARY\jquery.alerts.js" />
+    <Content Include="JS\LIBRARY\jquery.query-2.1.7.js" />
+    <Content Include="JS\LIBRARY\jquery.tipsy.js" />
+    <Content Include="JS\LIBRARY\jquery.tooltips.min.js" />
+    <Content Include="JS\LIBRARY\jscript.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Form.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Encryption.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Paging.css" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Paging.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Scrollbar.css" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Scrollbar.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Slider.css" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.Slider.js" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.StringProcess.js" />
+    <Content Include="JS\LIBRARY\mootools-core.js" />
+    <Content Include="JS\LIBRARY\mootools-more.js" />
+    <Content Include="JS\LIBRARY\Object.BrowserClient.js" />
+    <Content Include="JS\LIBRARY\Object.Paging.js" />
+    <Content Include="JS\LIBRARY\Object.StringProcess.js" />
+    <Content Include="JS\LIBRARY\plugins\charts\excanvas.min.js" />
+    <Content Include="JS\LIBRARY\plugins\charts\jquery.flot.js" />
+    <Content Include="JS\LIBRARY\plugins\charts\jquery.flot.orderBars.js" />
+    <Content Include="JS\LIBRARY\plugins\charts\jquery.flot.pie.js" />
+    <Content Include="JS\LIBRARY\plugins\charts\jquery.flot.resize.js" />
+    <Content Include="JS\LIBRARY\plugins\charts\jquery.sparkline.min.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\autogrowtextarea.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.autotab.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.chosen.min.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.cleditor.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.dualListBox.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.ibutton.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.inputlimiter.min.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.maskedinput.min.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.mousewheel.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.tagsinput.min.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.uniform.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.validationEngine-en.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\jquery.validationEngine.js" />
+    <Content Include="JS\LIBRARY\plugins\forms\ui.spinner.js" />
+    <Content Include="JS\LIBRARY\plugins\others\jquery.elfinder.js" />
+    <Content Include="JS\LIBRARY\plugins\others\jquery.fullcalendar.js" />
+    <Content Include="JS\LIBRARY\plugins\tables\jquery.dataTables.js" />
+    <Content Include="JS\LIBRARY\plugins\tables\jquery.resizable.js" />
+    <Content Include="JS\LIBRARY\plugins\tables\jquery.sortable.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.breadcrumbs.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.collapsible.min.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.colorpicker.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.easytabs.min.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.fancybox.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.fileTree.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.jgrowl.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.progress.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.rounded.progress.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.sourcerer.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.timeentry.min.js" />
+    <Content Include="JS\LIBRARY\plugins\ui\jquery.tipsy.js" />
+    <Content Include="JS\LIBRARY\plugins\uploader\jquery.plupload.queue.js" />
+    <Content Include="JS\LIBRARY\plugins\uploader\plupload.html4.js" />
+    <Content Include="JS\LIBRARY\plugins\uploader\plupload.html5.js" />
+    <Content Include="JS\LIBRARY\plugins\uploader\plupload.js" />
+    <Content Include="JS\LIBRARY\plugins\wizards\jquery.form.js" />
+    <Content Include="JS\LIBRARY\plugins\wizards\jquery.form.wizard.js" />
+    <Content Include="JS\LIBRARY\plugins\wizards\jquery.validate.js" />
+    <Content Include="JS\LIBRARY\RedMinsk.Library.js" />
+    <Content Include="JS\LIBRARY\XML2Json.js" />
+    <Content Include="JS\Uploadify\cancel.png" />
+    <Content Include="JS\Uploadify\check.php" />
+    <Content Include="JS\Uploadify\expressInstall.swf" />
+    <Content Include="JS\Uploadify\jquery-1.4.2.min.js" />
+    <Content Include="JS\Uploadify\jquery.uploadify.v2.1.4.js" />
+    <Content Include="JS\Uploadify\jquery.uploadify.v2.1.4.min.js" />
+    <Content Include="JS\Uploadify\swfobject.js" />
+    <Content Include="JS\Uploadify\uploadify.allglyphs.swf" />
+    <Content Include="JS\Uploadify\uploadify.css" />
+    <Content Include="JS\Uploadify\uploadify.php" />
+    <Content Include="JS\Uploadify\uploadify.swf" />
+    <Content Include="Languages\EN\Albums_Manager.xml" />
+    <Content Include="Languages\EN\BookingHalls_New_Manager.xml" />
+    <Content Include="Languages\EN\BookingHalls_Online_Manager.xml" />
+    <Content Include="Languages\EN\BookingRooms_New_Manager.xml" />
+    <Content Include="Languages\EN\BookingRooms_Online_Manager.xml" />
+    <Content Include="Languages\EN\BookingVIPHalls_New_Manager.xml" />
+    <Content Include="Languages\EN\CategoryLevel1_Manager.xml" />
+    <Content Include="Languages\EN\CategoryLevel2_Manager.xml" />
+    <Content Include="Languages\EN\Configs_Manager.xml" />
+    <Content Include="Languages\EN\Customers_Manager.xml" />
+    <Content Include="Languages\EN\ExtendProperties_Manager.xml" />
+    <Content Include="Languages\EN\Halls_Manager.xml" />
+    <Content Include="Languages\EN\Files_Manager.xml" />
+    <Content Include="Languages\EN\Languages_Manager.xml" />
+    <Content Include="Languages\EN\Main.xml" />
+    <Content Include="Languages\EN\News_History_Manager.xml" />
+    <Content Include="Languages\EN\Contents_Manager.xml" />
+    <Content Include="Languages\EN\PermitDetails_Manager.xml" />
+    <Content Include="Languages\EN\Permits_Manager.xml" />
+    <Content Include="Languages\EN\PermitUserMappings_Manager.xml" />
+    <Content Include="Languages\EN\Rooms_Manager.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_001.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_002.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_003.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_004.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_005.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_006.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_007.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_008.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_009.xml" />
+    <Content Include="Languages\EN\SelectListCategoryLevel1_ByCodeCategoryLevel2_010.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_001.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_002.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_003.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_004.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_005.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_006.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_007.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_008.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_009.xml" />
+    <Content Include="Languages\EN\SelectListContents_ByCodeCategoryLevel1_010.xml" />
+    <Content Include="Languages\EN\Services_Manager.xml" />
+    <Content Include="Languages\EN\SystemUsers_Manager.xml" />
+    <Content Include="Languages\EN\VIPCustomers_Manager.xml" />
+    <Content Include="Languages\EN\VIPHalls_Manager.xml" />
+    <Content Include="Languages\EN\WebDefault.Master.xml" />
+    <Content Include="Languages\JP\Albums_Manager.xml" />
+    <Content Include="Languages\JP\BookingHalls_New_Manager.xml" />
+    <Content Include="Languages\JP\BookingHalls_Online_Manager.xml" />
+    <Content Include="Languages\JP\BookingRooms_New_Manager.xml" />
+    <Content Include="Languages\JP\BookingRooms_Online_Manager.xml" />
+    <Content Include="Languages\JP\BookingVIPHalls_New_Manager.xml" />
+    <Content Include="Languages\JP\CategoryLevel1_Manager.xml" />
+    <Content Include="Languages\JP\CategoryLevel2_Manager.xml" />
+    <Content Include="Languages\JP\Configs_Manager.xml" />
+    <Content Include="Languages\JP\Customers_Manager.xml" />
+    <Content Include="Languages\JP\ExtendProperties_Manager.xml" />
+    <Content Include="Languages\JP\Halls_Manager.xml" />
+    <Content Include="Languages\JP\Files_Manager.xml" />
+    <Content Include="Languages\JP\Languages_Manager.xml" />
+    <Content Include="Languages\JP\Main.xml" />
+    <Content Include="Languages\JP\News_History_Manager.xml" />
+    <Content Include="Languages\JP\Contents_Manager.xml" />
+    <Content Include="Languages\JP\PermitDetails_Manager.xml" />
+    <Content Include="Languages\JP\Permits_Manager.xml" />
+    <Content Include="Languages\JP\PermitUserMappings_Manager.xml" />
+    <Content Include="Languages\JP\Rooms_Manager.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_001.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_002.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_003.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_004.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_005.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_006.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_007.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_008.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_009.xml" />
+    <Content Include="Languages\JP\SelectListCategoryLevel1_ByCodeCategoryLevel2_010.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_001.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_002.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_003.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_004.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_005.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_006.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_007.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_008.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_009.xml" />
+    <Content Include="Languages\JP\SelectListContents_ByCodeCategoryLevel1_010.xml" />
+    <Content Include="Languages\JP\Services_Manager.xml" />
+    <Content Include="Languages\JP\SystemUsers_Manager.xml" />
+    <Content Include="Languages\JP\ucMenuAdmin.xml" />
+    <Content Include="Languages\JP\VIPCustomers_Manager.xml" />
+    <Content Include="Languages\JP\VIPHalls_Manager.xml" />
+    <Content Include="Languages\JP\WebDefault.Master.xml" />
+    <Content Include="Languages\VN\FRAMEWORK\StaticLanguage.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_001.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_002.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_003.xml" />
+    <Content Include="Languages\VN\Main.xml" />
+    <Content Include="Languages\VN\News_History_Manager.xml" />
+    <Content Include="Languages\VN\PermitDetails_Manager.xml" />
+    <Content Include="Languages\VN\Permits_Manager.xml" />
+    <Content Include="Languages\VN\PermitUserMappings_Manager.xml" />
+    <Content Include="Languages\VN\Rooms_Manager.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_004.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_005.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_006.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_007.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_008.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_009.xml" />
+    <Content Include="Languages\VN\SelectListCategoryLevel1_ByCodeCategoryLevel2_010.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_001.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_002.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_003.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_004.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_005.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_006.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_007.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_008.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_009.xml" />
+    <Content Include="Languages\VN\SelectListContents_ByCodeCategoryLevel1_010.xml" />
+    <Content Include="Languages\VN\Services_Manager.xml" />
+    <Content Include="Languages\VN\SystemUsers_Manager.xml" />
+    <Content Include="Languages\VN\ucMenuAdmin.xml" />
+    <Content Include="Languages\VN\VIPCustomers_Manager.xml" />
+    <Content Include="Languages\VN\VIPHalls_Manager.xml" />
+    <Content Include="Languages\VN\WebDefault.Master.xml" />
+    <Content Include="Login.aspx" />
+    <Content Include="Main1.aspx" />
+    <Content Include="Modules\ucMenuAdmin.ascx" />
+    <Content Include="New folder\css\bootstrap.css" />
+    <Content Include="New folder\css\elfinder.css" />
+    <Content Include="New folder\css\fancybox.css" />
+    <Content Include="New folder\css\font.css" />
+    <Content Include="New folder\css\font\icomoon.svg" />
+    <Content Include="New folder\css\fullcalendar.css" />
+    <Content Include="New folder\css\ie.css" />
+    <Content Include="New folder\css\plugins.css" />
+    <Content Include="New folder\css\reset.css" />
+    <Content Include="New folder\css\styles.css" />
+    <Content Include="New folder\css\ui_custom.css" />
+    <Content Include="New folder\images\backgrounds\alt.png" />
+    <Content Include="New folder\images\backgrounds\body.jpg" />
+    <Content Include="New folder\images\backgrounds\breadcrumb.png" />
+    <Content Include="New folder\images\backgrounds\breadcrumbs.png" />
+    <Content Include="New folder\images\backgrounds\contentTop.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern1.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern2.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern3.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern4.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern5.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern6.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern7.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern8.png" />
+    <Content Include="New folder\images\backgrounds\patterns\pattern9.png" />
+    <Content Include="New folder\images\backgrounds\side.jpg" />
+    <Content Include="New folder\images\backgrounds\sidebar.jpg" />
+    <Content Include="New folder\images\backgrounds\subnav.jpg" />
+    <Content Include="New folder\images\backgrounds\top.jpg" />
+    <Content Include="New folder\images\big.png" />
+    <Content Include="New folder\images\demo.png" />
+    <Content Include="New folder\images\div.png" />
+    <Content Include="New folder\images\dropFiles.png" />
+    <Content Include="New folder\images\elements\checkboxes\handle.png" />
+    <Content Include="New folder\images\elements\checkboxes\handle2.png" />
+    <Content Include="New folder\images\elements\checkboxes\ibutton-slider-default copy.png" />
+    <Content Include="New folder\images\elements\checkboxes\ibutton-slider-default.png" />
+    <Content Include="New folder\images\elements\checkboxes\ibutton-slider-giva-original.png" />
+    <Content Include="New folder\images\elements\checkboxes\ibutton-slider-giva2.png" />
+    <Content Include="New folder\images\elements\checkboxes\no.png" />
+    <Content Include="New folder\images\elements\checkboxes\off.png" />
+    <Content Include="New folder\images\elements\checkboxes\off2.png" />
+    <Content Include="New folder\images\elements\checkboxes\on.png" />
+    <Content Include="New folder\images\elements\checkboxes\on2.png" />
+    <Content Include="New folder\images\elements\checkboxes\slider.png" />
+    <Content Include="New folder\images\elements\checkboxes\slider_center.png" />
+    <Content Include="New folder\images\elements\checkboxes\slider_left.png" />
+    <Content Include="New folder\images\elements\checkboxes\slider_right.png" />
+    <Content Include="New folder\images\elements\checkboxes\yes.png" />
+    <Content Include="New folder\images\elements\colorPicker\blank.gif" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_background.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_hex.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_hsb_b.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_hsb_h.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_hsb_s.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_indic.gif" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_overlay.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_rgb_b.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_rgb_g.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_rgb_r.png" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_select.gif" />
+    <Content Include="New folder\images\elements\colorPicker\colorpicker_submit.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_background.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_hex.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_hsb_b.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_hsb_h.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_hsb_s.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_indic.gif" />
+    <Content Include="New folder\images\elements\colorPicker\custom_rgb_b.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_rgb_g.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_rgb_r.png" />
+    <Content Include="New folder\images\elements\colorPicker\custom_submit.png" />
+    <Content Include="New folder\images\elements\colorPicker\select.png" />
+    <Content Include="New folder\images\elements\colorPicker\select2.png" />
+    <Content Include="New folder\images\elements\colorPicker\slider.png" />
+    <Content Include="New folder\images\elements\control\hasddArrow.png" />
+    <Content Include="New folder\images\elements\control\headSubmit.png" />
+    <Content Include="New folder\images\elements\control\resultsarrow.png" />
+    <Content Include="New folder\images\elements\control\rightArrow.png" />
+    <Content Include="New folder\images\elements\control\subIcon.png" />
+    <Content Include="New folder\images\elements\control\subNavIcon.png" />
+    <Content Include="New folder\images\elements\control\subnav_arrow.png" />
+    <Content Include="New folder\images\elements\fileTree\application.png" />
+    <Content Include="New folder\images\elements\fileTree\code.png" />
+    <Content Include="New folder\images\elements\fileTree\css.png" />
+    <Content Include="New folder\images\elements\fileTree\db.png" />
+    <Content Include="New folder\images\elements\fileTree\directory.png" />
+    <Content Include="New folder\images\elements\fileTree\doc.png" />
+    <Content Include="New folder\images\elements\fileTree\file.png" />
+    <Content Include="New folder\images\elements\fileTree\film.png" />
+    <Content Include="New folder\images\elements\fileTree\flash.png" />
+    <Content Include="New folder\images\elements\fileTree\folder_open.png" />
+    <Content Include="New folder\images\elements\fileTree\html.png" />
+    <Content Include="New folder\images\elements\fileTree\java.png" />
+    <Content Include="New folder\images\elements\fileTree\linux.png" />
+    <Content Include="New folder\images\elements\fileTree\music.png" />
+    <Content Include="New folder\images\elements\fileTree\pdf.png" />
+    <Content Include="New folder\images\elements\fileTree\php.png" />
+    <Content Include="New folder\images\elements\fileTree\picture.png" />
+    <Content Include="New folder\images\elements\fileTree\ppt.png" />
+    <Content Include="New folder\images\elements\fileTree\psd.png" />
+    <Content Include="New folder\images\elements\fileTree\ruby.png" />
+    <Content Include="New folder\images\elements\fileTree\script.png" />
+    <Content Include="New folder\images\elements\fileTree\spinner.gif" />
+    <Content Include="New folder\images\elements\fileTree\txt.png" />
+    <Content Include="New folder\images\elements\fileTree\xls.png" />
+    <Content Include="New folder\images\elements\fileTree\zip.png" />
+    <Content Include="New folder\images\elements\forms\addFiles.png" />
+    <Content Include="New folder\images\elements\forms\checkboxes.png" />
+    <Content Include="New folder\images\elements\forms\closeSelection.png" />
+    <Content Include="New folder\images\elements\forms\radios.png" />
+    <Content Include="New folder\images\elements\forms\selectArrow.png" />
+    <Content Include="New folder\images\elements\forms\spinnerBottom.png" />
+    <Content Include="New folder\images\elements\forms\spinnerTop.png" />
+    <Content Include="New folder\images\elements\lightbox\blank.gif" />
+    <Content Include="New folder\images\elements\lightbox\fancybox-x.png" />
+    <Content Include="New folder\images\elements\lightbox\fancybox-y.png" />
+    <Content Include="New folder\images\elements\lightbox\fancybox.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_close.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_loading.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_nav_left.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_nav_right.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_e.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_n.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_ne.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_nw.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_s.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_se.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_sw.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_shadow_w.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_title_left.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_title_main.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_title_over.png" />
+    <Content Include="New folder\images\elements\lightbox\fancy_title_right.png" />
+    <Content Include="New folder\images\elements\loaders\1.gif" />
+    <Content Include="New folder\images\elements\loaders\10.gif" />
+    <Content Include="New folder\images\elements\loaders\10s.gif" />
+    <Content Include="New folder\images\elements\loaders\1s.gif" />
+    <Content Include="New folder\images\elements\loaders\2.gif" />
+    <Content Include="New folder\images\elements\loaders\2s.gif" />
+    <Content Include="New folder\images\elements\loaders\3.gif" />
+    <Content Include="New folder\images\elements\loaders\3s.gif" />
+    <Content Include="New folder\images\elements\loaders\4.gif" />
+    <Content Include="New folder\images\elements\loaders\4s.gif" />
+    <Content Include="New folder\images\elements\loaders\5.gif" />
+    <Content Include="New folder\images\elements\loaders\5s.gif" />
+    <Content Include="New folder\images\elements\loaders\6.gif" />
+    <Content Include="New folder\images\elements\loaders\6s.gif" />
+    <Content Include="New folder\images\elements\loaders\7.gif" />
+    <Content Include="New folder\images\elements\loaders\7s.gif" />
+    <Content Include="New folder\images\elements\loaders\8.gif" />
+    <Content Include="New folder\images\elements\loaders\8s.gif" />
+    <Content Include="New folder\images\elements\loaders\9.gif" />
+    <Content Include="New folder\images\elements\loaders\9s.gif" />
+    <Content Include="New folder\images\elements\other\contact_status.png" />
+    <Content Include="New folder\images\elements\other\dropped.png" />
+    <Content Include="New folder\images\elements\other\dropTopArrow.png" />
+    <Content Include="New folder\images\elements\other\fileError.png" />
+    <Content Include="New folder\images\elements\other\fileSuccess.png" />
+    <Content Include="New folder\images\elements\other\grown.png" />
+    <Content Include="New folder\images\elements\other\iButton.png" />
+    <Content Include="New folder\images\elements\other\iTop.png" />
+    <Content Include="New folder\images\elements\other\link.png" />
+    <Content Include="New folder\images\elements\other\messageArrow_left.png" />
+    <Content Include="New folder\images\elements\other\messageArrow_right.png" />
+    <Content Include="New folder\images\elements\other\overlay.png" />
+    <Content Include="New folder\images\elements\other\photo.png" />
+    <Content Include="New folder\images\elements\other\removeLi.png" />
+    <Content Include="New folder\images\elements\other\tableArrows.png" />
+    <Content Include="New folder\images\elements\other\taskDone.png" />
+    <Content Include="New folder\images\elements\other\taskPending.png" />
+    <Content Include="New folder\images\elements\other\taskProgress.png" />
+    <Content Include="New folder\images\elements\other\updateDone.png" />
+    <Content Include="New folder\images\elements\other\updateNotice.png" />
+    <Content Include="New folder\images\elements\other\updateWarning.png" />
+    <Content Include="New folder\images\elements\other\userArrow.png" />
+    <Content Include="New folder\images\elements\progress\dashed\base.png" />
+    <Content Include="New folder\images\elements\progress\dashed\black.png" />
+    <Content Include="New folder\images\elements\progress\dashed\blue.png" />
+    <Content Include="New folder\images\elements\progress\dashed\green.png" />
+    <Content Include="New folder\images\elements\progress\dashed\pink.png" />
+    <Content Include="New folder\images\elements\progress\dashed\red.png" />
+    <Content Include="New folder\images\elements\progress\solid\base.png" />
+    <Content Include="New folder\images\elements\progress\solid\blue.png" />
+    <Content Include="New folder\images\elements\progress\solid\green.png" />
+    <Content Include="New folder\images\elements\progress\solid\orange.png" />
+    <Content Include="New folder\images\elements\progress\solid\pink.png" />
+    <Content Include="New folder\images\elements\progress\solid\red.png" />
+    <Content Include="New folder\images\elements\ui\dateArrows.png" />
+    <Content Include="New folder\images\elements\ui\handle.png" />
+    <Content Include="New folder\images\elements\ui\pageOverlay.png" />
+    <Content Include="New folder\images\elements\ui\progress.png" />
+    <Content Include="New folder\images\elements\ui\progressOverlay.png" />
+    <Content Include="New folder\images\elements\ui\spinner.png" />
+    <Content Include="New folder\images\elements\ui\triangles.png" />
+    <Content Include="New folder\images\elements\uploader\deleteFile.png" />
+    <Content Include="New folder\images\elements\uploader\drag.png" />
+    <Content Include="New folder\images\elements\uploader\error.png" />
+    <Content Include="New folder\images\elements\uploader\throbber.gif" />
+    <Content Include="New folder\images\elements\uploader\uploaded.png" />
+    <Content Include="New folder\images\elements\wysiwyg\buttons.gif" />
+    <Content Include="New folder\images\elements\wysiwyg\toolbar.gif" />
+    <Content Include="New folder\images\fileManager\arrows-active.png" />
+    <Content Include="New folder\images\fileManager\arrows-normal.png" />
+    <Content Include="New folder\images\fileManager\crop.gif" />
+    <Content Include="New folder\images\fileManager\dialogs.png" />
+    <Content Include="New folder\images\fileManager\icons-big.png" />
+    <Content Include="New folder\images\fileManager\icons-small.png" />
+    <Content Include="New folder\images\fileManager\logo.png" />
+    <Content Include="New folder\images\fileManager\progress.gif" />
+    <Content Include="New folder\images\fileManager\ql.png" />
+    <Content Include="New folder\images\fileManager\quicklook-bg.png" />
+    <Content Include="New folder\images\fileManager\quicklook-icons.png" />
+    <Content Include="New folder\images\fileManager\resize.png" />
+    <Content Include="New folder\images\fileManager\spinner-mini.gif" />
+    <Content Include="New folder\images\fileManager\spinner.gif" />
+    <Content Include="New folder\images\fileManager\toolbar.png" />
+    <Content Include="New folder\images\gallery.png" />
+    <Content Include="New folder\images\icons\arrowDown.png" />
+    <Content Include="New folder\images\icons\breadsArrow.png" />
+    <Content Include="New folder\images\icons\breadsHome.png" />
+    <Content Include="New folder\images\icons\color\address.png" />
+    <Content Include="New folder\images\icons\color\administrative-docs.png" />
+    <Content Include="New folder\images\icons\color\advertising.png" />
+    <Content Include="New folder\images\icons\color\archives.png" />
+    <Content Include="New folder\images\icons\color\attibutes.png" />
+    <Content Include="New folder\images\icons\color\bank.png" />
+    <Content Include="New folder\images\icons\color\basket.png" />
+    <Content Include="New folder\images\icons\color\bestseller.png" />
+    <Content Include="New folder\images\icons\color\billing.png" />
+    <Content Include="New folder\images\icons\color\bookmark.png" />
+    <Content Include="New folder\images\icons\color\brainstorming.png" />
+    <Content Include="New folder\images\icons\color\business-contact.png" />
+    <Content Include="New folder\images\icons\color\busy.png" />
+    <Content Include="New folder\images\icons\color\calendar.png" />
+    <Content Include="New folder\images\icons\color\category.png" />
+    <Content Include="New folder\images\icons\color\check.png" />
+    <Content Include="New folder\images\icons\color\collaboration.png" />
+    <Content Include="New folder\images\icons\color\comment.png" />
+    <Content Include="New folder\images\icons\color\communication.png" />
+    <Content Include="New folder\images\icons\color\config.png" />
+    <Content Include="New folder\images\icons\color\consulting.png" />
+    <Content Include="New folder\images\icons\color\contact.png" />
+    <Content Include="New folder\images\icons\color\cost.png" />
+    <Content Include="New folder\images\icons\color\credit-card.png" />
+    <Content Include="New folder\images\icons\color\credit.png" />
+    <Content Include="New folder\images\icons\color\current-work.png" />
+    <Content Include="New folder\images\icons\color\customers.png" />
+    <Content Include="New folder\images\icons\color\cv.png" />
+    <Content Include="New folder\images\icons\color\database.png" />
+    <Content Include="New folder\images\icons\color\date.png" />
+    <Content Include="New folder\images\icons\color\delicious.png" />
+    <Content Include="New folder\images\icons\color\document-library.png" />
+    <Content Include="New folder\images\icons\color\donate.png" />
+    <Content Include="New folder\images\icons\color\drawings.png" />
+    <Content Include="New folder\images\icons\color\edit.png" />
+    <Content Include="New folder\images\icons\color\email.png" />
+    <Content Include="New folder\images\icons\color\facebook.png" />
+    <Content Include="New folder\images\icons\color\featured.png" />
+    <Content Include="New folder\images\icons\color\feed.png" />
+    <Content Include="New folder\images\icons\color\finished-work.png" />
+    <Content Include="New folder\images\icons\color\flag.png" />
+    <Content Include="New folder\images\icons\color\folder.png" />
+    <Content Include="New folder\images\icons\color\free-for-job.png" />
+    <Content Include="New folder\images\icons\color\freelance.png" />
+    <Content Include="New folder\images\icons\color\full-time.png" />
+    <Content Include="New folder\images\icons\color\future-projects.png" />
+    <Content Include="New folder\images\icons\color\graphic-design.png" />
+    <Content Include="New folder\images\icons\color\heart.png" />
+    <Content Include="New folder\images\icons\color\hire-me.png" />
+    <Content Include="New folder\images\icons\color\home.png" />
+    <Content Include="New folder\images\icons\color\illustration.png" />
+    <Content Include="New folder\images\icons\color\invoice.png" />
+    <Content Include="New folder\images\icons\color\issue.png" />
+    <Content Include="New folder\images\icons\color\library.png" />
+    <Content Include="New folder\images\icons\color\lightbulb.png" />
+    <Content Include="New folder\images\icons\color\limited-edition.png" />
+    <Content Include="New folder\images\icons\color\link.png" />
+    <Content Include="New folder\images\icons\color\lock.png" />
+    <Content Include="New folder\images\icons\color\login.png" />
+    <Content Include="New folder\images\icons\color\logout.png" />
+    <Content Include="New folder\images\icons\color\milestone.png" />
+    <Content Include="New folder\images\icons\color\my-account.png" />
+    <Content Include="New folder\images\icons\color\networking.png" />
+    <Content Include="New folder\images\icons\color\old-versions.png" />
+    <Content Include="New folder\images\icons\color\order-149.png" />
+    <Content Include="New folder\images\icons\color\order.png" />
+    <Content Include="New folder\images\icons\color\payment-card.png" />
+    <Content Include="New folder\images\icons\color\paypal.png" />
+    <Content Include="New folder\images\icons\color\pc.png" />
+    <Content Include="New folder\images\icons\color\pen.png" />
+    <Content Include="New folder\images\icons\color\pencil.png" />
+    <Content Include="New folder\images\icons\color\phone.png" />
+    <Content Include="New folder\images\icons\color\photography.png" />
+    <Content Include="New folder\images\icons\color\plus.png" />
+    <Content Include="New folder\images\icons\color\premium.png" />
+    <Content Include="New folder\images\icons\color\print.png" />
+    <Content Include="New folder\images\icons\color\process.png" />
+    <Content Include="New folder\images\icons\color\product-163.png" />
+    <Content Include="New folder\images\icons\color\product-design.png" />
+    <Content Include="New folder\images\icons\color\product.png" />
+    <Content Include="New folder\images\icons\color\project.png" />
+    <Content Include="New folder\images\icons\color\publish.png" />
+    <Content Include="New folder\images\icons\color\refresh.png" />
+    <Content Include="New folder\images\icons\color\search.png" />
+    <Content Include="New folder\images\icons\color\settings.png" />
+    <Content Include="New folder\images\icons\color\shipping.png" />
+    <Content Include="New folder\images\icons\color\showreel.png" />
+    <Content Include="New folder\images\icons\color\sign-in.png" />
+    <Content Include="New folder\images\icons\color\sign-out.png" />
+    <Content Include="New folder\images\icons\color\sign-up.png" />
+    <Content Include="New folder\images\icons\color\sitemap.png" />
+    <Content Include="New folder\images\icons\color\special-offer.png" />
+    <Content Include="New folder\images\icons\color\star.png" />
+    <Content Include="New folder\images\icons\color\statistics.png" />
+    <Content Include="New folder\images\icons\color\suppliers.png" />
+    <Content Include="New folder\images\icons\color\tag.png" />
+    <Content Include="New folder\images\icons\color\ticket.png" />
+    <Content Include="New folder\images\icons\color\twitter.png" />
+    <Content Include="New folder\images\icons\color\upcoming-work.png" />
+    <Content Include="New folder\images\icons\color\user.png" />
+    <Content Include="New folder\images\icons\color\world.png" />
+    <Content Include="New folder\images\icons\color\zoom.png" />
+    <Content Include="New folder\images\icons\delete.png" />
+    <Content Include="New folder\images\icons\frames.png" />
+    <Content Include="New folder\images\icons\iconHome.gif" />
+    <Content Include="New folder\images\icons\light\icon-abacus.png" />
+    <Content Include="New folder\images\icons\light\icon-add.png" />
+    <Content Include="New folder\images\icons\light\icon-address-book.png" />
+    <Content Include="New folder\images\icons\light\icon-admin.png" />
+    <Content Include="New folder\images\icons\light\icon-admin2.png" />
+    <Content Include="New folder\images\icons\light\icon-airplane.png" />
+    <Content Include="New folder\images\icons\light\icon-alarm.png" />
+    <Content Include="New folder\images\icons\light\icon-alert.png" />
+    <Content Include="New folder\images\icons\light\icon-android.png" />
+    <Content Include="New folder\images\icons\light\icon-archive.png" />
+    <Content Include="New folder\images\icons\light\icon-arrowdown.png" />
+    <Content Include="New folder\images\icons\light\icon-arrowleft.png" />
+    <Content Include="New folder\images\icons\light\icon-arrowright.png" />
+    <Content Include="New folder\images\icons\light\icon-arrowup.png" />
+    <Content Include="New folder\images\icons\light\icon-bag.png" />
+    <Content Include="New folder\images\icons\light\icon-baloons.png" />
+    <Content Include="New folder\images\icons\light\icon-bandaid.png" />
+    <Content Include="New folder\images\icons\light\icon-basket.png" />
+    <Content Include="New folder\images\icons\light\icon-basket2.png" />
+    <Content Include="New folder\images\icons\light\icon-battery-full.png" />
+    <Content Include="New folder\images\icons\light\icon-battery.png" />
+    <Content Include="New folder\images\icons\light\icon-bell.png" />
+    <Content Include="New folder\images\icons\light\icon-bell2.png" />
+    <Content Include="New folder\images\icons\light\icon-beta.png" />
+    <Content Include="New folder\images\icons\light\icon-bigbrush.png" />
+    <Content Include="New folder\images\icons\light\icon-blackberry.png" />
+    <Content Include="New folder\images\icons\light\icon-block.png" />
+    <Content Include="New folder\images\icons\light\icon-blocks.png" />
+    <Content Include="New folder\images\icons\light\icon-bluetooth.png" />
+    <Content Include="New folder\images\icons\light\icon-bluetooth2.png" />
+    <Content Include="New folder\images\icons\light\icon-bluray.png" />
+    <Content Include="New folder\images\icons\light\icon-books.png" />
+    <Content Include="New folder\images\icons\light\icon-books2.png" />
+    <Content Include="New folder\images\icons\light\icon-bright.png" />
+    <Content Include="New folder\images\icons\light\icon-bullseye.png" />
+    <Content Include="New folder\images\icons\light\icon-buzz.png" />
+    <Content Include="New folder\images\icons\light\icon-calc.png" />
+    <Content Include="New folder\images\icons\light\icon-camera.png" />
+    <Content Include="New folder\images\icons\light\icon-camera2.png" />
+    <Content Include="New folder\images\icons\light\icon-camera3.png" />
+    <Content Include="New folder\images\icons\light\icon-car.png" />
+    <Content Include="New folder\images\icons\light\icon-cart.png" />
+    <Content Include="New folder\images\icons\light\icon-cart2.png" />
+    <Content Include="New folder\images\icons\light\icon-cart3.png" />
+    <Content Include="New folder\images\icons\light\icon-cart4.png" />
+    <Content Include="New folder\images\icons\light\icon-cart5.png" />
+    <Content Include="New folder\images\icons\light\icon-cashreg.png" />
+    <Content Include="New folder\images\icons\light\icon-cassette.png" />
+    <Content Include="New folder\images\icons\light\icon-cat.png" />
+    <Content Include="New folder\images\icons\light\icon-cd.png" />
+    <Content Include="New folder\images\icons\light\icon-chart.png" />
+    <Content Include="New folder\images\icons\light\icon-chart2.png" />
+    <Content Include="New folder\images\icons\light\icon-chart3.png" />
+    <Content Include="New folder\images\icons\light\icon-chart4.png" />
+    <Content Include="New folder\images\icons\light\icon-chart5.png" />
+    <Content Include="New folder\images\icons\light\icon-chart6.png" />
+    <Content Include="New folder\images\icons\light\icon-chart7.png" />
+    <Content Include="New folder\images\icons\light\icon-chart8.png" />
+    <Content Include="New folder\images\icons\light\icon-check.png" />
+    <Content Include="New folder\images\icons\light\icon-chrome.png" />
+    <Content Include="New folder\images\icons\light\icon-clipboard.png" />
+    <Content Include="New folder\images\icons\light\icon-clock.png" />
+    <Content Include="New folder\images\icons\light\icon-cloud-download.png" />
+    <Content Include="New folder\images\icons\light\icon-cloud-upload.png" />
+    <Content Include="New folder\images\icons\light\icon-cloud.png" />
+    <Content Include="New folder\images\icons\light\icon-cog.png" />
+    <Content Include="New folder\images\icons\light\icon-cog2.png" />
+    <Content Include="New folder\images\icons\light\icon-cog3.png" />
+    <Content Include="New folder\images\icons\light\icon-cog4.png" />
+    <Content Include="New folder\images\icons\light\icon-comment.png" />
+    <Content Include="New folder\images\icons\light\icon-companies.png" />
+    <Content Include="New folder\images\icons\light\icon-copypaste.png" />
+    <Content Include="New folder\images\icons\light\icon-coverflow.png" />
+    <Content Include="New folder\images\icons\light\icon-create.png" />
+    <Content Include="New folder\images\icons\light\icon-create2.png" />
+    <Content Include="New folder\images\icons\light\icon-cross.png" />
+    <Content Include="New folder\images\icons\light\icon-cup.png" />
+    <Content Include="New folder\images\icons\light\icon-dates.png" />
+    <Content Include="New folder\images\icons\light\icon-dcalendar.png" />
+    <Content Include="New folder\images\icons\light\icon-delicious.png" />
+    <Content Include="New folder\images\icons\light\icon-dialog.png" />
+    <Content Include="New folder\images\icons\light\icon-digg.png" />
+    <Content Include="New folder\images\icons\light\icon-digg2.png" />
+    <Content Include="New folder\images\icons\light\icon-document.png" />
+    <Content Include="New folder\images\icons\light\icon-documents.png" />
+    <Content Include="New folder\images\icons\light\icon-download.png" />
+    <Content Include="New folder\images\icons\light\icon-download2.png" />
+    <Content Include="New folder\images\icons\light\icon-download3.png" />
+    <Content Include="New folder\images\icons\light\icon-downloadto.png" />
+    <Content Include="New folder\images\icons\light\icon-dribbble.png" />
+    <Content Include="New folder\images\icons\light\icon-dribbble2.png" />
+    <Content Include="New folder\images\icons\light\icon-drive.png" />
+    <Content Include="New folder\images\icons\light\icon-dropbox.png" />
+    <Content Include="New folder\images\icons\light\icon-drupal.png" />
+    <Content Include="New folder\images\icons\light\icon-dvd.png" />
+    <Content Include="New folder\images\icons\light\icon-electroinput.png" />
+    <Content Include="New folder\images\icons\light\icon-electroplug.png" />
+    <Content Include="New folder\images\icons\light\icon-email.png" />
+    <Content Include="New folder\images\icons\light\icon-excel.png" />
+    <Content Include="New folder\images\icons\light\icon-exit.png" />
+    <Content Include="New folder\images\icons\light\icon-expression.png" />
+    <Content Include="New folder\images\icons\light\icon-eyedropper.png" />
+    <Content Include="New folder\images\icons\light\icon-facebook.png" />
+    <Content Include="New folder\images\icons\light\icon-fax.png" />
+    <Content Include="New folder\images\icons\light\icon-female.png" />
+    <Content Include="New folder\images\icons\light\icon-ff.png" />
+    <Content Include="New folder\images\icons\light\icon-files.png" />
+    <Content Include="New folder\images\icons\light\icon-filmstrip.png" />
+    <Content Include="New folder\images\icons\light\icon-filmstrip2.png" />
+    <Content Include="New folder\images\icons\light\icon-finish.png" />
+    <Content Include="New folder\images\icons\light\icon-flag.png" />
+    <Content Include="New folder\images\icons\light\icon-flag2.png" />
+    <Content Include="New folder\images\icons\light\icon-folder.png" />
+    <Content Include="New folder\images\icons\light\icon-footprints.png" />
+    <Content Include="New folder\images\icons\light\icon-fountain-pen.png" />
+    <Content Include="New folder\images\icons\light\icon-frames.png" />
+    <Content Include="New folder\images\icons\light\icon-full2.png" />
+    <Content Include="New folder\images\icons\light\icon-full3.png" />
+    <Content Include="New folder\images\icons\light\icon-full4.png" />
+    <Content Include="New folder\images\icons\light\icon-full5.png" />
+    <Content Include="New folder\images\icons\light\icon-fullscreen.png" />
+    <Content Include="New folder\images\icons\light\icon-fullscreen2.png" />
+    <Content Include="New folder\images\icons\light\icon-globe.png" />
+    <Content Include="New folder\images\icons\light\icon-google-maps.png" />
+    <Content Include="New folder\images\icons\light\icon-graph.png" />
+    <Content Include="New folder\images\icons\light\icon-hd.png" />
+    <Content Include="New folder\images\icons\light\icon-hd2.png" />
+    <Content Include="New folder\images\icons\light\icon-hd3.png" />
+    <Content Include="New folder\images\icons\light\icon-headphones.png" />
+    <Content Include="New folder\images\icons\light\icon-heart.png" />
+    <Content Include="New folder\images\icons\light\icon-help.png" />
+    <Content Include="New folder\images\icons\light\icon-home.png" />
+    <Content Include="New folder\images\icons\light\icon-home2.png" />
+    <Content Include="New folder\images\icons\light\icon-ichat.png" />
+    <Content Include="New folder\images\icons\light\icon-iclassic.png" />
+    <Content Include="New folder\images\icons\light\icon-imac.png" />
+    <Content Include="New folder\images\icons\light\icon-images.png" />
+    <Content Include="New folder\images\icons\light\icon-images2.png" />
+    <Content Include="New folder\images\icons\light\icon-images3.png" />
+    <Content Include="New folder\images\icons\light\icon-images4.png" />
+    <Content Include="New folder\images\icons\light\icon-inano.png" />
+    <Content Include="New folder\images\icons\light\icon-inbox.png" />
+    <Content Include="New folder\images\icons\light\icon-inbox2.png" />
+    <Content Include="New folder\images\icons\light\icon-info.png" />
+    <Content Include="New folder\images\icons\light\icon-ipad.png" />
+    <Content Include="New folder\images\icons\light\icon-iphone.png" />
+    <Content Include="New folder\images\icons\light\icon-joomla.png" />
+    <Content Include="New folder\images\icons\light\icon-laptop.png" />
+    <Content Include="New folder\images\icons\light\icon-lastfm.png" />
+    <Content Include="New folder\images\icons\light\icon-like.png" />
+    <Content Include="New folder\images\icons\light\icon-link.png" />
+    <Content Include="New folder\images\icons\light\icon-link2.png" />
+    <Content Include="New folder\images\icons\light\icon-linux.png" />
+    <Content Include="New folder\images\icons\light\icon-list.png" />
+    <Content Include="New folder\images\icons\light\icon-list2.png" />
+    <Content Include="New folder\images\icons\light\icon-list3.png" />
+    <Content Include="New folder\images\icons\light\icon-listimg.png" />
+    <Content Include="New folder\images\icons\light\icon-loading.png" />
+    <Content Include="New folder\images\icons\light\icon-locked.png" />
+    <Content Include="New folder\images\icons\light\icon-logoff.png" />
+    <Content Include="New folder\images\icons\light\icon-macos.png" />
+    <Content Include="New folder\images\icons\light\icon-magic-mouse.png" />
+    <Content Include="New folder\images\icons\light\icon-male.png" />
+    <Content Include="New folder\images\icons\light\icon-map.png" />
+    <Content Include="New folder\images\icons\light\icon-marker.png" />
+    <Content Include="New folder\images\icons\light\icon-mcalendar.png" />
+    <Content Include="New folder\images\icons\light\icon-medicase.png" />
+    <Content Include="New folder\images\icons\light\icon-megaphone.png" />
+    <Content Include="New folder\images\icons\light\icon-mic.png" />
+    <Content Include="New folder\images\icons\light\icon-mighty-mouse.png" />
+    <Content Include="New folder\images\icons\light\icon-mobile.png" />
+    <Content Include="New folder\images\icons\light\icon-moby.png" />
+    <Content Include="New folder\images\icons\light\icon-money.png" />
+    <Content Include="New folder\images\icons\light\icon-money2.png" />
+    <Content Include="New folder\images\icons\light\icon-money3.png" />
+    <Content Include="New folder\images\icons\light\icon-monitor.png" />
+    <Content Include="New folder\images\icons\light\icon-music-symbol.png" />
+    <Content Include="New folder\images\icons\light\icon-myspace.png" />
+    <Content Include="New folder\images\icons\light\icon-notebook.png" />
+    <Content Include="New folder\images\icons\light\icon-outbox.png" />
+    <Content Include="New folder\images\icons\light\icon-pacman.png" />
+    <Content Include="New folder\images\icons\light\icon-paintbrush.png" />
+    <Content Include="New folder\images\icons\light\icon-pants.png" />
+    <Content Include="New folder\images\icons\light\icon-paperclip.png" />
+    <Content Include="New folder\images\icons\light\icon-paypal.png" />
+    <Content Include="New folder\images\icons\light\icon-paypal2.png" />
+    <Content Include="New folder\images\icons\light\icon-paypal3.png" />
+    <Content Include="New folder\images\icons\light\icon-pdf.png" />
+    <Content Include="New folder\images\icons\light\icon-pencil.png" />
+    <Content Include="New folder\images\icons\light\icon-phone.png" />
+    <Content Include="New folder\images\icons\light\icon-phone3.png" />
+    <Content Include="New folder\images\icons\light\icon-phonehook.png" />
+    <Content Include="New folder\images\icons\light\icon-photos.png" />
+    <Content Include="New folder\images\icons\light\icon-piggybank.png" />
+    <Content Include="New folder\images\icons\light\icon-planecase.png" />
+    <Content Include="New folder\images\icons\light\icon-play.png" />
+    <Content Include="New folder\images\icons\light\icon-play2.png" />
+    <Content Include="New folder\images\icons\light\icon-plixi.png" />
+    <Content Include="New folder\images\icons\light\icon-postcard.png" />
+    <Content Include="New folder\images\icons\light\icon-power.png" />
+    <Content Include="New folder\images\icons\light\icon-powerpoint.png" />
+    <Content Include="New folder\images\icons\light\icon-preview.png" />
+    <Content Include="New folder\images\icons\light\icon-pricetag.png" />
+    <Content Include="New folder\images\icons\light\icon-pricetag2.png" />
+    <Content Include="New folder\images\icons\light\icon-printer.png" />
+    <Content Include="New folder\images\icons\light\icon-purse.png" />
+    <Content Include="New folder\images\icons\light\icon-radio.png" />
+    <Content Include="New folder\images\icons\light\icon-record.png" />
+    <Content Include="New folder\images\icons\light\icon-recycle.png" />
+    <Content Include="New folder\images\icons\light\icon-refresh.png" />
+    <Content Include="New folder\images\icons\light\icon-refresh2.png" />
+    <Content Include="New folder\images\icons\light\icon-refresh3.png" />
+    <Content Include="New folder\images\icons\light\icon-refresh4.png" />
+    <Content Include="New folder\images\icons\light\icon-repeat.png" />
+    <Content Include="New folder\images\icons\light\icon-robot.png" />
+    <Content Include="New folder\images\icons\light\icon-rss.png" />
+    <Content Include="New folder\images\icons\light\icon-ruler.png" />
+    <Content Include="New folder\images\icons\light\icon-ruler2.png" />
+    <Content Include="New folder\images\icons\light\icon-running.png" />
+    <Content Include="New folder\images\icons\light\icon-safari.png" />
+    <Content Include="New folder\images\icons\light\icon-scissors.png" />
+    <Content Include="New folder\images\icons\light\icon-sd.png" />
+    <Content Include="New folder\images\icons\light\icon-sd2.png" />
+    <Content Include="New folder\images\icons\light\icon-sd3.png" />
+    <Content Include="New folder\images\icons\light\icon-search.png" />
+    <Content Include="New folder\images\icons\light\icon-settings.png" />
+    <Content Include="New folder\images\icons\light\icon-settings2.png" />
+    <Content Include="New folder\images\icons\light\icon-shirt.png" />
+    <Content Include="New folder\images\icons\light\icon-shoppingbag.png" />
+    <Content Include="New folder\images\icons\light\icon-shuffle.png" />
+    <Content Include="New folder\images\icons\light\icon-sign-post.png" />
+    <Content Include="New folder\images\icons\light\icon-signal.png" />
+    <Content Include="New folder\images\icons\light\icon-skype.png" />
+    <Content Include="New folder\images\icons\light\icon-smallbrush.png" />
+    <Content Include="New folder\images\icons\light\icon-socks.png" />
+    <Content Include="New folder\images\icons\light\icon-sound.png" />
+    <Content Include="New folder\images\icons\light\icon-speech-bubble.png" />
+    <Content Include="New folder\images\icons\light\icon-speech-bubble2.png" />
+    <Content Include="New folder\images\icons\light\icon-speech-bubbles.png" />
+    <Content Include="New folder\images\icons\light\icon-speech-bubbles2.png" />
+    <Content Include="New folder\images\icons\light\icon-stand.png" />
+    <Content Include="New folder\images\icons\light\icon-star.png" />
+    <Content Include="New folder\images\icons\light\icon-stats.png" />
+    <Content Include="New folder\images\icons\light\icon-stop.png" />
+    <Content Include="New folder\images\icons\light\icon-stoptimer.png" />
+    <Content Include="New folder\images\icons\light\icon-stumbleupon.png" />
+    <Content Include="New folder\images\icons\light\icon-suitcase.png" />
+    <Content Include="New folder\images\icons\light\icon-switcher.png" />
+    <Content Include="New folder\images\icons\light\icon-tag.png" />
+    <Content Include="New folder\images\icons\light\icon-tags.png" />
+    <Content Include="New folder\images\icons\light\icon-timer.png" />
+    <Content Include="New folder\images\icons\light\icon-transfer.png" />
+    <Content Include="New folder\images\icons\light\icon-trash.png" />
+    <Content Include="New folder\images\icons\light\icon-travelcase.png" />
+    <Content Include="New folder\images\icons\light\icon-tree.png" />
+    <Content Include="New folder\images\icons\light\icon-trolly.png" />
+    <Content Include="New folder\images\icons\light\icon-truck.png" />
+    <Content Include="New folder\images\icons\light\icon-tumbler.png" />
+    <Content Include="New folder\images\icons\light\icon-tv.png" />
+    <Content Include="New folder\images\icons\light\icon-uc.png" />
+    <Content Include="New folder\images\icons\light\icon-umbrella.png" />
+    <Content Include="New folder\images\icons\light\icon-unlocked.png" />
+    <Content Include="New folder\images\icons\light\icon-upload.png" />
+    <Content Include="New folder\images\icons\light\icon-user.png" />
+    <Content Include="New folder\images\icons\light\icon-user2.png" />
+    <Content Include="New folder\images\icons\light\icon-users.png" />
+    <Content Include="New folder\images\icons\light\icon-users2.png" />
+    <Content Include="New folder\images\icons\light\icon-vault.png" />
+    <Content Include="New folder\images\icons\light\icon-vbar.png" />
+    <Content Include="New folder\images\icons\light\icon-vcard.png" />
+    <Content Include="New folder\images\icons\light\icon-view.png" />
+    <Content Include="New folder\images\icons\light\icon-vimeo.png" />
+    <Content Include="New folder\images\icons\light\icon-walking.png" />
+    <Content Include="New folder\images\icons\light\icon-wifi.png" />
+    <Content Include="New folder\images\icons\light\icon-wifi2.png" />
+    <Content Include="New folder\images\icons\light\icon-windows.png" />
+    <Content Include="New folder\images\icons\light\icon-wired-mouse.png" />
+    <Content Include="New folder\images\icons\light\icon-word.png" />
+    <Content Include="New folder\images\icons\light\icon-wordpress.png" />
+    <Content Include="New folder\images\icons\light\icon-wordpress2.png" />
+    <Content Include="New folder\images\icons\light\icon-youtube.png" />
+    <Content Include="New folder\images\icons\light\icon-zipfile.png" />
+    <Content Include="New folder\images\icons\light\icon-zipfiles.png" />
+    <Content Include="New folder\images\icons\loginEmail.png" />
+    <Content Include="New folder\images\icons\loginLock.png" />
+    <Content Include="New folder\images\icons\loginUsername.png" />
+    <Content Include="New folder\images\icons\mainnav\dashboard.png" />
+    <Content Include="New folder\images\icons\mainnav\forms.png" />
+    <Content Include="New folder\images\icons\mainnav\messages.png" />
+    <Content Include="New folder\images\icons\mainnav\other.png" />
+    <Content Include="New folder\images\icons\mainnav\statistics.png" />
+    <Content Include="New folder\images\icons\mainnav\tables.png" />
+    <Content Include="New folder\images\icons\mainnav\ui.png" />
+    <Content Include="New folder\images\icons\middlenav\add.png" />
+    <Content Include="New folder\images\icons\middlenav\create.png" />
+    <Content Include="New folder\images\icons\middlenav\dialogs.png" />
+    <Content Include="New folder\images\icons\middlenav\stats.png" />
+    <Content Include="New folder\images\icons\middlenav\upload.png" />
+    <Content Include="New folder\images\icons\quickstats\money.png" />
+    <Content Include="New folder\images\icons\quickstats\plus.png" />
+    <Content Include="New folder\images\icons\quickstats\user.png" />
+    <Content Include="New folder\images\icons\sidebarButtons\users.png" />
+    <Content Include="New folder\images\icons\stats.png" />
+    <Content Include="New folder\images\icons\subnav\icon.png" />
+    <Content Include="New folder\images\icons\subnav\icon1.png" />
+    <Content Include="New folder\images\icons\update.png" />
+    <Content Include="New folder\images\icons\usernav\logout.png" />
+    <Content Include="New folder\images\icons\usernav\messages.png" />
+    <Content Include="New folder\images\icons\usernav\profile.png" />
+    <Content Include="New folder\images\icons\usernav\screen.png" />
+    <Content Include="New folder\images\icons\usernav\search.png" />
+    <Content Include="New folder\images\icons\usernav\settings.png" />
+    <Content Include="New folder\images\icons\usernav\sidebar.png" />
+    <Content Include="New folder\images\icons\usual\icon-abacus.png" />
+    <Content Include="New folder\images\icons\usual\icon-add.png" />
+    <Content Include="New folder\images\icons\usual\icon-address-book.png" />
+    <Content Include="New folder\images\icons\usual\icon-admin.png" />
+    <Content Include="New folder\images\icons\usual\icon-admin2.png" />
+    <Content Include="New folder\images\icons\usual\icon-airplane.png" />
+    <Content Include="New folder\images\icons\usual\icon-alarm.png" />
+    <Content Include="New folder\images\icons\usual\icon-alert.png" />
+    <Content Include="New folder\images\icons\usual\icon-android.png" />
+    <Content Include="New folder\images\icons\usual\icon-archive.png" />
+    <Content Include="New folder\images\icons\usual\icon-arrowdown.png" />
+    <Content Include="New folder\images\icons\usual\icon-arrowleft.png" />
+    <Content Include="New folder\images\icons\usual\icon-arrowright.png" />
+    <Content Include="New folder\images\icons\usual\icon-arrowup.png" />
+    <Content Include="New folder\images\icons\usual\icon-bag.png" />
+    <Content Include="New folder\images\icons\usual\icon-baloons.png" />
+    <Content Include="New folder\images\icons\usual\icon-bandaid.png" />
+    <Content Include="New folder\images\icons\usual\icon-basket.png" />
+    <Content Include="New folder\images\icons\usual\icon-basket2.png" />
+    <Content Include="New folder\images\icons\usual\icon-battery-full.png" />
+    <Content Include="New folder\images\icons\usual\icon-battery.png" />
+    <Content Include="New folder\images\icons\usual\icon-bell.png" />
+    <Content Include="New folder\images\icons\usual\icon-bell2.png" />
+    <Content Include="New folder\images\icons\usual\icon-beta.png" />
+    <Content Include="New folder\images\icons\usual\icon-bigbrush.png" />
+    <Content Include="New folder\images\icons\usual\icon-blackberry.png" />
+    <Content Include="New folder\images\icons\usual\icon-block.png" />
+    <Content Include="New folder\images\icons\usual\icon-blocks.png" />
+    <Content Include="New folder\images\icons\usual\icon-bluetooth.png" />
+    <Content Include="New folder\images\icons\usual\icon-bluetooth2.png" />
+    <Content Include="New folder\images\icons\usual\icon-bluray.png" />
+    <Content Include="New folder\images\icons\usual\icon-books.png" />
+    <Content Include="New folder\images\icons\usual\icon-books2.png" />
+    <Content Include="New folder\images\icons\usual\icon-bright.png" />
+    <Content Include="New folder\images\icons\usual\icon-bullseye.png" />
+    <Content Include="New folder\images\icons\usual\icon-buzz.png" />
+    <Content Include="New folder\images\icons\usual\icon-calc.png" />
+    <Content Include="New folder\images\icons\usual\icon-camera.png" />
+    <Content Include="New folder\images\icons\usual\icon-camera2.png" />
+    <Content Include="New folder\images\icons\usual\icon-camera3.png" />
+    <Content Include="New folder\images\icons\usual\icon-car.png" />
+    <Content Include="New folder\images\icons\usual\icon-cart.png" />
+    <Content Include="New folder\images\icons\usual\icon-cart2.png" />
+    <Content Include="New folder\images\icons\usual\icon-cart3.png" />
+    <Content Include="New folder\images\icons\usual\icon-cart4.png" />
+    <Content Include="New folder\images\icons\usual\icon-cart5.png" />
+    <Content Include="New folder\images\icons\usual\icon-cashreg.png" />
+    <Content Include="New folder\images\icons\usual\icon-cassette.png" />
+    <Content Include="New folder\images\icons\usual\icon-cat.png" />
+    <Content Include="New folder\images\icons\usual\icon-cd.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart2.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart3.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart4.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart5.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart6.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart7.png" />
+    <Content Include="New folder\images\icons\usual\icon-chart8.png" />
+    <Content Include="New folder\images\icons\usual\icon-check.png" />
+    <Content Include="New folder\images\icons\usual\icon-chrome.png" />
+    <Content Include="New folder\images\icons\usual\icon-clipboard.png" />
+    <Content Include="New folder\images\icons\usual\icon-clock.png" />
+    <Content Include="New folder\images\icons\usual\icon-cloud-download.png" />
+    <Content Include="New folder\images\icons\usual\icon-cloud-upload.png" />
+    <Content Include="New folder\images\icons\usual\icon-cloud.png" />
+    <Content Include="New folder\images\icons\usual\icon-cog.png" />
+    <Content Include="New folder\images\icons\usual\icon-cog2.png" />
+    <Content Include="New folder\images\icons\usual\icon-cog3.png" />
+    <Content Include="New folder\images\icons\usual\icon-cog4.png" />
+    <Content Include="New folder\images\icons\usual\icon-comment.png" />
+    <Content Include="New folder\images\icons\usual\icon-companies.png" />
+    <Content Include="New folder\images\icons\usual\icon-copypaste.png" />
+    <Content Include="New folder\images\icons\usual\icon-coverflow.png" />
+    <Content Include="New folder\images\icons\usual\icon-create.png" />
+    <Content Include="New folder\images\icons\usual\icon-create2.png" />
+    <Content Include="New folder\images\icons\usual\icon-cross.png" />
+    <Content Include="New folder\images\icons\usual\icon-cup.png" />
+    <Content Include="New folder\images\icons\usual\icon-dates.png" />
+    <Content Include="New folder\images\icons\usual\icon-dcalendar.png" />
+    <Content Include="New folder\images\icons\usual\icon-delicious.png" />
+    <Content Include="New folder\images\icons\usual\icon-dialog.png" />
+    <Content Include="New folder\images\icons\usual\icon-digg.png" />
+    <Content Include="New folder\images\icons\usual\icon-digg2.png" />
+    <Content Include="New folder\images\icons\usual\icon-document.png" />
+    <Content Include="New folder\images\icons\usual\icon-documents.png" />
+    <Content Include="New folder\images\icons\usual\icon-download.png" />
+    <Content Include="New folder\images\icons\usual\icon-download2.png" />
+    <Content Include="New folder\images\icons\usual\icon-download3.png" />
+    <Content Include="New folder\images\icons\usual\icon-downloadto.png" />
+    <Content Include="New folder\images\icons\usual\icon-dribbble.png" />
+    <Content Include="New folder\images\icons\usual\icon-dribbble2.png" />
+    <Content Include="New folder\images\icons\usual\icon-drive.png" />
+    <Content Include="New folder\images\icons\usual\icon-dropbox.png" />
+    <Content Include="New folder\images\icons\usual\icon-drupal.png" />
+    <Content Include="New folder\images\icons\usual\icon-dvd.png" />
+    <Content Include="New folder\images\icons\usual\icon-electroinput.png" />
+    <Content Include="New folder\images\icons\usual\icon-electroplug.png" />
+    <Content Include="New folder\images\icons\usual\icon-email.png" />
+    <Content Include="New folder\images\icons\usual\icon-excel.png" />
+    <Content Include="New folder\images\icons\usual\icon-exit.png" />
+    <Content Include="New folder\images\icons\usual\icon-expression.png" />
+    <Content Include="New folder\images\icons\usual\icon-eyedropper.png" />
+    <Content Include="New folder\images\icons\usual\icon-facebook.png" />
+    <Content Include="New folder\images\icons\usual\icon-fax.png" />
+    <Content Include="New folder\images\icons\usual\icon-female.png" />
+    <Content Include="New folder\images\icons\usual\icon-ff.png" />
+    <Content Include="New folder\images\icons\usual\icon-files.png" />
+    <Content Include="New folder\images\icons\usual\icon-filmstrip.png" />
+    <Content Include="New folder\images\icons\usual\icon-filmstrip2.png" />
+    <Content Include="New folder\images\icons\usual\icon-finish.png" />
+    <Content Include="New folder\images\icons\usual\icon-flag.png" />
+    <Content Include="New folder\images\icons\usual\icon-flag2.png" />
+    <Content Include="New folder\images\icons\usual\icon-folder.png" />
+    <Content Include="New folder\images\icons\usual\icon-footprints.png" />
+    <Content Include="New folder\images\icons\usual\icon-fountain-pen.png" />
+    <Content Include="New folder\images\icons\usual\icon-frames.png" />
+    <Content Include="New folder\images\icons\usual\icon-full2.png" />
+    <Content Include="New folder\images\icons\usual\icon-full3.png" />
+    <Content Include="New folder\images\icons\usual\icon-full4.png" />
+    <Content Include="New folder\images\icons\usual\icon-full5.png" />
+    <Content Include="New folder\images\icons\usual\icon-fullscreen.png" />
+    <Content Include="New folder\images\icons\usual\icon-fullscreen2.png" />
+    <Content Include="New folder\images\icons\usual\icon-globe.png" />
+    <Content Include="New folder\images\icons\usual\icon-google-maps.png" />
+    <Content Include="New folder\images\icons\usual\icon-graph.png" />
+    <Content Include="New folder\images\icons\usual\icon-hd.png" />
+    <Content Include="New folder\images\icons\usual\icon-hd2.png" />
+    <Content Include="New folder\images\icons\usual\icon-hd3.png" />
+    <Content Include="New folder\images\icons\usual\icon-headphones.png" />
+    <Content Include="New folder\images\icons\usual\icon-heart.png" />
+    <Content Include="New folder\images\icons\usual\icon-help.png" />
+    <Content Include="New folder\images\icons\usual\icon-home.png" />
+    <Content Include="New folder\images\icons\usual\icon-home2.png" />
+    <Content Include="New folder\images\icons\usual\icon-ichat.png" />
+    <Content Include="New folder\images\icons\usual\icon-iclassic.png" />
+    <Content Include="New folder\images\icons\usual\icon-imac.png" />
+    <Content Include="New folder\images\icons\usual\icon-images.png" />
+    <Content Include="New folder\images\icons\usual\icon-images2.png" />
+    <Content Include="New folder\images\icons\usual\icon-images3.png" />
+    <Content Include="New folder\images\icons\usual\icon-images4.png" />
+    <Content Include="New folder\images\icons\usual\icon-inano.png" />
+    <Content Include="New folder\images\icons\usual\icon-inbox.png" />
+    <Content Include="New folder\images\icons\usual\icon-inbox2.png" />
+    <Content Include="New folder\images\icons\usual\icon-info.png" />
+    <Content Include="New folder\images\icons\usual\icon-ipad.png" />
+    <Content Include="New folder\images\icons\usual\icon-iphone.png" />
+    <Content Include="New folder\images\icons\usual\icon-joomla.png" />
+    <Content Include="New folder\images\icons\usual\icon-laptop.png" />
+    <Content Include="New folder\images\icons\usual\icon-lastfm.png" />
+    <Content Include="New folder\images\icons\usual\icon-like.png" />
+    <Content Include="New folder\images\icons\usual\icon-link.png" />
+    <Content Include="New folder\images\icons\usual\icon-link2.png" />
+    <Content Include="New folder\images\icons\usual\icon-linux.png" />
+    <Content Include="New folder\images\icons\usual\icon-list.png" />
+    <Content Include="New folder\images\icons\usual\icon-list2.png" />
+    <Content Include="New folder\images\icons\usual\icon-list3.png" />
+    <Content Include="New folder\images\icons\usual\icon-listimg.png" />
+    <Content Include="New folder\images\icons\usual\icon-loading.png" />
+    <Content Include="New folder\images\icons\usual\icon-locked.png" />
+    <Content Include="New folder\images\icons\usual\icon-logoff.png" />
+    <Content Include="New folder\images\icons\usual\icon-macos.png" />
+    <Content Include="New folder\images\icons\usual\icon-magic-mouse.png" />
+    <Content Include="New folder\images\icons\usual\icon-male.png" />
+    <Content Include="New folder\images\icons\usual\icon-map.png" />
+    <Content Include="New folder\images\icons\usual\icon-marker.png" />
+    <Content Include="New folder\images\icons\usual\icon-mcalendar.png" />
+    <Content Include="New folder\images\icons\usual\icon-medicase.png" />
+    <Content Include="New folder\images\icons\usual\icon-megaphone.png" />
+    <Content Include="New folder\images\icons\usual\icon-mic.png" />
+    <Content Include="New folder\images\icons\usual\icon-mighty-mouse.png" />
+    <Content Include="New folder\images\icons\usual\icon-mobile.png" />
+    <Content Include="New folder\images\icons\usual\icon-moby.png" />
+    <Content Include="New folder\images\icons\usual\icon-money.png" />
+    <Content Include="New folder\images\icons\usual\icon-money2.png" />
+    <Content Include="New folder\images\icons\usual\icon-money3.png" />
+    <Content Include="New folder\images\icons\usual\icon-monitor.png" />
+    <Content Include="New folder\images\icons\usual\icon-music-symbol.png" />
+    <Content Include="New folder\images\icons\usual\icon-myspace.png" />
+    <Content Include="New folder\images\icons\usual\icon-notebook.png" />
+    <Content Include="New folder\images\icons\usual\icon-outbox.png" />
+    <Content Include="New folder\images\icons\usual\icon-pacman.png" />
+    <Content Include="New folder\images\icons\usual\icon-paintbrush.png" />
+    <Content Include="New folder\images\icons\usual\icon-pants.png" />
+    <Content Include="New folder\images\icons\usual\icon-paperclip.png" />
+    <Content Include="New folder\images\icons\usual\icon-paypal.png" />
+    <Content Include="New folder\images\icons\usual\icon-paypal2.png" />
+    <Content Include="New folder\images\icons\usual\icon-paypal3.png" />
+    <Content Include="New folder\images\icons\usual\icon-pdf.png" />
+    <Content Include="New folder\images\icons\usual\icon-pencil.png" />
+    <Content Include="New folder\images\icons\usual\icon-phone.png" />
+    <Content Include="New folder\images\icons\usual\icon-phone3.png" />
+    <Content Include="New folder\images\icons\usual\icon-phonehook.png" />
+    <Content Include="New folder\images\icons\usual\icon-photos.png" />
+    <Content Include="New folder\images\icons\usual\icon-piggybank.png" />
+    <Content Include="New folder\images\icons\usual\icon-planecase.png" />
+    <Content Include="New folder\images\icons\usual\icon-play.png" />
+    <Content Include="New folder\images\icons\usual\icon-play2.png" />
+    <Content Include="New folder\images\icons\usual\icon-plixi.png" />
+    <Content Include="New folder\images\icons\usual\icon-postcard.png" />
+    <Content Include="New folder\images\icons\usual\icon-power.png" />
+    <Content Include="New folder\images\icons\usual\icon-powerpoint.png" />
+    <Content Include="New folder\images\icons\usual\icon-preview.png" />
+    <Content Include="New folder\images\icons\usual\icon-pricetag.png" />
+    <Content Include="New folder\images\icons\usual\icon-pricetag2.png" />
+    <Content Include="New folder\images\icons\usual\icon-printer.png" />
+    <Content Include="New folder\images\icons\usual\icon-purse.png" />
+    <Content Include="New folder\images\icons\usual\icon-radio.png" />
+    <Content Include="New folder\images\icons\usual\icon-record.png" />
+    <Content Include="New folder\images\icons\usual\icon-recycle.png" />
+    <Content Include="New folder\images\icons\usual\icon-refresh.png" />
+    <Content Include="New folder\images\icons\usual\icon-refresh2.png" />
+    <Content Include="New folder\images\icons\usual\icon-refresh3.png" />
+    <Content Include="New folder\images\icons\usual\icon-refresh4.png" />
+    <Content Include="New folder\images\icons\usual\icon-repeat.png" />
+    <Content Include="New folder\images\icons\usual\icon-robot.png" />
+    <Content Include="New folder\images\icons\usual\icon-rss.png" />
+    <Content Include="New folder\images\icons\usual\icon-ruler.png" />
+    <Content Include="New folder\images\icons\usual\icon-ruler2.png" />
+    <Content Include="New folder\images\icons\usual\icon-running.png" />
+    <Content Include="New folder\images\icons\usual\icon-safari.png" />
+    <Content Include="New folder\images\icons\usual\icon-scissors.png" />
+    <Content Include="New folder\images\icons\usual\icon-sd.png" />
+    <Content Include="New folder\images\icons\usual\icon-sd2.png" />
+    <Content Include="New folder\images\icons\usual\icon-sd3.png" />
+    <Content Include="New folder\images\icons\usual\icon-search.png" />
+    <Content Include="New folder\images\icons\usual\icon-settings.png" />
+    <Content Include="New folder\images\icons\usual\icon-settings2.png" />
+    <Content Include="New folder\images\icons\usual\icon-shirt.png" />
+    <Content Include="New folder\images\icons\usual\icon-shoppingbag.png" />
+    <Content Include="New folder\images\icons\usual\icon-shuffle.png" />
+    <Content Include="New folder\images\icons\usual\icon-sign-post.png" />
+    <Content Include="New folder\images\icons\usual\icon-signal.png" />
+    <Content Include="New folder\images\icons\usual\icon-skype.png" />
+    <Content Include="New folder\images\icons\usual\icon-smallbrush.png" />
+    <Content Include="New folder\images\icons\usual\icon-socks.png" />
+    <Content Include="New folder\images\icons\usual\icon-sound.png" />
+    <Content Include="New folder\images\icons\usual\icon-speech-bubble.png" />
+    <Content Include="New folder\images\icons\usual\icon-speech-bubble2.png" />
+    <Content Include="New folder\images\icons\usual\icon-speech-bubbles.png" />
+    <Content Include="New folder\images\icons\usual\icon-speech-bubbles2.png" />
+    <Content Include="New folder\images\icons\usual\icon-stand.png" />
+    <Content Include="New folder\images\icons\usual\icon-star.png" />
+    <Content Include="New folder\images\icons\usual\icon-stats.png" />
+    <Content Include="New folder\images\icons\usual\icon-stop.png" />
+    <Content Include="New folder\images\icons\usual\icon-stoptimer.png" />
+    <Content Include="New folder\images\icons\usual\icon-stumbleupon.png" />
+    <Content Include="New folder\images\icons\usual\icon-suitcase.png" />
+    <Content Include="New folder\images\icons\usual\icon-switcher.png" />
+    <Content Include="New folder\images\icons\usual\icon-tag.png" />
+    <Content Include="New folder\images\icons\usual\icon-tags.png" />
+    <Content Include="New folder\images\icons\usual\icon-timer.png" />
+    <Content Include="New folder\images\icons\usual\icon-transfer.png" />
+    <Content Include="New folder\images\icons\usual\icon-trash.png" />
+    <Content Include="New folder\images\icons\usual\icon-travelcase.png" />
+    <Content Include="New folder\images\icons\usual\icon-tree.png" />
+    <Content Include="New folder\images\icons\usual\icon-trolly.png" />
+    <Content Include="New folder\images\icons\usual\icon-truck.png" />
+    <Content Include="New folder\images\icons\usual\icon-tumbler.png" />
+    <Content Include="New folder\images\icons\usual\icon-tv.png" />
+    <Content Include="New folder\images\icons\usual\icon-uc.png" />
+    <Content Include="New folder\images\icons\usual\icon-umbrella.png" />
+    <Content Include="New folder\images\icons\usual\icon-unlocked.png" />
+    <Content Include="New folder\images\icons\usual\icon-upload.png" />
+    <Content Include="New folder\images\icons\usual\icon-user.png" />
+    <Content Include="New folder\images\icons\usual\icon-user2.png" />
+    <Content Include="New folder\images\icons\usual\icon-users.png" />
+    <Content Include="New folder\images\icons\usual\icon-users2.png" />
+    <Content Include="New folder\images\icons\usual\icon-vault.png" />
+    <Content Include="New folder\images\icons\usual\icon-vbar.png" />
+    <Content Include="New folder\images\icons\usual\icon-vcard.png" />
+    <Content Include="New folder\images\icons\usual\icon-view.png" />
+    <Content Include="New folder\images\icons\usual\icon-vimeo.png" />
+    <Content Include="New folder\images\icons\usual\icon-walking.png" />
+    <Content Include="New folder\images\icons\usual\icon-wifi.png" />
+    <Content Include="New folder\images\icons\usual\icon-wifi2.png" />
+    <Content Include="New folder\images\icons\usual\icon-windows.png" />
+    <Content Include="New folder\images\icons\usual\icon-wired-mouse.png" />
+    <Content Include="New folder\images\icons\usual\icon-word.png" />
+    <Content Include="New folder\images\icons\usual\icon-wordpress.png" />
+    <Content Include="New folder\images\icons\usual\icon-wordpress2.png" />
+    <Content Include="New folder\images\icons\usual\icon-youtube.png" />
+    <Content Include="New folder\images\icons\usual\icon-zipfile.png" />
+    <Content Include="New folder\images\icons\usual\icon-zipfiles.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="New folder\images\jquery_ui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="New folder\images\jquery_ui\ui-icons_222222_256x240.png" />
+    <Content Include="New folder\images\jquery_ui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="New folder\images\jquery_ui\ui-icons_454545_256x240.png" />
+    <Content Include="New folder\images\jquery_ui\ui-icons_888888_256x240.png" />
+    <Content Include="New folder\images\jquery_ui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="New folder\images\leftArrow.png" />
+    <Content Include="New folder\images\live\face1.png" />
+    <Content Include="New folder\images\live\face2.png" />
+    <Content Include="New folder\images\live\face3.png" />
+    <Content Include="New folder\images\live\face4.png" />
+    <Content Include="New folder\images\live\face5.png" />
+    <Content Include="New folder\images\live\face6.png" />
+    <Content Include="New folder\images\live\face7.png" />
+    <Content Include="New folder\images\live\face8.png" />
+    <Content Include="New folder\images\loginControl.png" />
+    <Content Include="New folder\images\logo.png" />
+    <Content Include="New folder\images\newLogo.png" />
+    <Content Include="New folder\images\rightArrow.png" />
+    <Content Include="New folder\images\searchSmall.png" />
+    <Content Include="New folder\images\sprites\glyphicons-halflings-white.png" />
+    <Content Include="New folder\images\sprites\glyphicons-halflings.png" />
+    <Content Include="New folder\images\sprites\loginControl.png" />
+    <Content Include="New folder\images\sprites\paymentIcons.png" />
+    <Content Include="New folder\images\sprites\sprite.png" />
+    <Content Include="New folder\images\subArrow.png" />
+    <Content Include="New folder\images\tables\back_disabled.png" />
+    <Content Include="New folder\images\tables\back_enabled.png" />
+    <Content Include="New folder\images\tables\back_enabled_hover.png" />
+    <Content Include="New folder\images\tables\forward_disabled.png" />
+    <Content Include="New folder\images\tables\forward_enabled.png" />
+    <Content Include="New folder\images\tables\forward_enabled_hover.png" />
+    <Content Include="New folder\images\tables\searchSmall.png" />
+    <Content Include="New folder\images\tables\sort.png" />
+    <Content Include="New folder\images\tables\sortDown.png" />
+    <Content Include="New folder\images\tables\sortUp.png" />
+    <Content Include="New folder\images\tables\sort_asc.png" />
+    <Content Include="New folder\images\tables\sort_asc_disabled.png" />
+    <Content Include="New folder\images\tables\sort_both.png" />
+    <Content Include="New folder\images\tables\sort_desc.png" />
+    <Content Include="New folder\images\tables\sort_desc_disabled.png" />
+    <Content Include="New folder\images\tipsy.gif" />
+    <Content Include="New folder\images\user.png" />
+    <Content Include="New folder\images\userLogin.png" />
+    <Content Include="New folder\images\userLogin2.png" />
+    <Content Include="New folder\images\widgetDiv.png" />
+    <Content Include="New folder\index.html" />
+    <Content Include="New folder\js\charts\bar.js" />
+    <Content Include="New folder\js\charts\bar_side.js" />
+    <Content Include="New folder\js\charts\chart.js" />
+    <Content Include="New folder\js\charts\chart_side.js" />
+    <Content Include="New folder\js\charts\hBar.js" />
+    <Content Include="New folder\js\charts\hBar_side.js" />
+    <Content Include="New folder\js\charts\pie.js" />
+    <Content Include="New folder\js\charts\updating.js" />
+    <Content Include="New folder\js\files\bootstrap.js" />
+    <Content Include="New folder\js\files\functions.js" />
+    <Content Include="New folder\js\files\Gridview.js" />
+    <Content Include="New folder\js\files\login.js" />
+    <Content Include="New folder\js\files\roundLoader.js" />
+    <Content Include="New folder\js\Gripviews.js" />
+    <Content Include="New folder\js\plugins\charts\excanvas.min.js" />
+    <Content Include="New folder\js\plugins\charts\jquery.flot.js" />
+    <Content Include="New folder\js\plugins\charts\jquery.flot.orderBars.js" />
+    <Content Include="New folder\js\plugins\charts\jquery.flot.pie.js" />
+    <Content Include="New folder\js\plugins\charts\jquery.flot.resize.js" />
+    <Content Include="New folder\js\plugins\charts\jquery.sparkline.min.js" />
+    <Content Include="New folder\js\plugins\forms\autogrowtextarea.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.autotab.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.chosen.min.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.cleditor.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.dualListBox.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.ibutton.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.inputlimiter.min.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.maskedinput.min.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.mousewheel.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.tagsinput.min.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.uniform.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.validationEngine-en.js" />
+    <Content Include="New folder\js\plugins\forms\jquery.validationEngine.js" />
+    <Content Include="New folder\js\plugins\forms\ui.spinner.js" />
+    <Content Include="New folder\js\plugins\others\jquery.elfinder.js" />
+    <Content Include="New folder\js\plugins\others\jquery.fullcalendar.js" />
+    <Content Include="New folder\js\plugins\tables\jquery.dataTables.js" />
+    <Content Include="New folder\js\plugins\tables\jquery.resizable.js" />
+    <Content Include="New folder\js\plugins\tables\jquery.sortable.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.breadcrumbs.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.collapsible.min.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.colorpicker.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.easytabs.min.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.fancybox.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.fileTree.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.jgrowl.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.progress.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.rounded.progress.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.sourcerer.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.timeentry.min.js" />
+    <Content Include="New folder\js\plugins\ui\jquery.tipsy.js" />
+    <Content Include="New folder\js\plugins\uploader\jquery.plupload.queue.js" />
+    <Content Include="New folder\js\plugins\uploader\plupload.html4.js" />
+    <Content Include="New folder\js\plugins\uploader\plupload.html5.js" />
+    <Content Include="New folder\js\plugins\uploader\plupload.js" />
+    <Content Include="New folder\js\plugins\wizards\jquery.form.js" />
+    <Content Include="New folder\js\plugins\wizards\jquery.form.wizard.js" />
+    <Content Include="New folder\js\plugins\wizards\jquery.validate.js" />
+    <Content Include="New folder\tables_dynamic - Copy.html" />
+    <Content Include="New folder\tables_dynamic.html" />
+    <Content Include="PagesAspx\Albums_Manager.aspx" />
+    <Content Include="PagesAspx\CategoryLevel1_Manager.aspx" />
+    <Content Include="PagesAspx\CategoryLevel2_Manager.aspx" />
+    <Content Include="PagesAspx\Configs_Manager.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="PagesAspx\Customers_Manager.aspx" />
+    <Content Include="PagesAspx\ExtendProperties_Manager.aspx" />
+    <Content Include="PagesAspx\Files_Manager.aspx" />
+    <Content Include="PagesAspx\Languages_Manager.aspx" />
+    <Content Include="PagesAspx\News_History_Manager.aspx" />
+    <Content Include="PagesAspx\Contents_Manager.aspx" />
+    <Content Include="PagesAspx\PermitDetails_Manager.aspx" />
+    <Content Include="PagesAspx\Permits_Manager.aspx" />
+    <Content Include="PagesAspx\PermitUserMappings_Manager.aspx" />
+    <Content Include="PagesAspx\Services_Manager.aspx" />
+    <Content Include="PagesAspx\SystemUsers_Manager.aspx" />
+    <Content Include="Templates\Lst_Contents.htm" />
+    <Content Include="Templates\Ins_CategoryLevel2-1.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_001.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_002.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_003.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_004.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_005.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_006.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_007.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_008.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_009.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1ToCategoryLevel2_010.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_001.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_002.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_003.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_004.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_005.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_006.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_007.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_008.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_009.htm" />
+    <Content Include="Templates\Ins_ContentToCategoryLevel1_010.htm" />
+    <Content Include="JS\FRAMEWORK\CMS.Menu.Level1.js" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_001.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_002.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_003.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_004.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_005.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_006.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_007.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_008.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_009.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1ToCategoryLevel2_010.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_001.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_002.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_003.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_004.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_005.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_006.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_007.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_008.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_009.htm" />
+    <Content Include="Templates\Upd_ContentToCategoryLevel1_010.htm" />
+    <Content Include="Templates\Upd_Files.htm" />
+    <Content Include="Templates\Ins_Files.htm" />
+    <Content Include="Templates\Ins_News_History.htm" />
+    <Content Include="Templates\Upd_Albums.htm" />
+    <Content Include="Templates\Upd_BookingHalls_ForWebsiteBooking.htm" />
+    <Content Include="Templates\Upd_BookingRooms_ForWebsiteBooking.htm" />
+    <Content Include="Templates\Upd_BookingVIPHalls_ForCalendar.htm" />
+    <Content Include="Templates\Upd_CategoryLevel1.htm" />
+    <Content Include="Templates\Upd_CategoryLevel2.htm" />
+    <Content Include="Templates\Upd_Configs.htm" />
+    <Content Include="Templates\Upd_Customers.htm" />
+    <Content Include="Templates\Upd_ExtendProperties.htm" />
+    <Content Include="Templates\Upd_Halls.htm" />
+    <Content Include="Templates\Upd_Images.htm" />
+    <Content Include="Templates\Upd_Languages.htm" />
+    <Content Include="Templates\Upd_Contents.htm" />
+    <Content Include="Templates\Upd_News_History.htm" />
+    <Content Include="Templates\Upd_PermitDetails.htm" />
+    <Content Include="Templates\Upd_Permits.htm" />
+    <Content Include="Templates\Upd_PermitUserMappings.htm" />
+    <Content Include="Templates\Upd_RoomProperties.htm" />
+    <Content Include="Templates\Upd_Rooms.htm" />
+    <Content Include="Templates\Upd_Services.htm" />
+    <Content Include="Templates\Upd_SystemUsers.htm" />
+    <Content Include="Templates\Upd_VIPCustomers.htm" />
+    <Content Include="Templates\Upd_BookingRooms_ForCalendar.htm" />
+    <Content Include="Templates\Upd_BookingHalls_ForCalendar.htm" />
+    <Content Include="Templates\Upd_VIPHalls.htm" />
+    <Content Include="Templates\Ins_Albums.htm" />
+    <Content Include="Templates\Ins_BookingHalls.htm" />
+    <Content Include="Templates\Ins_BookingHalls_ForCalendar.htm" />
+    <Content Include="Templates\Ins_BookingRooms_ForCalendar.htm" />
+    <Content Include="Templates\Ins_BookingVIPHalls_ForCalendar.htm" />
+    <Content Include="Templates\Ins_CategoryLevel1.htm" />
+    <Content Include="Templates\Ins_CategoryLevel2.htm" />
+    <Content Include="Templates\Ins_Configs.htm" />
+    <Content Include="Templates\Ins_Customers.htm" />
+    <Content Include="Templates\Ins_Halls.htm" />
+    <Content Include="Templates\Ins_Images.htm" />
+    <Content Include="Templates\Ins_Contents.htm" />
+    <Content Include="Templates\Ins_RoomProperties.htm" />
+    <Content Include="Templates\Ins_Rooms.htm" />
+    <Content Include="Templates\Ins_VIPCustomers.htm" />
+    <Content Include="Templates\Ins_PermitDetails.htm" />
+    <Content Include="Templates\Ins_Permits.htm" />
+    <Content Include="Templates\Ins_PermitUserMappings.htm" />
+    <Content Include="Templates\Ins_SystemUsers.htm" />
+    <Content Include="Templates\Ins_VIPHalls.htm" />
+    <Content Include="Templates\Ins_ExtendProperties.htm" />
+    <Content Include="Templates\Ins_Languages.htm" />
+    <Content Include="Templates\Ins_Services.htm" />
+    <Content Include="Templates\Test.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\ProcessBackendAction.ashx.cs">
+      <DependentUpon>ProcessBackendAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Action\ProcessImageServiceAction.ashx.cs">
+      <DependentUpon>ProcessImageServiceAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Action\ProcessUploadAction.ashx.cs">
+      <DependentUpon>ProcessUploadAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLogin.aspx.cs">
+      <DependentUpon>CheckLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckLogin.aspx.designer.cs">
+      <DependentUpon>CheckLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS.aspx.cs">
+      <DependentUpon>CMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS.aspx.designer.cs">
+      <DependentUpon>CMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebDefault.Master.cs">
+      <DependentUpon>WebDefault.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebDefault.Master.designer.cs">
+      <DependentUpon>WebDefault.Master</DependentUpon>
+    </Compile>
+    <Compile Include="JS\Common\jqLunarDatepicker\TestLunarCalendar.aspx.cs">
+      <DependentUpon>TestLunarCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main1.aspx.cs">
+      <DependentUpon>Main1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main1.aspx.designer.cs">
+      <DependentUpon>Main1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ucMenuAdmin.ascx.cs">
+      <DependentUpon>ucMenuAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ucMenuAdmin.ascx.designer.cs">
+      <DependentUpon>ucMenuAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Albums_Manager.aspx.cs">
+      <DependentUpon>Albums_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Albums_Manager.aspx.designer.cs">
+      <DependentUpon>Albums_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\CategoryLevel1_Manager.aspx.cs">
+      <DependentUpon>CategoryLevel1_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\CategoryLevel1_Manager.aspx.designer.cs">
+      <DependentUpon>CategoryLevel1_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\CategoryLevel2_Manager.aspx.cs">
+      <DependentUpon>CategoryLevel2_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\CategoryLevel2_Manager.aspx.designer.cs">
+      <DependentUpon>CategoryLevel2_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Configs_Manager.aspx.cs">
+      <DependentUpon>Configs_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Configs_Manager.aspx.designer.cs">
+      <DependentUpon>Configs_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Customers_Manager.aspx.cs">
+      <DependentUpon>Customers_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Customers_Manager.aspx.designer.cs">
+      <DependentUpon>Customers_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\ExtendProperties_Manager.aspx.cs">
+      <DependentUpon>ExtendProperties_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\ExtendProperties_Manager.aspx.designer.cs">
+      <DependentUpon>ExtendProperties_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Files_Manager.aspx.cs">
+      <DependentUpon>Files_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Files_Manager.aspx.designer.cs">
+      <DependentUpon>Files_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Languages_Manager.aspx.cs">
+      <DependentUpon>Languages_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Languages_Manager.aspx.designer.cs">
+      <DependentUpon>Languages_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\News_History_Manager.aspx.cs">
+      <DependentUpon>News_History_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\News_History_Manager.aspx.designer.cs">
+      <DependentUpon>News_History_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Contents_Manager.aspx.cs">
+      <DependentUpon>Contents_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Contents_Manager.aspx.designer.cs">
+      <DependentUpon>Contents_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\PermitDetails_Manager.aspx.cs">
+      <DependentUpon>PermitDetails_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\PermitDetails_Manager.aspx.designer.cs">
+      <DependentUpon>PermitDetails_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Permits_Manager.aspx.cs">
+      <DependentUpon>Permits_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Permits_Manager.aspx.designer.cs">
+      <DependentUpon>Permits_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\PermitUserMappings_Manager.aspx.cs">
+      <DependentUpon>PermitUserMappings_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\PermitUserMappings_Manager.aspx.designer.cs">
+      <DependentUpon>PermitUserMappings_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\Services_Manager.aspx.cs">
+      <DependentUpon>Services_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\Services_Manager.aspx.designer.cs">
+      <DependentUpon>Services_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAspx\SystemUsers_Manager.aspx.cs">
+      <DependentUpon>SystemUsers_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAspx\SystemUsers_Manager.aspx.designer.cs">
+      <DependentUpon>SystemUsers_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebDefault1.Master.cs">
+      <DependentUpon>WebDefault1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebDefault1.Master.designer.cs">
+      <DependentUpon>WebDefault1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ActionHandler\ActionHandler.csproj">
+      <Project>{CDB365FD-663E-4EBA-88F2-C1ADCE6CB092}</Project>
+      <Name>ActionHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BussinessLogic\BussinessLogic.csproj">
+      <Project>{B398596C-F3BD-4201-B518-B38F7B6943EB}</Project>
+      <Name>BussinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CORE\CORE.csproj">
+      <Project>{00C0CB4D-6D23-41FA-9AA9-C6D8D282F729}</Project>
+      <Name>CORE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccesss\DataAccess.csproj">
+      <Project>{6f7d0edc-e69c-4bdc-b156-9af9dd9cbe82}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\EntitiesExt.csproj">
+      <Project>{33744C62-A932-4E17-8839-A3871C4B4FC2}</Project>
+      <Name>EntitiesExt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{27D615F6-A77C-4CAE-B476-A8F9D71CC71E}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Action\ProcessBackendAction.ashx" />
+    <Content Include="Action\ProcessUploadAction.ashx" />
+    <Content Include="Action\ProcessImageServiceAction.ashx" />
+    <Content Include="WebDefault.Master" />
+    <Content Include="CSS\Backup\CSSBackEnd\font\fontawesome-webfont.eot" />
+    <Content Include="CSS\Backup\CSSBackEnd\font\fontawesome-webfont.ttf" />
+    <Content Include="CSS\Backup\CSSBackEnd\font\fontawesome-webfont.woff" />
+    <Content Include="CSS\Backup\vssver2.scc" />
+    <Content Include="CSS\font\.DS_Store" />
+    <Content Include="CSS\font\icomoon.eot" />
+    <Content Include="CSS\font\icomoon.ttf" />
+    <Content Include="CSS\font\icomoon.woff" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\CHANGES.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\LICENSE.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\scayt\README.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\plugins\wsc\README.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\README.md" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="JS\Common\ckeditor_4.4.7_full\ckeditor\skins\moono\readme.md" />
+    <None Include="JS\Common\Flexigrid-table\css\flexigrid.less" />
+    <Content Include="JS\LIBRARY\Lotus.Lib.GUI.js" />
+    <Content Include="JS\LIBRARY\.DS_Store" />
+    <Content Include="JS\LIBRARY\charts\.DS_Store" />
+    <Content Include="JS\LIBRARY\files\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\charts\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\forms\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\others\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\tables\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\ui\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\uploader\.DS_Store" />
+    <Content Include="JS\LIBRARY\plugins\wizards\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\minified\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\minified\plugins\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\minified\utils\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\uncompressed\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\uncompressed\easing\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\uncompressed\plugins\.DS_Store" />
+    <Content Include="JS\Common\GreenSock\uncompressed\utils\.DS_Store" />
+    <None Include="JS\Uploadify\com\adobe\air\logging\FileTarget.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\HMAC.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\MD5.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\MD5Stream.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\SHA1.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\SHA224.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\SHA256.as" />
+    <None Include="JS\Uploadify\com\adobe\crypto\WSSEUsernameToken.as" />
+    <None Include="JS\Uploadify\com\adobe\errors\IllegalStateError.as" />
+    <None Include="JS\Uploadify\com\adobe\fileformats\vcard\Address.as" />
+    <None Include="JS\Uploadify\com\adobe\fileformats\vcard\Email.as" />
+    <None Include="JS\Uploadify\com\adobe\fileformats\vcard\Phone.as" />
+    <None Include="JS\Uploadify\com\adobe\fileformats\vcard\VCard.as" />
+    <None Include="JS\Uploadify\com\adobe\fileformats\vcard\VCardParser.as" />
+    <None Include="JS\Uploadify\com\adobe\images\BitString.as" />
+    <None Include="JS\Uploadify\com\adobe\images\JPGEncoder.as" />
+    <None Include="JS\Uploadify\com\adobe\images\PNGEncoder.as" />
+    <None Include="JS\Uploadify\com\adobe\net\DynamicURLLoader.as" />
+    <None Include="JS\Uploadify\com\adobe\net\IURIResolver.as" />
+    <None Include="JS\Uploadify\com\adobe\net\MimeTypeMap.as" />
+    <None Include="JS\Uploadify\com\adobe\net\proxies\RFC2817Socket.as" />
+    <None Include="JS\Uploadify\com\adobe\net\URI.as" />
+    <None Include="JS\Uploadify\com\adobe\net\URIEncodingBitmap.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\Database.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\Definition.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\Dict.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\DictionaryServer.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\ConnectedEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\DatabaseEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\DefinitionEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\DefinitionHeaderEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\DictionaryServerEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\DisconnectedEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\ErrorEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\MatchEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\MatchStrategiesEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\events\NoMatchEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\MatchStrategy.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\Response.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\util\CompleteResponseEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\protocols\dict\util\SocketHelper.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSON.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSONDecoder.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSONEncoder.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSONParseError.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSONToken.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSONTokenizer.as" />
+    <None Include="JS\Uploadify\com\adobe\serialization\json\JSONTokenType.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\ArrayUtil.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\DateUtil.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\DictionaryUtil.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\IntUtil.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\NumberFormatter.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\StringUtil.as" />
+    <None Include="JS\Uploadify\com\adobe\utils\XMLUtil.as" />
+    <None Include="JS\Uploadify\com\adobe\webapis\events\ServiceEvent.as" />
+    <None Include="JS\Uploadify\com\adobe\webapis\ServiceBase.as" />
+    <None Include="JS\Uploadify\com\adobe\webapis\URLLoaderBase.as" />
+    <None Include="JS\Uploadify\uploadify.fla" />
+    <None Include="Languages\EN\.DS_Store" />
+    <Content Include="New folder\css\.DS_Store" />
+    <Content Include="New folder\css\font\.DS_Store" />
+    <Content Include="New folder\css\font\icomoon.eot" />
+    <Content Include="New folder\css\font\icomoon.ttf" />
+    <Content Include="New folder\css\font\icomoon.woff" />
+    <Content Include="New folder\images\.DS_Store" />
+    <Content Include="New folder\images\backgrounds\.DS_Store" />
+    <Content Include="New folder\images\elements\.DS_Store" />
+    <Content Include="New folder\images\elements\colorPicker\Thumbs.db" />
+    <Content Include="New folder\images\elements\forms\.DS_Store" />
+    <Content Include="New folder\images\elements\lightbox\.DS_Store" />
+    <Content Include="New folder\images\elements\loaders\.DS_Store" />
+    <Content Include="New folder\images\elements\progress\.DS_Store" />
+    <Content Include="New folder\images\elements\ui\.DS_Store" />
+    <Content Include="New folder\images\elements\ui\v1.psd" />
+    <Content Include="New folder\images\elements\uploader\.DS_Store" />
+    <Content Include="New folder\images\icons\.DS_Store" />
+    <Content Include="New folder\images\icons\color\.DS_Store" />
+    <Content Include="New folder\images\icons\light\.DS_Store" />
+    <Content Include="New folder\images\icons\options" />
+    <Content Include="New folder\images\icons\subnav\.DS_Store" />
+    <Content Include="New folder\images\icons\usual\.DS_Store" />
+    <Content Include="New folder\images\sprites\.DS_Store" />
+    <Content Include="New folder\images\tables\.DS_Store" />
+    <Content Include="New folder\js\.DS_Store" />
+    <Content Include="New folder\js\charts\.DS_Store" />
+    <Content Include="New folder\js\files\.DS_Store" />
+    <Content Include="New folder\js\plugins\.DS_Store" />
+    <Content Include="New folder\js\plugins\charts\.DS_Store" />
+    <Content Include="New folder\js\plugins\forms\.DS_Store" />
+    <Content Include="New folder\js\plugins\others\.DS_Store" />
+    <Content Include="New folder\js\plugins\tables\.DS_Store" />
+    <Content Include="New folder\js\plugins\ui\.DS_Store" />
+    <Content Include="New folder\js\plugins\uploader\.DS_Store" />
+    <Content Include="New folder\js\plugins\wizards\.DS_Store" />
+    <Content Include="New folder\js\php\.DS_Store" />
+    <Content Include="New folder\js\php\connector.php" />
+    <Content Include="New folder\js\php\elFinder.class.php" />
+    <Content Include="New folder\js\php\elFinderConnector.class.php" />
+    <Content Include="New folder\js\php\elFinderVolumeDriver.class.php" />
+    <Content Include="New folder\js\php\elFinderVolumeLocalFileSystem.class.php" />
+    <Content Include="New folder\js\php\jqueryFileTree.php" />
+    <Content Include="New folder\js\php\upload.php" />
+    <None Include="Properties\PublishProfiles\CMS.pubxml" />
+    <None Include="Uploads\Thumbs.db" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebDefault1.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2338</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CMS</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

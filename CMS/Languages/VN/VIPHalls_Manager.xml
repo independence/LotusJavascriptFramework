@@ -1,0 +1,33 @@
+﻿<root>
+  <item Index="0">Mã Hội Trường</item>
+  <item Index="1">Loại bàn</item>
+  <item Index="2">bàn 6</item>
+  <item Index="3">bàn 8</item>
+  <item Index="4">Số bàn trung bình</item>
+  <item Index="5">Số bàn tối đa</item>
+  <item Index="6">Ảnh</item>
+  <item Index="7"> Chọn thư mục ảnh</item>
+  <item Index="8">Chỉ chọn thư mục ảnh</item>
+  <item Index="8"> Có lỗi trong quá trình tải lên thư mục</item>
+  <item Index="10">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="11">Kích thước ảnh quá lớn</item>
+  <item Index="12">Trạng thái</item>
+  <item Index="13">Trạng thái 0</item>
+  <item Index="14">Trạng thái 1</item>
+  <item Index="15">Trạng thái 2</item>
+  <item Index="16">Trạng thái 3</item>
+  <item Index="17">Trạng thái 4</item>
+  <item Index="18">Tạm khóa</item>
+  <item Index="19">Có</item>
+  <item Index="20">Không</item>
+  <item Index="21">Ngôn ngữ</item>
+  <item Index="22">Giá thuê</item>
+  <item Index="23">Đơn vị</item>
+  <item Index="24">Trích dẫn</item>
+  <item Index="25">Giới thiệu</item>
+
+
+  <item Index="26">Sửa</item>
+  <item Index="27">Xóa</item>
+  <item Index="28">Mã</item>
+</root>

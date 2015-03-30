@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () { setTimeout(' Init_Dialog_Ins("#divPermit","#divUser");', 1000) });
+</script>
+<script language="javascript" type="text/javascript">
+  </script>
+<div>
+
+
+
+            <div class="col width-45" style="width: 100% !important">
+
+                <fieldset>
+                    <legend>{$P.Lang[26].Text}</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmIns_PermitUserMappings"
+                    name="frmIns_PermitUserMappings" onsubmit="return false;">
+                   <input type="hidden" id="txt_ID" name="txt_ID"  />
+                    <table class="admintable" width="100%">
+						 <tr><td class="key">{$P.Lang[0].Text}</td><td class="paramlist_key">
+                             <div id="divPermit">
+                                        </div>
+						 </td>
+                             <td class="key">{$P.Lang[1].Text}</td><td class="paramlist_key">
+                                <div id="divUser">
+                                        </div>
+                             </td>
+						 </tr>
+                         <tr><td class="key">{$P.Lang[2].Text}</td>
+                             <td class="paramlist_key"><select id="txt_IsView" name="txt_IsView">
+                                            <option value="true" selected="selected">{$P.Lang[3].Text}</option>
+                                            <option value="false">{$P.Lang[4].Text}</option>
+                                                        </select>
+                                </td>
+                             <td class="key">{$P.Lang[5].Text}</td>
+                             <td class="paramlist_key"><select id="txt_IsInsert" name="txt_IsInsert">
+                                            <option value="true" selected="selected">{$P.Lang[3].Text}</option>
+                                            <option value="false">{$P.Lang[4].Text}</option>
+                                                        </select>
+                                </td>
+                                </tr>
+     
+                         <tr>
+                             </tr>
+                        
+                         <tr><td class="key">{$P.Lang[6].Text}</td>
+                             <td class="paramlist_key"><select id="txt_IsUpdate" name="txt_IsUpdate">
+                                            <option value="true" selected="selected">{$P.Lang[3].Text}</option>
+                                            <option value="false">{$P.Lang[4].Text}</option>
+                                                        </select>
+                                </td>
+                             <td class="key">{$P.Lang[7].Text}</td>
+                             <td class="paramlist_key"><select id="txt_IsDelete" name="txt_IsDelete">
+                                           <option value="true" selected="selected">{$P.Lang[3].Text}</option>
+                                            <option value="false">{$P.Lang[4].Text}</option>
+                                                        </select>
+                                </td>
+                             </tr>
+                         
+                         <tr>
+                             </tr>
+                         
+                         <tr><td class="key">{$P.Lang[8].Text}</td>
+                             <td class="paramlist_key"><select id="txt_IsSpecial" name="txt_IsSpecial">
+                                            <option value="true" selected="selected">{$P.Lang[3].Text}</option>
+                                            <option value="false">{$P.Lang[4].Text}</option>
+                                                        </select>
+                                </td>
+                             </tr>
+                         
+                         <tr><td class="key">{$P.Lang[9].Text}</td><td class="paramlist_key"><input type="text" id="txt_Description" name="txt_Description" /></td>
+                             <td class="key">{$P.Lang[10].Text}</td><td class="paramlist_key"><input type="text" id="txt_Logs" name="txt_Logs" /></td>
+                         </tr>
+                        
+                         
+                         <tr><td class="key">{$P.Lang[11].Text}</td><td class="paramlist_key"><select id="txt_Type" name="txt_Type">
+                                            <option value="0"  ">{$P.Lang[12].Text}</option>
+                                            <option value="1"  selected="selected">{$P.Lang[13].Text}</option>
+                                            <option value="2"  >{$P.Lang[14].Text}</option>
+                                            <option value="3" >{$P.Lang[15].Text}</option>
+                                            <option value="4" >{$P.Lang[16].Text}</option>
+                                                        </select></td>
+                             <td class="key">{$P.Lang[17].Text}</td><td class="paramlist_key"><select id="txt_Status" name="txt_Status">
+                                            <option value="0"  >{$P.Lang[18].Text}</option>
+                                            <option value="1" selected="selected" >{$P.Lang[19].Text}</option>
+                                            <option value="2"  >{$P.Lang[20].Text}</option>
+                                                              </select></td>
+                         </tr>
+                      </table>
+                    </form>
+                </fieldset>
+           
+    </div>
+</div>

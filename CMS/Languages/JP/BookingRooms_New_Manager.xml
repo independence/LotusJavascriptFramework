@@ -1,0 +1,67 @@
+﻿<root>
+  <item Index="0">話題</item>
+  <item Index="1">チェックインの予定</item>
+  <item Index="2">チェックアウトの予定</item>
+  <item Index="3">部屋</item>
+  <item Index="4">お客様</item>
+  <item Index="5">値段</item>
+  <item Index="6">単位</item>
+  <item Index="7">[その他]</item>
+  <item Index="8">メモ</item>
+  <item Index="9">支払い</item>
+  <item Index="10">現金</item>
+  <item Index="11">振込み</item>
+  <item Index="12">チェック</item>
+  <item Index="13">支払い状態</item>
+  <item Index="14">支払い未完了</item>
+  <item Index="15">立替デポジット</item>
+  <item Index="16">支払い完了</item>
+  <item Index="17">金額</item>
+  <item Index="18">状態</item>
+  <item Index="19">状態 0</item>
+  <item Index="20">状態 1</item>
+  <item Index="21">状態 2</item>
+  <item Index="22">状態 3</item>
+  <item Index="23">状態 4</item>
+  <item Index="24">一応ロック</item>
+  <item Index="25">はい</item>
+  <item Index="26">いいえ</item>
+  <item Index="27">予約状態</item>
+  <item Index="28">チェックアウトした</item>
+  <item Index="29">取り消し</item>
+  <item Index="30">[営業] 部屋を予約 </item>
+  <item Index="31">[Website] 部屋を予約</item>
+  <item Index="32">チェックインした</item>
+
+
+  <item Index="33">スケジュール</item>
+  <item Index="34">ローディング...</item>
+  <item Index="35">ネットワックのためかも、データが見つけられなかった</item>
+  <item Index="36">新イベント</item>
+  <item Index="37">今日</item>
+  <item Index="38">日</item>
+  <item Index="39">週</item>
+  <item Index="40">月</item>
+  <item Index="41">更新</item>
+  <item Index="42">取り込んで</item>
+  
+  <item Index="43">言語</item>
+  <item Index="44">連続</item>
+  <item Index="45">違い</item>
+  <item Index="46">正しい</item>
+
+  <item Index="47">色</item>
+  <item Index="48">既定色</item>
+  <item Index="49">グリーン</item>
+  <item Index="50">薄い緑</item>
+  <item Index="51">黄色</item>
+  <item Index="52">オレンジ</item>
+
+  <item Index="53">ドラッグアンドドロップ</item>
+  <item Index="54">はい</item>
+  <item Index="55">いいえg</item>
+
+  <item Index="56">変更でもいい</item>
+  <item Index="57">いいえ</item>
+  <item Index="58">はい</item>
+</root>

@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+    Init_Dialog_Ins();
+</script>
+
+<div>
+    <div id="element-box">
+        <fieldset>
+            <legend>Thêm BookingHalls </legend>
+            <form id="frmIns_BookingHalls" enctype="multipart/form-data" method="post" action="">
+                
+                            <input type="hidden" id="txt_Code" name="txt_Code" />
+                <!--<input type="hidden" id="txt_Type" name="txt_Type" value="" />-->
+                <!--##############################################################-->
+                <table class="admintable">
+
+
+                    <tr>
+                        <td class="key">{$P.Lang[8].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_IDCustomer" name="txt_IDCustomer" value="{$T.BookingHalls_Group[0].IDCustomer}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[9].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_CodeHall" name="txt_CodeHall" value="{$T.BookingHalls_Group[0].CodeHall}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[1].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_CreatedByIDUser" name="txt_CreatedByIDUser" value="{$T.BookingHalls_Group[0].CreatedByIDUser}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[0].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_CreatedDate" name="txt_CreatedDate" value="{$T.BookingHalls_Group[0].CreatedDate}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[20].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Cost" name="txt_Cost" value="{$T.BookingHalls_Group[0].Cost}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[21].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_CostUnit" name="txt_CostUnit" value="{$T.BookingHalls_Group[0].CostUnit}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[22].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_PayMethod" name="txt_PayMethod" value="{$T.BookingHalls_Group[0].PayMethod}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[23].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_StatusPay" name="txt_StatusPay" value="{$T.BookingHalls_Group[0].StatusPay}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[24].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_BookingMoney" name="txt_BookingMoney" value="{$T.BookingHalls_Group[0].BookingMoney}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[25].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_BookingStatus" name="txt_BookingStatus" value="{$T.BookingHalls_Group[0].BookingStatus}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[26].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Unit" name="txt_Unit" value="{$T.BookingHalls_Group[0].Unit}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[27].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_TableOrPerson" name="txt_TableOrPerson" value="{$T.BookingHalls_Group[0].TableOrPerson}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[28].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Date" name="txt_Date" value="{$T.BookingHalls_Group[0].Date}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[29].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_LunarDate" name="txt_LunarDate" value="{$T.BookingHalls_Group[0].LunarDate}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[30].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Note" name="txt_Note" value="{$T.BookingHalls_Group[0].Note}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[31].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Subject" name="txt_Subject" value="{$T.BookingHalls_Group[0].Subject}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[32].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Location" name="txt_Location" value="{$T.BookingHalls_Group[0].Location}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[33].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Description" name="txt_Description" value="{$T.BookingHalls_Group[0].Description}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[34].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_StartTime" name="txt_StartTime" value="{$T.BookingHalls_Group[0].StartTime}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[35].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_EndTime" name="txt_EndTime" value="{$T.BookingHalls_Group[0].EndTime}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[36].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_IsAllDayEvent" name="txt_IsAllDayEvent" value="{$T.BookingHalls_Group[0].IsAllDayEvent}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[37].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Color" name="txt_Color" value="{$T.BookingHalls_Group[0].Color}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[38].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_IsRecurring" name="txt_IsRecurring" value="{$T.BookingHalls_Group[0].IsRecurring}" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[39].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_IsEditable" name="txt_IsEditable"  /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[40].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_AdditionalColumn1" name="txt_AdditionalColumn1" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td class="key">{$P.Lang[3].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <label for="image_file">
+                                Chọn file ảnh</label>
+                            <input type="file" name="image_file" id="image_file" onchange="fileSelected();" />
+                            <input type="button" style="width: 100%; float: left" value="Upload" onclick="startUploading('frmIns_BookingHalls', 'BookingHalls_IMAGE', 'txt_Image', true, -1, -1, true)" />
+                            <input type="hidden" id="txt_Image" name="txt_Image" />
+                        </td>
+                        <td class="paramlist_key" colspan="2">
+                            <div style="">
+
+                                <div id="fileinfo">
+                                    <div id="filename">
+                                    </div>
+                                    <div id="filesize">
+                                    </div>
+                                    <div id="filetype">
+                                    </div>
+                                    <div id="filedim">
+                                    </div>
+                                </div>
+                                <img id="preview" />
+                            </div>
+
+                            <div style="float: left; width: 100%">
+                                <div id="error">Chỉ chọn file ảnh</div>
+                                <div id="error2">Có lỗi trong quá trình upload file</div>
+                                <div id="abort">Upload đã được ngừng bởi người dùng hoặc do đường truyền</div>
+                                <div id="warnsize">Kích thước ảnh quá lớn</div>
+
+                                <div id="progress_info">
+                                    <div id="progress">
+                                    </div>
+                                    <div id="progress_percent">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clear_both">
+                                    </div>
+                                    <div>
+                                        <div id="speed">
+                                            &nbsp;
+                                        </div>
+                                        <div id="remaining">
+                                            &nbsp;
+                                        </div>
+                                        <div id="b_transfered">
+                                            &nbsp;
+                                        </div>
+                                        <div class="clear_both">
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="upload_response" />
+                                    <input type="hidden" id="txtImage" />
+
+
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[4].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <select id="txt_Status" name="txt_Status">
+                                <option value="0" selected="selected">{$P.Lang[15].Text}</option>
+                                <option value="1">{$P.Lang[16].Text}</option>
+                                <option value="2">{$P.Lang[17].Text} </option>
+                                <option value="3">{$P.Lang[18].Text}</option>
+                                <option value="4">{$P.Lang[19].Text} </option>
+                            </select>
+                        </td>
+                        <!-- </tr>
+                        <tr>-->
+                        <td class="key">{$P.Lang[5].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <select id="txt_Disable" name="txt_Disable">
+                                <option value="false" selected="selected">{$P.Lang[41].Text} </option>
+                                <option value="true">{$P.Lang[42].Text} </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <!--##############################################################-->
+                <div id="tabs">
+                    <ul>
+                        {#for index = 1 to $P.NumLang}
+                        <li><a href="#tabs-{$T.index}">{$P.Lang[43].Text} {$T.index}</a></li>
+                        {#/for}
+                    </ul>
+                    {#for index = 1 to $P.NumLang}
+                    <div id="tabs-{$T.index}">
+                        <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+                        <table class="admintable" width="100%">
+
+
+                            <tr>
+                                <td class="key" width="10%">{$P.Lang[6].Text}
+                                </td>
+                                <td class="paramlist_key" colspan="3">
+                                    <textarea id="txt_Intro_Lang{$T.index}" name="txt_Intro_Lang{$T.index}" class="txt_Intro_Lang{$T.index}" style="width: 625px; height: 63px;" rows="10"
+                                        cols="45"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="key" width="10%">{$P.Lang[7].Text}
+                                </td>
+                                <td class="paramlist_key" colspan="3">
+                                    <textarea id="txt_Info_Lang{$T.index}" name="txt_Info_Lang{$T.index}" class="txt_Info" rows="10" cols="45"></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    {#/for}
+                </div>
+
+                <!--##############################################################-->
+            </form>
+        </fieldset>
+    </div>
+</div>

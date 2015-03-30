@@ -1,0 +1,64 @@
+<root>
+<!--==================MAIN.ASPX=====================-->
+  <item Index="0">Chọn kiểu</item>
+  <item Index="1">Content</item>
+  <item Index="2">Tag</item>
+  <item Index="3">Ngày Tạo</item>
+  <item Index="4">Trạng thái</item>
+  <!--===================Insert Content =============================-->
+  <item Index="5">Kiểu tin</item>
+  <item Index="6">Ngày xuất bản</item>
+  <item Index="7">Ngày hết hạn</item>
+  <item Index="8">Ngày tạo</item>
+  <item Index="9">Ngày sửa</item>
+  <item Index="10">Người sửa</item>
+  <item Index="11">Ngày đăng</item>
+  <item Index="12">Ngày hết hạn</item>
+  <item Index="13">Mã nhóm tin cấp 1</item>
+  <item Index="14">Mã Album</item>
+  <item Index="15">Chọn ảnh mặc định</item>
+  <item Index="16">Trạng thái</item>
+  <item Index="17">Chỉ chọn thư mục ảnh</item>
+  <item Index="18"> Có lỗi trong quá trình tải thư mục</item>
+  <item Index="19">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="20">Kích thước ảnh quá lớn</item>
+  <item Index="21">Trạng thái</item>
+  <item Index="22">Khóa</item>
+  <item Index="23">Ngôn ngữ 1</item>
+  <item Index="24">Ngôn ngữ 2</item>
+  <item Index="25">Ngôn ngữ 3</item>
+  <item Index="26">Tiêu đề ngôn ngữ</item>
+  <item Index="27">Intro</item>
+  <item Index="28">Info</item>
+  <item Index="29">Có</item>
+  <item Index="30">Ngôn ngữ</item>
+  <item Index="31">Tiêu đề</item>
+  <item Index="32">Trích dẫn</item>
+  <item Index="33">Giới thiệu</item>
+
+  <item Index="34">Sửa</item>
+  <item Index="35">Xóa</item>
+  <item Index="36">Mã</item>
+
+  <item Index="37">Tin tức</item>
+  <item Index="38">Thêm Tin tức </item>
+  <item Index="39">Ghi chú</item>
+  <item Index="40">Bạn có chắc muốn xóa dòng này ?</item>
+  <item Index="41">Chọn ảnh 1</item>
+  <item Index="42">Chọn ảnh 2</item>
+  <item Index="43">Chọn ảnh 3</item>
+
+  <item Index="44">Số lượt xem</item>
+  <item Index="45">Loại 1</item>
+  <item Index="46">Loại 2</item>
+  <item Index="47">Loại 3</item>
+  <item Index="48">Thuộc tính mở rộng</item>
+
+  <item Index="49">Lượt xem</item>
+
+  <item Index="50">Dữ liệu dự phòng 1</item>
+  <item Index="51">Dữ liệu dự phòng 2</item>
+  <item Index="52">Dữ liệu dự phòng 3</item>
+  <item Index="53">Dữ liệu dự phòng</item>
+  
+</root>

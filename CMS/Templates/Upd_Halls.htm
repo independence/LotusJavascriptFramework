@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () { setTimeout('Init_Dialog_Upd();', 1000); });
+</script>
+<div>
+    <div id="element-box">
+
+            <div class="col width-45" style="width: 100% !important">
+                <fieldset>
+                    <legend>Sửa Hội trường</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_Halls" name="frmUpd_Halls"
+                    onsubmit="return false;">
+                    <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.Halls_Group[0].ID}" />
+                <!--##############################################################-->
+            <table class="admintable" width="100%">
+                <tr>
+                    <td class="key" width="20%">
+                        {$P.Lang[0].Text}
+                    </td>
+                    <td class="paramlist_key" width="30%">
+                        <input type="text" id="txt_Sku" name="txt_Sku" value="{$T.Halls_Group[0].Sku}"/>
+                    </td>
+                    <!--</tr>
+                        <tr>-->
+                    <td class="key" width="20%">
+                       {$P.Lang[1].Text}
+                    </td>
+                    <td class="paramlist_key" width="30%">
+                        <select id="txt_TableType" name="txt_TableType">
+                            <option value="6"  {#if $T.Halls_Group[0].TableType == 6} selected="selected"  {#/if}>{$P.Lang[2].Text}  </option>
+                            <option value="10" {#if $T.Halls_Group[0].TableType == 10} selected="selected"  {#/if}>{$P.Lang[3].Text}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="key">
+                         {$P.Lang[4].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_NumTableStandard" name="txt_NumTableStandard" value="{$T.Halls_Group[0].NumTableStandard}" />
+                        <span id="lbWarning_NumTableStandard"></span>
+                    </td>
+                    <!--</tr>
+                        <tr>-->
+                    <td class="key">
+                       {$P.Lang[5].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_NumTableMax" name="txt_NumTableMax" value="{$T.Halls_Group[0].NumTableMax}" />
+                        <span id="lbWarning_NumTableMax"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="key">
+                       {$P.Lang[6].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <label for="image_file">
+                           {$P.Lang[7].Text}</label>
+                        <input type="file" name="image_file" id="image_file" onchange="fileSelected();" />
+                        <input type="button"  style="width:100%;float:left" value="Upload" onclick="startUploading('frmUpd_Halls','HALLS_IMAGE','txt_Image',true,-1,-1,true)" />
+                        <input type="hidden" id="txt_Image" name="txt_Image" value="{$T.Halls_Group[0].Image}"/>
+                    </td>
+                    <td class="paramlist_key" colspan="2">
+                        <div style="">
+                        
+                        <div id="fileinfo">
+                            <div id="filename">
+                            </div>
+                            <div id="filesize">
+                            </div>
+                            <div id="filetype">
+                            </div>
+                            <div id="filedim">
+                            </div>
+                        </div>
+                        <img id="preview" src="/Uploads/Halls/{$T.Halls_Group[0].Image}" alt="{$T.Halls_Group[0].Intro}" />
+                        </div>
+
+                        <div style="float:left; width:100%">
+                         <div id="error">{$P.Lang[8].Text}</div>
+                         <div id="error2">{$P.Lang[9].Text}</div>
+                         <div id="abort">{$P.Lang[10].Text}</div>
+                         <div id="warnsize">{$P.Lang[11].Text}</div>  
+                        <div id="progress_info">
+                            <div id="progress">
+                            </div>
+                            <div id="progress_percent">
+                                &nbsp;</div>
+                            <div class="clear_both">
+                            </div>
+                            <div>
+                                <div id="speed">
+                                    &nbsp;</div>
+                                <div id="remaining">
+                                    &nbsp;</div>
+                                <div id="b_transfered">
+                                    &nbsp;</div>
+                                <div class="clear_both">
+                                </div>
+                            </div>
+                            <input type="hidden" id="upload_response" />
+                            <input type="hidden" id="txt_OldImage" name="txt_OldImage" value="{$T.Halls_Group[0].Image}" />
+
+                            
+                        </div>
+                       </div>
+                        
+                   </td>
+                </tr>
+                <tr>
+                    <td class="key">
+                       {$P.Lang[12].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <select id="txt_Status" name="txt_Status">
+                            <option value="0" {#if $T.Halls_Group[0].Status == 0} selected="selected"  {#/if}>{$P.Lang[13].Text} </option>
+                            <option value="1" {#if $T.Halls_Group[0].Status == 1} selected="selected"  {#/if}>{$P.Lang[14].Text} </option>
+                            <option value="2" {#if $T.Halls_Group[0].Status == 2} selected="selected"  {#/if}>{$P.Lang[15].Text}</option>
+                            <option value="3" {#if $T.Halls_Group[0].Status == 3} selected="selected"  {#/if}>{$P.Lang[16].Text}</option>
+                            <option value="4" {#if $T.Halls_Group[0].Status == 4} selected="selected"  {#/if}>{$P.Lang[17].Text} </option>
+                        </select>
+                    </td>
+                    <!-- </tr>
+                        <tr>-->
+                    <td class="key">
+                        {$P.Lang[18].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <select id="txt_Disable" name="txt_Disable">
+                            <option value="false"  {#if $T.Halls_Group[0].Disable == false} selected="selected"  {#/if}>{$P.Lang[19].Text} </option>
+                            <option value="true"   {#if $T.Halls_Group[0].Disable == true} selected="selected"  {#/if}>{$P.Lang[20].Text} </option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+                <!--##############################################################-->
+                <div id="tabs">
+                    <ul>
+                        {#for index = 1 to $P.NumLang} <li><a href="#tabs-{$T.index}">{$P.Lang[21].Text} {$T.index}</a></li>{#/for}
+                    </ul>
+                    {#for index = 1 to $P.NumLang}
+                    <div id="tabs-{$T.index}">
+
+                     <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+                     <table class="admintable">
+                      <tr>
+                            <td class="key">
+                                {$P.Lang[22].Text}
+                            </td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_CostRef_Lang{$T.index}" class="txt_CostRef" name="txt_CostRef_Lang{$T.index}" value="{$T.Halls_Group[$T.index-1].CostRef}" />
+                                <span id="lbWarning_CostRef_Lang{$T.index}" class="lbWarning_CostRef"></span>
+                            </td>
+
+                            <td class="key">
+                                 {$P.Lang[23].Text}
+                            </td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_CostUnit_Lang{$T.index}" name="txt_CostUnit_Lang{$T.index}" value="{$T.Halls_Group[$T.index-1].CostUnit}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key" width="10%">
+                            {$P.Lang[24].Text}  
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <textarea id="txt_Intro_Lang{$T.index}" name="txt_Intro_Lang{$T.index}" class="txt_Intro" style="width:100%; height: 63px;" rows="10"cols="45">{$T.Halls_Group[$T.index-1].Intro}</textarea>
+                             
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key" width="10%">
+                               {$P.Lang[25].Text}
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <textarea id="txt_Info_Lang{$T.index}" name="txt_Info_Lang{$T.index}" class="txt_Info" rows="10"cols="45" style="width:100%; height: 63px;">{$T.Halls_Group[$T.index-1].Info}</textarea>
+                            </td>
+                        </tr>
+
+                    </table>
+                    </div>
+                    {#/for}
+                </div>
+                <!--##############################################################-->
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+  
+    </div>
+</div>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script language="javascript" type="text/javascript">
+    Init_Dialog_Upd();
+</script>
+<div>
+    <div id="element-box">
+
+            <div class="col width-45" style="width: 100% !important">
+                <fieldset>
+                    <legend>{$P.Lang[26].Text}</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_ExtendProperties" name="frmUpd_ExtendProperties"
+                    onsubmit="return false;">
+                    <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.ExtendProperties_Group[0].ID}" />
+                        <input type="hidden" id="txt_Code" name="txt_Code" value="{$T.ExtendProperties_Group[0].Code}" />
+					<!--<input type="hidden" id="txt_Type" name="txt_Type" value="{$T.ExtendProperties_Group[0].Type}" />-->
+                <!--##############################################################-->
+            <table class="admintable" width="100%">
+
+                <tr>
+                    <td class="key">{$P.Lang[0].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_Name" name="txt_Name" value="{$T.ExtendProperties_Group[0].Name}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[1].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_Value" name="txt_Value" value="{$T.ExtendProperties_Group[0].Value}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[2].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_ValueType" name="txt_ValueType" value="{$T.ExtendProperties_Group[0].ValueType}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              
+                        
+                <tr>
+                    <td class="key">{$P.Lang[3].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_IDObject" name="txt_IDObject" value="{$T.ExtendProperties_Group[0].IDObject}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[4].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_ObjectType" name="txt_ObjectType" value="{$T.ExtendProperties_Group[0].ObjectType}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[6].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_Group" name="txt_Group" value="{$T.ExtendProperties_Group[0].Group}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[8].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_CodeObject" name="txt_CodeObject" value="{$T.ExtendProperties_Group[0].CodeObject}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+			
+             
+			 <tr>
+
+                    <td class="key" width="20%">
+                        Loại 
+                    </td>
+                    <td class="paramlist_key" colspan="3">
+                        <select id="Select1" name="txt_Type">
+                            <option value="0" {#if $T.ExtendProperties_Group[0].Type == 0} selected="selected"  {#/if}>Type 0 </option>
+                            <option value="1" {#if $T.ExtendProperties_Group[0].Type == 1} selected="selected"  {#/if}>Type 1 </option>
+                            <option value="2" {#if $T.ExtendProperties_Group[0].Type == 2} selected="selected"  {#/if}>Type 2 </option>
+                            <option value="3" {#if $T.ExtendProperties_Group[0].Type == 3} selected="selected"  {#/if}>Type 3 </option>
+                            <option value="4" {#if $T.ExtendProperties_Group[0].Type == 4} selected="selected"  {#/if}>Type 4 </option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="key">
+                        {$P.Lang[7].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <select id="txt_Status" name="txt_Status">
+                            <option value="0" {#if $T.ExtendProperties_Group[0].Status == 0} selected="selected"  {#/if}>Status 0 </option>
+                            <option value="1" {#if $T.ExtendProperties_Group[0].Status == 1} selected="selected"  {#/if}>Status 1 </option>
+                            <option value="2" {#if $T.ExtendProperties_Group[0].Status == 2} selected="selected"  {#/if}>Status 2 </option>
+                            <option value="3" {#if $T.ExtendProperties_Group[0].Status == 3} selected="selected"  {#/if}>Status 3 </option>
+                            <option value="4" {#if $T.ExtendProperties_Group[0].Status == 4} selected="selected"  {#/if}>Status 4 </option>
+                        </select>
+                    </td>
+               
+                </tr>
+            </table>
+                <!--##############################################################-->
+                <div id="tabs">
+                    <ul>
+                        {#for index = 1 to $P.NumLang} <li><a href="#tabs-{$T.index}">{$P.Lang[24].Text} {$T.index}</a></li>{#/for}
+                    </ul>
+                    {#for index = 1 to $P.NumLang}
+                    <div id="tabs-{$T.index}">
+
+                     <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+                     <table class="admintable">
+                      <tr>
+                          
+                        <tr>
+                            <td class="key" width="10%">
+                                Trích dẫn
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <textarea id="txt_Intro_Lang{$T.index}" name="txt_Intro_Lang{$T.index}" class="txt_Intro" style="width:100%; height: 63px;" rows="10"cols="45">{$T.ExtendProperties_Group[$T.index-1].Intro}</textarea>
+                             
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key" width="10%">
+                                Giới thiệu
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <textarea id="txt_Info_Lang{$T.index}" name="txt_Info_Lang{$T.index}" class="txt_Info" rows="10"cols="45" style="width:100%; height: 63px;">{$T.ExtendProperties_Group[$T.index-1].Info}</textarea>
+                            </td>
+                        </tr>
+
+                    </table>
+                    </div>
+                    {#/for}
+                </div>
+                <!--##############################################################-->
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+  
+    </div>
+</div>

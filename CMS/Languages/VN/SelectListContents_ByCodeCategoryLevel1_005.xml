@@ -1,0 +1,56 @@
+﻿
+<root>
+  <item Index="0">Kiểu tin</item>
+  <item Index="1">Tạo bởi</item>
+  <item Index="2">Tag</item>
+  <item Index="3">Ngày tạo</item>
+  <item Index="4">Ngày sửa</item>
+  <item Index="5">Người sửa</item>
+  <item Index="6">Ngày đăng</item>
+  <item Index="7">Ngày hết hạn</item>
+  <item Index="8">Mã nhóm tin cấp 1</item>
+  <item Index="9">Mã Album</item>
+  <item Index="10">Chọn ảnh mặc định</item>
+  <item Index="11"> Chọn thư mục ảnh</item>
+  <item Index="12">Chỉ chọn thư mục ảnh</item>
+  <item Index="13"> Có lỗi trong quá trình tải thư mục</item>
+  <item Index="14">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="15">Kích thước ảnh quá lớn</item>
+  <item Index="16">Trạng thái</item>
+  <item Index="17">Trạng thái 0</item>
+  <item Index="18">Trạng thái 1</item>
+  <item Index="19">Trạng thái 2</item>
+  <item Index="20">Trạng thái 3</item>
+  <item Index="21">Trạng thái 4</item>
+  <item Index="22">Tạm khóa</item>
+  <item Index="23">Không</item>
+  <item Index="24">Có</item>
+  <item Index="25">Ngôn ngữ</item>
+  <item Index="26">Tiêu đề</item>
+  <item Index="27">Trích dẫn</item>
+  <item Index="28">Giới thiệu</item>
+
+  <item Index="29">Sửa</item>
+  <item Index="30">Xóa</item>
+  <item Index="31">Mã</item>
+
+  <item Index="32">Tin tức</item>
+  <item Index="33">Thêm Tin tức </item>
+  <item Index="34">Sửa Tin tức</item>
+  <item Index="35">Bạn có chắc muốn xóa dòng này ?</item>
+  <item Index="36">Chọn ảnh 1</item>
+  <item Index="37">Chọn ảnh 2</item>
+  <item Index="38">Chọn ảnh 3</item>
+
+  <item Index="39">Loại 0</item>
+  <item Index="40">Loại 1</item>
+  <item Index="41">Loại 2</item>
+  <item Index="42">Loại 3</item>
+  <item Index="43">Loại 4</item>
+
+  <item Index="44">Lượt xem</item>
+  <item Index="45">Dữ liệu dự phòng 1</item>
+  <item Index="46">Dữ liệu dự phòng 2</item>
+  <item Index="47">Dữ liệu dự phòng 3</item>
+  <item Index="48">Dữ liệu dự phòng</item>
+</root>

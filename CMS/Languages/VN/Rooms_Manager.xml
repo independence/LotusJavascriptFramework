@@ -1,0 +1,35 @@
+﻿<root>
+  <item Index="0">Mã Phòng</item>
+  <item Index="1">Loại</item>
+  <item Index="2">Giá tham khảo</item>
+  <item Index="3">Đơn vị</item>
+  <item Index="4">Số giường đơn</item>
+  <item Index="5">Số giường đôi</item>
+  <item Index="6">Ảnh</item>
+  <item Index="7">Chọn thư mục ảnh</item>
+  <item Index="8">Chỉ chọn thư mục ảnh</item>
+  <item Index="9"> Có lỗi trong quá trình tải lên thư mục</item>
+  <item Index="10">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="11">Kích thước ảnh quá lớn</item>
+  <item Index="12">Trạng thái</item>
+  <item Index="13">Trạng thái 0</item>
+  <item Index="14">Trạng thái 1</item>
+  <item Index="15">Trạng thái 2</item>
+  <item Index="16">Trạng thái 3</item>
+  <item Index="17">Trạng thái 4</item>
+  <item Index="18">Tạm khóa</item>
+  <item Index="19">Có</item>
+  <item Index="20">Không</item>
+  <item Index="21">Ngôn ngữ</item>
+  <item Index="22">Trích dẫn</item>
+  <item Index="23">Giới thiệu</item>
+  
+  <item Index="24">Sửa</item>
+  <item Index="25">Xóa</item>
+  <item Index="26">Mã</item>
+
+  <item Index="27">Standard</item>
+  <item Index="28">Deluxe</item>
+  <item Index="29">Superior</item>
+
+</root>

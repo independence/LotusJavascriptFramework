@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div>
+    <div id="element-box">
+
+        <div class="m">
+            <div class="col width-45" style="width: 100% !important">
+
+                <fieldset>
+                    <legend>{$P.Lang[22].Text}</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_SystemUsers"
+                    name="frmUpd_SystemUsers" onsubmit="return false;">
+                   <input type="hidden" id="txt_UserID" name="txt_UserID" value="{$T.SystemUsers.UserID}" />
+                    <table class="admintable" width="100%">
+                        <tr>
+                            <td class="key">{$P.Lang[0].Text}</td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_Username" name="txt_Username" value="{$T.SystemUsers.Username}" /></td>
+                        </tr>
+                        <tr>
+                            <td class="key">{$P.Lang[1].Text}</td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_UserGroup" name="txt_UserGroup" value="{$T.SystemUsers.UserGroup}" /></td>
+                        </tr>
+                        <tr>
+                            <td class="key">{$P.Lang[2].Text}</td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_Email" name="txt_Email" value="{$T.SystemUsers.Email}" /></td>
+                        </tr>
+                        <tr>
+                            <td class="key">{$P.Lang[3].Text}</td>
+                            <td class="paramlist_key">
+                                <input type="password" id="txt_Password" name="txt_Password" value="{$T.SystemUsers.Password}" /></td>
+                        </tr>
+                        <tr>
+                            <td class="key">{$P.Lang[4].Text}</td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_IDRefMailSystem" name="txt_IDRefMailSystem" value="{$T.SystemUsers.IDRefMailSystem}" /></td>
+                        </tr>
+                        <tr>
+                            <td class="key">{$P.Lang[5].Text}</td>
+                            <td class="paramlist_key">
+                                <input type="text" id="txt_IDRefAnotherSystem" name="txt_IDRefAnotherSystem" value="{$T.SystemUsers.IDRefAnotherSystem}" /></td>
+                        </tr>
+                        <tr><td class="key">{$P.Lang[6].Text}</td><td class="paramlist_key"><select id="txt_Type" name="txt_Type">
+                                            <option value="0" {#if $T.SystemUsers.Type == "0"} selected="selected" {#/if}>{$P.Lang[7].Text}</option>
+                                            <option value="1" {#if $T.SystemUsers.Type == "1"} selected="selected" {#/if}>{$P.Lang[8].Text}</option>
+                                            <option value="2" {#if $T.SystemUsers.Type == "2"} selected="selected" {#/if}>{$P.Lang[9].Text}</option>
+                                            <option value="3" {#if $T.SystemUsers.Type == "3"} selected="selected" {#/if}>{$P.Lang[10].Text}</option>
+                                            <option value="4" {#if $T.SystemUsers.Type == "4"} selected="selected" {#/if}>{$P.Lang[11].Text}</option>
+                                                        </select>
+                                                     </td></tr>
+                        <tr><td class="key">{$P.Lang[12].Text}</td><td class="paramlist_key"><select id="txt_Status" name="txt_Status">
+                                            <option value="0" {#if $T.SystemUsers.Status == "0"} selected="selected" {#/if}>{$P.Lang[13].Text}</option>
+                                            <option value="1" {#if $T.SystemUsers.Status == "1"} selected="selected" {#/if}>{$P.Lang[14].Text}</option>
+                                            <option value="2" {#if $T.SystemUsers.Status == "2"} selected="selected" {#/if}>{$P.Lang[15].Text}</option>
+                            </select>
+                                                             </td></tr>   
+
+
+                      </table>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+</div>

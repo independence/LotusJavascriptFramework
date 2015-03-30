@@ -1,0 +1,40 @@
+﻿.Checklistbox {
+   
+}
+
+.Lotus_Scrollbar {
+    background-color: lightgray;
+    float: left;
+    height: 200px;
+    margin-left: 0;
+    margin-top: 0;
+    overflow-y: scroll;
+    width: auto;
+}
+
+.Lotus_Scrollbar::-webkit-scrollbar{
+width:16px;
+background-color:#cccccc;
+} 
+
+.Lotus_Scrollbar::-webkit-scrollbar-thumb{
+background-color:#B03C3F;
+border-radius:10px;
+}
+
+.Lotus_Scrollbar::-webkit-scrollbar-thumb:hover{
+background-color:#BF4649;
+border:1px solid #333333;
+}
+
+.Lotus_Scrollbar::-webkit-scrollbar-thumb:active{
+background-color:#A6393D;
+border:1px solid #333333;
+}
+
+.Lotus_Scrollbar::-webkit-scrollbar-track{
+border:1px gray solid;
+border-radius:10px;
+-webkit-box-shadow:0 0 6px gray inset;
+}
+ 

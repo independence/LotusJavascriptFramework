@@ -1,0 +1,41 @@
+﻿<root>
+  <item Index="0">アルバムコード</item>
+  <item Index="1">アップロード日</item>
+  <item Index="2">作成者</item>
+  <item Index="3">種類</item>
+  <item Index="4">種類 0</item>
+  <item Index="5">種類 1</item>
+  <item Index="6">種類 2</item>
+  <item Index="7">種類 3</item>
+  <item Index="8">種類 4</item>
+  <item Index="9">巾</item>
+  <item Index="10">長さ</item>
+  <item Index="11"> 写真</item>
+  <item Index="12"> 写真を選択</item>
+  <item Index="13">写真だけ</item>
+  <item Index="14"> アップロード中にエラーが発生した</item>
+  <item Index="15">ユーザー、それともネットワックのため、アップロードが中断しました</item>
+  <item Index="16">写真のデータが重すぎ</item>
+  <item Index="17">状態</item>
+  <item Index="18">状態 0</item>
+  <item Index="19">状態 1</item>
+  <item Index="20">状態 2</item>
+  <item Index="21">状態 3</item>
+  <item Index="22">状態 4</item>
+  <item Index="23">一応ロック</item>
+  <item Index="24">いいえ</item>
+  <item Index="25">はい</item>
+  <item Index="26">言語</item>
+   <item Index="27">紹介</item>
+
+  <item Index="28">変更</item>
+  <item Index="29">削除</item>
+  <item Index="30">表示しているアルバム:</item>
+  <item Index="31">コード</item>
+  
+  <item Index="32">写真</item>
+  <item Index="33">写真追加 </item>
+  <item Index="34">写真変更</item>
+  <item Index="35">削除してよろしいですか ?</item>
+  <item Index="36">[全部表示]</item>
+</root>

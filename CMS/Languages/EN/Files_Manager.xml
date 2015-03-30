@@ -1,0 +1,41 @@
+﻿<root>
+  <item Index="0">Album code</item>
+  <item Index="1">Upload date</item>
+  <item Index="2">Created by</item>
+  <item Index="3">Type</item>
+  <item Index="4">Type 0</item>
+  <item Index="5">Type 1</item>
+  <item Index="6">Type 2</item>
+  <item Index="7">Type 3</item>
+  <item Index="8">Type 4</item>
+  <item Index="9">Wide</item>
+  <item Index="10">Lenght</item>
+  <item Index="11"> Photo</item>
+  <item Index="12"> Choose file</item>
+  <item Index="13">Choose photo</item>
+  <item Index="14"> Error in uploading file</item>
+  <item Index="15">Upload is stopped by User or link </item>
+  <item Index="16">Kích thước ảnh quá lớn</item>
+  <item Index="17">Status</item>
+  <item Index="18">Status 0</item>
+  <item Index="19">Status 1</item>
+  <item Index="20">Status 2</item>
+  <item Index="21">Status 3</item>
+  <item Index="22">Status 4</item>
+  <item Index="23">Lock</item>
+  <item Index="24">No</item>
+  <item Index="25">Yes</item>
+  <item Index="26">Language</item>
+   <item Index="27">Introduction</item>
+
+  <item Index="28">Edit</item>
+  <item Index="29">Delete</item>
+  <item Index="30">Display photo</item>
+  <item Index="31">Code</item>
+  
+  <item Index="32">Images</item>
+  <item Index="33">Add Images </item>
+  <item Index="34">Edit Images</item>
+  <item Index="35">Do you sure to delete this ?</item>
+  <item Index="36">[Display all]</item>
+</root>

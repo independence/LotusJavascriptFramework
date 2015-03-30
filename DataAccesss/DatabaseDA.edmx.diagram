@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4b78530021384162b25f52c97ffb1b3a" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="Model.Configs" Width="1.5" PointX="1.8628639997275847" PointY="9.6445867315142362" />
+        <EntityTypeShape EntityType="Model.Languages" Width="1.5" PointX="2.676144530380212" PointY="23.70570110888486" />
+        <EntityTypeShape EntityType="Model.PermitDetails" Width="1.5" PointX="9.5533319514027486" PointY="3.8140456396220466" />
+        <EntityTypeShape EntityType="Model.Permits" Width="1.5" PointX="11.397469516562982" PointY="13.661879247828331" />
+        <EntityTypeShape EntityType="Model.Permits_SystemUsers" Width="1.5" PointX="4.7992474626746251" PointY="15.567359991170168" />
+        <EntityTypeShape EntityType="Model.SystemUsers" Width="1.5" PointX="8.9967111744902617" PointY="30.58482491904163" />
+        <EntityTypeShape EntityType="Model.CategoryLevel1_CategoryLevel2" Width="1.5" PointX="6.0530298678451349" PointY="31.151412129007007" />
+        <EntityTypeShape EntityType="Model.Contents" Width="1.5" PointX="3.571577038416442" PointY="2.8946347995170556" />
+        <EntityTypeShape EntityType="Model.ExtendProperties" Width="1.5" PointX="14.625" PointY="9.875" />
+        <EntityTypeShape EntityType="Model.Albums" Width="1.5" PointX="0.39581706579579834" PointY="29.299026026064077" />
+        <EntityTypeShape EntityType="Model.Files" Width="1.5" PointX="1.5592353910017924" PointY="10.541455407879061" />
+        <EntityTypeShape EntityType="Model.vw_CategoryLevel1ViewAll" Width="1.5" PointX="0.51399735757801568" PointY="4.2397492547704605" />
+        <EntityTypeShape EntityType="Model.vw_CategoryLevel2ViewAll" Width="1.5" PointX="5.6545019939795607" PointY="20.44506741522116" />
+        <EntityTypeShape EntityType="Model.vw_ContentViewAll" Width="1.5" PointX="6.125" PointY="9.125" />
+        <EntityTypeShape EntityType="Model.vw_FilesViewAll" Width="1.5" PointX="8.6960007085911943" PointY="7.0831394675574915" />
+        <EntityTypeShape EntityType="Model.vw_PermitViewAll" Width="1.5" PointX="8.0117325987721486" PointY="23.566241379625275" />
+        <AssociationConnector Association="Model.FK_PermitDetails_Permits" />
+        <AssociationConnector Association="Model.FK_Permits_SystemUsers_Permits" />
+        <AssociationConnector Association="Model.FK_Permits_SystemUsers_SystemUsers" />
+        <EntityTypeShape EntityType="Model.Contents_CategoryLevel1" Width="1.5" PointX="3.875" PointY="12" />
+        <EntityTypeShape EntityType="Model.CategoryLevel1" Width="1.5" PointX="4.0097428094641039" PointY="11.656061371628224" />
+        <EntityTypeShape EntityType="Model.CategoryLevel2" Width="1.5" PointX="11.798375822509813" PointY="22.55763679303119" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,27 @@
+﻿<root>
+<item Index="0">アルバム</item>
+<item Index="1">アップロード</item>
+
+
+<item Index="2">スタッフ</item>
+<item Index="3">進め</item>
+<item Index="4">仕事</item>
+<item Index="5">パートナー</item>
+
+
+<item Index="6">紹介</item>
+<item Index="7">ニュース</item>
+<item Index="8">ニュースc</item>
+<item Index="9">レベル１のニュース</item>
+<item Index="10">レベル２のニュース</item>
+
+<item Index="11">システム</item>
+
+<item Index="12">ユーザー</item>
+<item Index="13">権限役割</item>
+<item Index="14">権限のリスト</item>
+<item Index="15">ユーザーの権限</item>
+<item Index="16">コンフィギュレーション</item>
+<item Index="17">言語</item>
+
+</root>

@@ -1,0 +1,455 @@
+﻿
+<script src="/JS/ForEachPage/Process_Contents.js"></script>
+<script src="../JS/FRAMEWORK/BussinessLogic/ContentsBO.js"></script>
+<script src="../JS/FRAMEWORK/BussinessLogic/CategoryLevel1BO.js"></script>
+
+<div class="fluid">
+    <div class="widget">
+        <div class="whead">
+            <h6>{sys_GetText(200,'Thêm dữ liệu');}</h6>
+            <div class="clear"></div>
+        </div>
+
+        <form id="frmIns_Contents" enctype="multipart/form-data" method="" action="ssss">
+            <!--<input type="hidden" id="txtType" name="txtType" value="" />-->
+           <!-- <input type="hidden" id="txtGroupContents" name="txtGroupContents" value="NormalContents" />-->
+            <input type="hidden" id="txtCode" name="txtCode" />
+            <!--##############################################################-->
+           <!-- ------------------------TITLE ROW TO TREN CUNG------------------------------------->
+            <div class="formRow">
+                <div class="grid4">{sys_GetText(201,'Thuộc CategoryLevel1')}</div>
+                <div class="grid8">{sys_GetText(202,'Thuộc tính khác')}</div>
+                <div class="clear"></div>
+            </div>
+            <!-- ------------------------TITLE ROW TO TREN CUNG------------------------------------->
+            <!-- ------------------------ROW TO TREN CUNG------------------------------------->
+            <div class="formRow">
+                <!-- ------------------------COT BEN TRAI------------------------------------->
+                <div class="grid4">
+                    <div id="Div_CategoryLevel1"></div>
+                </div>
+                <!-- ------------------------COT BEN TRAI------------------------------------->
+                <!-- ------------------------COT BEN PHAI------------------------------------->
+                <div class="grid8">
+                    <div class="formRow">
+  
+                        <div class="grid2">{sys_GetText(203,'Type')}</div>
+                        <div class="grid4">
+                            <select id="cbbType" name="cbbType">
+                                <option value="0" selected="selected">{sys_GetText(204,'Type')}</option>
+                                <option value="1">{sys_GetText(205,'Type')}</option>
+                                <option value="2">{sys_GetText(206,'Type')}</option>
+                                <option value="3">{sys_GetText(207,'Type')}</option>
+                                <option value="4">{sys_GetText(208,'Type')}</option>
+                            </select>
+
+                        </div>
+
+                        <div class="grid2">
+                            {sys_GetText(209,'ViewCount')}
+                        </div>
+                        <div class="grid4">
+                            <input type="text" id="txtViewCount" name="txtViewCount" />
+                        </div>
+
+
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid2">{sys_GetText(210,'PublishDate')}</div>
+                        <div class="grid4">
+                            <input type="text" id="txtPublishDate" name="txtPublishDate" />
+                        </div>
+
+                        <div class="grid2">{sys_GetText(211,'ExpireDate')}</div>
+                        <div class="grid4">
+                            <input type="text" id="txtExpireDate" name="txtExpireDate" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="formRowLast">
+                        <div class="grid2">{sys_GetText(212,'Status')}</div>
+                        <div class="grid4">
+                            <select id="cbbStatus" name="cbbStatus">
+                                <option value="0" selected="selected">{sys_GetText(213,'Status')}</option>
+                                <option value="1">{sys_GetText(214,'Status')}</option>
+                                <option value="2">{sys_GetText(215,'Status')}</option>
+                                <option value="3">{sys_GetText(216,'Status')}</option>
+                                <option value="4">{sys_GetText(217,'Status')}</option>
+                            </select>
+                        </div>
+                        <div class="grid2">
+                            <label>{sys_GetText(218,'Disable')}</label></div>
+                        <div class="grid4">
+                            <select id="cbbDisable" name="cbbDisable">
+                                <option value="false" selected="selected">{sys_GetText(219,'false')} </option>
+                                <option value="true">{sys_GetText(220,'true')} </option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+                <!-- ------------------------COT BEN TRAI------------------------------------->
+                <div class="clear"></div>
+
+            </div>
+            <!-- ------------------------ROW TO TREN CUNG------------------------------------->
+
+
+
+
+            <div class="formRow">
+                <div class="grid1">{sys_GetText(221,'Tag')}</div>
+                <div class="grid3">
+                    <input type="text" id="txtTag" name="txtTag" />
+
+                </div>
+                <div class="grid1">{sys_GetText(222,'DateCreated')}</div>
+                <div class="grid3">
+                    <input type="text" id="txtDateCreated" name="txtDateCreated" id="txtDateCreated"  class="datepicker" />
+                </div>
+                <div class="grid1">{sys_GetText(223,'CodeAlbum')}</div>
+                <div class="grid3">
+                    <div id="Div_CodeAlbum"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+            <!--==============================================-->
+           
+            <div class="formRow noBorderW">
+               <!--==============================================-->
+                <div class="grid3">
+                    <form></form>
+                    <input type="hidden" id="txtImage_1" name="txtImage_1" />
+                    <form id="Form_Upload_1" enctype="multipart/form-data" method="post">
+                        <div style="width: 100%">
+                            {sys_GetText(224,'Image_1')}<br />
+                            <input style="width: 100%" type="file" name="image_file_1" id="image_file_1" onchange="fileSelected(1);" />
+
+
+                            <div class="fileinfo" id="fileinfo_1">
+                                <div id="filename_1">
+                                </div>
+                                <div id="filesize_1">
+                                </div>
+                                <div id="filetype_1">
+                                </div>
+                                <div id="filedim_1">
+                                </div>
+                            </div>
+                            <img id="preview_1" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                            <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(1, 'Form_Upload_1', 'Contents_IMAGE', 'txtImage_1', true, -1, -1, true)" />
+
+                        </div>
+
+                        <div style="width: 100%">
+                            <div class="error" id="error_1">{sys_GetText(225,'Chỉ chọn thư mục ảnh')}</div>
+                            <div class="error2" id="error2_1">{sys_GetText(226,'Có lỗi trong quá trình tải thư mục')}</div>
+                            <div class="abort" id="abort_1">{sys_GetText(227,'Tải lên đã được ngừng bởi người dùng hoặc do đường truyền')}</div>
+                            <div class="warnsize" id="warnsize_1">{sys_GetText(228,'Kích thước ảnh quá lớn')}</div>
+
+                            <div id="progress_info_1" class="progress_info">
+                                <div id="progress_1" class="progress">
+                                </div>
+                                <div id="progress_percent_1" class="progress_percent">
+                                    &nbsp;
+                                </div>
+                                <div class="clear_both">
+                                </div>
+                                <div>
+                                    <div id="speed_1" class="speed">
+                                        &nbsp;
+                                    </div>
+                                    <div id="remaining_1" class="remaining">
+                                        &nbsp;
+                                    </div>
+                                    <div id="b_transfered_1" class="b_transfered">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clear_both">
+                                    </div>
+                                </div>
+                                <input type="hidden" id="upload_response_1" />
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--==============================================-->
+                </div>
+                <div class="grid3">
+                    <input type="hidden" id="txtImage_2" name="txtImage_2" />
+                    <form id="Form_Upload_2" enctype="multipart/form-data" method="post" action="">
+                        <div style="width: 100%">
+                            {sys_GetText(229,'Image_2')}<br />
+                            <input style="width: 100%" type="file" name="image_file_2" id="image_file_2" onchange="fileSelected(2);" />
+
+
+                            <div class="fileinfo" id="fileinfo_2">
+                                <div id="filename_2">
+                                </div>
+                                <div id="filesize_2">
+                                </div>
+                                <div id="filetype_2">
+                                </div>
+                                <div id="filedim_2">
+                                </div>
+                            </div>
+                            <img id="preview_2" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                            <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(2, 'Form_Upload_2', 'Contents_IMAGE', 'txtImage_2', true, -1, -1, true)" />
+
+                        </div>
+
+                        <div style="width: 100%">
+                            <div class="error" id="error_2">{sys_GetText(225,'Chỉ chọn thư mục ảnh')}</div>
+                            <div class="error2" id="error2_2">{sys_GetText(226,'Có lỗi trong quá trình tải thư mục')}</div>
+                            <div class="abort" id="abort_2">{sys_GetText(227,'Tải lên đã được ngừng bởi người dùng hoặc do đường truyền')}</div>
+                            <div class="warnsize" id="warnsize_2">{sys_GetText(228,'Kích thước ảnh quá lớn')}</div>
+
+
+                            <div id="progress_info_2" class="progress_info">
+                                <div id="progress_2" class="progress">
+                                </div>
+                                <div id="progress_percent_2">
+                                    &nbsp;
+                                </div>
+                                <div class="clear_both">
+                                </div>
+                                <div>
+                                    <div id="speed_2" class="speed">
+                                        &nbsp;
+                                    </div>
+                                    <div id="remaining_2" class="remaining">
+                                        &nbsp;
+                                    </div>
+                                    <div id="b_transfered_2">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clear_both">
+                                    </div>
+                                </div>
+                                <input type="hidden" id="upload_response_2" />
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="grid3">
+                    <input type="hidden" id="txtImage_3" name="txtImage_3" />
+                    <form id="Form_Upload_3" enctype="multipart/form-data" method="post" action="">
+                        <div style="width: 100%">
+                            {sys_GetText(230,'Image_3')}<br />
+                            <input style="width: 100%" type="file" name="image_file_3" id="image_file_3" onchange="fileSelected(3);" />
+
+
+                            <div class="fileinfo" id="fileinfo_3">
+                                <div id="filename_3">
+                                </div>
+                                <div id="filesize_3">
+                                </div>
+                                <div id="filetype_3">
+                                </div>
+                                <div id="filedim_3">
+                                </div>
+                            </div>
+                            <img id="preview_3" width="100%" style="margin-bottom: 10px; margin-top: 10px"  />
+
+                            <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(3, 'Form_Upload_3', 'Contents_IMAGE', 'txtImage_3', true, -1, -1, true)" />
+
+                        </div>
+
+                        <div style="width: 100%">
+                            <div class="error" id="error_3">{sys_GetText(225,'Chỉ chọn thư mục ảnh')}</div>
+                            <div class="error2" id="error2_3">{sys_GetText(226,'Có lỗi trong quá trình tải thư mục')}</div>
+                            <div class="abort" id="abort_3">{sys_GetText(227,'Tải lên đã được ngừng bởi người dùng hoặc do đường truyền')}</div>
+                            <div class="warnsize" id="warnsize_3">{sys_GetText(228,'Kích thước ảnh quá lớn')}</div>
+
+
+                            <div id="progress_info_3" class="progress_info">
+                                <div id="progress_3" class="progress">
+                                </div>
+                                <div id="progress_percent_3">
+                                    &nbsp;
+                                </div>
+                                <div class="clear_both">
+                                </div>
+                                <div>
+                                    <div id="speed_3" class="speed">
+                                        &nbsp;
+                                    </div>
+                                    <div id="remaining_3" class="remaining">
+                                        &nbsp;
+                                    </div>
+                                    <div id="b_transfered_3">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clear_both">
+                                    </div>
+                                </div>
+                                <input type="hidden" id="upload_response_3" />
+                             
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="grid3">
+                    <input type="hidden" id="txtImage_4" name="txtImage_4" />
+                    <form id="Form_Upload_4" enctype="multipart/form-data" method="post" action="">
+                        <div style="width: 100%">
+                            {sys_GetText(231,'Image_4')}<br />
+                            <input style="width: 100%" type="file" name="image_file_4" id="image_file_4" onchange="fileSelected(4);" />
+
+
+                            <div class="fileinfo" id="fileinfo_4">
+                                <div id="filename_4">
+                                </div>
+                                <div id="filesize_4">
+                                </div>
+                                <div id="filetype_4">
+                                </div>
+                                <div id="filedim_4">
+                                </div>
+                            </div>
+                            <img id="preview_4" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                            <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(4, 'Form_Upload_4', 'Contents_IMAGE', 'txtImage_4', true, -1, -1, true)" />
+
+                        </div>
+
+                        <div style="width: 100%">
+                            <div class="error" id="error_4">{sys_GetText(12,'XXX')}</div>
+                            <div class="error2" id="error2_4">{sys_GetText(13,'XXX')}</div>
+                            <div class="abort" id="abort_4">{sys_GetText(14,'XXX')}</div>
+                            <div class="warnsize" id="warnsize_4">{sys_GetText(15,'XXX')}</div>
+
+                            <div id="progress_info_4" class="progress_info">
+                                <div id="progress_4" class="progress">
+                                </div>
+                                <div id="progress_percent_4">
+                                    &nbsp;
+                                </div>
+                                <div class="clear_both">
+                                </div>
+                                <div>
+                                    <div id="speed_4" class="speed">
+                                        &nbsp;
+                                    </div>
+                                    <div id="remaining_4" class="remaining">
+                                        &nbsp;
+                                    </div>
+                                    <div id="b_transfered_4">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clear_both">
+                                    </div>
+                                </div>
+                                <input type="hidden" id="upload_response_4" />
+                                <!--<input type="hidden" id="txtImage_4" />-->
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+
+               
+              
+            </div>
+
+          
+
+            <!--==============================================-->
+
+            <!--##############################################################-->
+         
+             
+             <div class="widget" id="divtabs">
+            
+            
+            <ul class="tabs">
+                {#for index = 1 to sys_NUM_LANG}
+                        <li><a href="#tabs-{$T.index}">{sys_GetText(234,'Ngôn ngữ')} {$T.index}</a></li>
+                {#/for}         
+            </ul>
+                 
+
+
+            <div class="tab_container">
+                {#for index = 1 to sys_NUM_LANG}            
+                    <div id="tabs-{$T.index}" class="tab_content">
+                        <!------>
+                        <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" form="frmIns_Contents" value="{$T.index}" />
+
+                        <div class="formRow noBorderW">
+                            <div class="grid2">{sys_GetText(235,'Contents')}</div>
+                            <div class="grid10">
+                                <input type="text" id="txtTitle_Lang{$T.index}" form="frmIns_Contents" name="txtTitle_Lang{$T.index}" />
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="formRow">
+                            <div class="grid2">{sys_GetText(236,'ExtendProperties')}</div>
+                            <div class="grid2">
+                                <input type="text" id="txtExtendProperties1_Lang{$T.index}" form="frmIns_Contents" name="txtExtendProperties1_Lang{$T.index}" />
+                            </div>
+                            <div class="grid2">
+                                <input type="text" id="txtExtendProperties2_Lang{$T.index}" form="frmIns_Contents" name="txtExtendProperties2_Lang{$T.index}" />
+                            </div>
+                            <div class="grid2">
+                                <input type="text" id="txtExtendProperties3_Lang{$T.index}" form="frmIns_Contents" name="txtExtendProperties3_Lang{$T.index}" />
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="formRow">
+                            <div class="grid2">
+                                {sys_GetText(237,'Intro')}
+                            </div>
+                            <div class="grid10">
+                                <textarea id="txtIntro_Lang{$T.index}" name="txtIntro_Lang{$T.index}" form="frmIns_Contents" class="txtIntro" style="width: 100%; height: 120px;" rows="10" cols="45"></textarea>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="formRow noBorderB">
+                            <div class="grid2">
+                                {sys_GetText(238,'Info')}
+                            </div>
+                            <div class="grid10">
+                                <textarea id="txtInfo_Lang{$T.index}" name="txtInfo_Lang{$T.index}" form="frmIns_Contents" class="txtInfo" style="width: 100%; height: 620px;" rows="10" cols="45"></textarea>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                {#/for}
+            </div>
+            <div class="clear"></div>
+            </div>
+            <!--##############################################################-->
+
+             <div class="formRow">
+                 <div class="grid9">
+                     <div id="progress2"><span class="pbar"></span><span class="percent"></span><span class="elapsed"></span></div>
+                 </div>
+                 <div class="grid3">
+                    <a class="buttonM bRed" onclick="Ins();">
+                    <span class="icon-checkmark-3"></span>
+                    <span>{sys_GetText(239,'Save')}</span>
+                    </a>
+                 </div>
+                 <div class="clear"></div>
+             </div>
+
+        </form>
+      
+    </div>
+</div>
+<!--##################################################################-->
+<!--##################################################################-->

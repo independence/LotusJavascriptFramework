@@ -1,0 +1,32 @@
+﻿<root>
+  <item Index="0">Mã</item>
+  <item Index="1">Tên dịch vụ</item>
+  <item Index="2">Mô tả</item>
+  <item Index="3">Thông tin</item>
+  <item Index="4">Giá tham khảo</item>
+  <item Index="5">Đơn vị</item>
+  <item Index="6">Ghi chú</item>
+  <item Index="7">Loại</item>
+  <item Index="8">Nhóm dịch vụ</item>
+  <item Index="9">Ảnh</item>
+  <item Index="10"> Chọn thư mục ảnh</item>
+  <item Index="11">Chỉ chọn thư mục ảnh</item>
+  <item Index="12"> Có lỗi trong quá trình tải lên thư mục</item>
+  <item Index="13">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="14">Kích thước ảnh quá lớn</item>
+  <item Index="15">Trạng thái</item>
+  <item Index="16">Trạng thái 0</item>
+  <item Index="17">Trạng thái 1</item>
+  <item Index="18">Trạng thái 2</item>
+  <item Index="19">Trạng thái 3</item>
+  <item Index="20">Trạng thái 4</item>
+  <item Index="21">Ngôn ngữ</item>
+  <item Index="22">Loại 0</item>
+  <item Index="23">Loại 1</item>
+  <item Index="24">Loại 2</item>
+  <item Index="25">Loại 3</item>
+  <item Index="26">Loại 4</item>
+  <item Index="27">Tạm khóa</item>
+  <item Index="28">Có</item>
+  <item Index="29">Không</item>
+</root>

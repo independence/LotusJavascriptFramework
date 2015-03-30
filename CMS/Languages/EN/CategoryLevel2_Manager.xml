@@ -1,0 +1,32 @@
+﻿<root>
+  <item Index="0">Type</item>
+  <item Index="1">Type 0</item>
+  <item Index="2">Type 1</item>
+  <item Index="3">Type 2</item>
+  <item Index="4">Type 3</item>
+  <item Index="5">Type 4</item>
+  <item Index="6">Status</item>
+  <item Index="7">Status 0</item>
+  <item Index="8">Status 1</item>
+  <item Index="9">Status 2</item>
+  <item Index="10">Status 3</item>
+  <item Index="11">Status 4</item>
+  <item Index="12">Lock</item>
+  <item Index="13">No</item>
+  <item Index="14">Yes</item>
+  <item Index="15">Language</item>
+  <item Index="16">Name of Contents group 2</item>
+  <item Index="17">Edit</item>
+  <item Index="18">Delete</item>
+  <item Index="19">Code</item>
+  <item Index="20">Lock</item>
+  <item Index="21">CategoryLevel2</item>
+  <item Index="22">Add CategoryLevel2</item>
+  <item Index="23">Edit CategoryLevel2</item>
+  <item Index="24">Do you sure to delete this ?</item>
+  <item Index="25">Do you sure to delete this ?</item>
+  <item Index="26">Code</item>
+
+  <item Index="48">Reserve Data</item>
+  
+</root>

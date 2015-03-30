@@ -1,0 +1,59 @@
+<root>
+<!--==================MAIN.ASPX=====================-->
+  <item Index="100">Chọn kiểu</item>
+  <item Index="1">Content</item>
+  <item Index="2">Tag</item>
+  <item Index="3">Ngày Tạo</item>
+  <item Index="4">Trạng thái</item>
+  
+  <!--===================Insert Content =============================-->
+  <item Index="200">Thêm dữ liệu</item>
+  <item Index="201">Thuộc CategoryLevel1</item>
+  <item Index="202">Thuộc tính khác</item>
+  <item Index="203">Loại</item>
+  
+  <item Index="204">Loại 1</item>
+  <item Index="205">Loại 2</item>
+  <item Index="206">Loại 3</item>
+  <item Index="207">Loại 4</item>
+  <item Index="208">Loại 5</item>
+  
+  <item Index="209">Lượt xem</item>
+  <item Index="210">Ngày hiển thị</item>
+  <item Index="211">Ngày hết hạn</item>
+  
+  <item Index="212">Trạng thái</item>
+  <item Index="213">Trạng thái</item>
+  <item Index="214">Trạng thái</item>
+  <item Index="215">Trạng thái</item>
+  <item Index="216">Trạng thái</item>
+  <item Index="217">Trạng thái</item>
+  <item Index="218">Khóa</item>
+  <item Index="219">Khóa</item>
+  <item Index="220">Bật</item>
+
+  <item Index="221">Tag</item>
+  <item Index="222">DateCreated</item>
+  <item Index="223">CodeAlbum</item>
+  <item Index="224">Image_1</item>
+  
+  <item Index="225">Chỉ chọn thư mục ảnh</item>
+  <item Index="226"> Có lỗi trong quá trình tải thư mục</item>
+  <item Index="227">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="228">Kích thước ảnh quá lớn</item>
+  
+  <item Index="229">Image_2</item>
+  <item Index="230">Image_3</item>
+  <item Index="231">Image_4</item>
+  
+  <item Index="234">Ngôn ngữ</item>
+  <item Index="235">Nội dung</item> 
+  <item Index="236">Thuộc tính mở rộng</item> 
+  
+  <item Index="237">Giới thiệu</item> 
+  <item Index="238">Nội dung chính</item> 
+  <item Index="239">Lưu nội dung</item>
+  -------------------------------------------------------------------------
+ 
+  
+</root>

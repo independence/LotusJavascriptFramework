@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div>
+    <div id="element-box">
+
+        <div class="m">
+            <div class="col width-45" style="width: 100% !important">
+
+                <fieldset>
+                    <legend>{$P.Lang[12].Text}</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_Languages"
+                        name="frmUpd_Languages" onsubmit="return false;">
+                        <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.Languages.ID}" />
+                        <table class="admintable" width="100%">
+                            <tr>
+                                <td class="key">{$P.Lang[0].Text}</td>
+                                <td class="paramlist_key">
+                                    <input type="text" id="txt_NameLang" name="txt_NameLang" value="{$T.Languages.NameLang}" /></td>
+                            </tr>
+                            <tr>
+                                <td class="key">{$P.Lang[1].Text}</td>
+                                <td class="paramlist_key">
+                                    <input type="text" id="txt_Image" name="txt_Image" value="{$T.Languages.Image}" /></td>
+                            </tr>
+                            <tr>
+                                <td class="key">{$P.Lang[2].Text}</td>
+                                <td class="paramlist_key">
+                                    <input type="text" id="txt_Directory" name="txt_Directory" value="{$T.Languages.Directory}" /></td>
+                            </tr>
+                            <tr>
+                                <td class="key">{$P.Lang[3].Text}</td>
+                                <td class="paramlist_key">
+                                    <input type="text" id="txt_Filename" name="txt_Filename" value="{$T.Languages.Filename}" /></td>
+                            </tr>
+                            <tr>
+                                <td class="key">{$P.Lang[4].Text}</td>
+                                <td class="paramlist_key">
+                                    <input type="text" id="txt_Status" name="txt_Status" value="{$T.Languages.Status}" /></td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+</div>

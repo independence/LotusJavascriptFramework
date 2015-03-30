@@ -1,0 +1,60 @@
+﻿<root>
+  <item Index="0">必須</item>
+  <item Index="1">もっと</item>
+  <item Index="2">お客様</item>
+  <item Index="3">ホール</item>
+  <item Index="4">人/テーブル</item>
+  <item Index="5">単位</item>
+  <item Index="6">テーブル</item>
+  <item Index="7">人</item>
+  <item Index="8">[その他]</item>
+  <item Index="9">から</item>
+  <item Index="10">まで</item>
+  <item Index="11">旧暦</item>
+  <item Index="12">予約</item>
+  <item Index="13">
+    [営業] ホールの予約
+  </item>
+  <item Index="14">[Website] ホールの予約</item>
+  <item Index="15">話題</item>
+  <item Index="16">場所</item>
+  <item Index="17">概要</item>
+  <item Index="18">メモ</item>
+  <item Index="19">値段</item>
+  <item Index="20">単位</item>
+  <item Index="21">支払い方法</item>
+  <item Index="22">現金</item>
+  <item Index="23">振込み</item>
+  <item Index="24">チェック</item>
+  <item Index="25">支払い状態</item>
+  <item Index="26">支払い未完了</item>
+  <item Index="27">立替デポジット</item>
+  <item Index="28">支払い完了</item>
+  <item Index="29">金額</item>
+  <item Index="30">一回予約/連続</item>
+  <item Index="31">1回</item>
+  <item Index="32">連続</item>
+  <item Index="33">状態</item>
+  <item Index="34">状態 0</item>
+  <item Index="35">状態 1</item>
+  <item Index="36">状態 2</item>
+  <item Index="37">状態 3</item>
+  <item Index="38">状態 4</item>
+  <item Index="39">変更でもいい</item>
+  <item Index="40">一応ロック</item>
+  <item Index="41">表示色</item>
+  <item Index="42">既定色</item>
+  <item Index="43">グリーン</item>
+  <item Index="44">薄い緑</item>
+  <item Index="45">黄色</item>
+  <item Index="46">オレンジ</item>
+  <item Index="47">ドラッグアンドドロップ</item>
+  <item Index="48">はい</item>
+  <item Index="49">いいえ</item>
+
+  <item Index="50">変更</item>
+  <item Index="51">削除</item>
+  <item Index="52">コード</item>
+</root>
+
+

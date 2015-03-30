@@ -1,0 +1,19 @@
+﻿
+<root>
+  <item Index="0">Language</item>
+  <item Index="1">Photo</item>
+  <item Index="2">Dictionary</item>
+  <item Index="3">File name</item>
+  <item Index="4">Status</item>
+  
+  <item Index="5">Status 0</item>
+  <item Index="6">Status 1</item>
+  <item Index="7">Status 2</item>
+  <item Index="8">Status 3</item>
+  <item Index="9">Status 4</item>
+
+  <item Index="10">Images</item>
+  <item Index="11">Add Images </item>
+  <item Index="12">Edit Images</item>
+  <item Index="13">Do you sure to delete this ?</item>
+</root>

@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebDefault1.Master.cs" Inherits="CMS.WebDefault1"  EnableViewState="true" ViewStateMode="Enabled" %>
+<%@ Register Src="~/Modules/ucMenuAdmin.ascx" TagName="ucMenu" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="ngk ntk, NGK NTK" />
+    <meta name="description" content="NGK NTK" />
+    <meta name="generator" content="Redminsk" />
+    <title><%=  CORE.CORE_Language.GetText_MasterPage(0)%></title>
+    <link href="/CSS/system.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/general.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 7]>
+<link href="/CSS/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <!--[if lte IE 6]>
+<link href="/CSS/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <link href="/CSS/icon.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/menu.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/rounded.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/Systembackend.css" rel="stylesheet" type="text/css" />
+
+    <link href="/JS/Common/Flexigrid-table/css/flexigrid.pack.css" rel="stylesheet" type="text/css" />
+
+    <link href="/JS/Common/jquery-ui-1.10.3/themes/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="/JS/Common/Tinymce/skins/lightgray/skin.min.css" rel="stylesheet" type="text/css" />
+    <link href="/JS/Common/Tinymce/skins/lightgray/content.min.css" rel="stylesheet" type="text/css" />
+    <link href="/JS/Common/UploadHTML5/css/main.css" rel="stylesheet" type="text/css" />
+    
+    <script src="/JS/Common/jquery-2.0.0.js" type="text/javascript"></script>
+    <script src="/JS/Common/jquery-migrate-1.1.1.js" type="text/javascript"></script>
+
+
+    <script src="/JS/Common/jquery-ui-1.10.3/ui/jquery-ui.js" type="text/javascript"></script>
+
+    <script src="/JS/Common/Go.Music.Class.js" type="text/javascript"></script>
+    <script src="/JS/Common/Tinymce/jquery.tinymce.min.js" type="text/javascript"></script>
+
+    <script src="/JS/Common/RedMinsk.Library.js" type="text/javascript"></script>
+    <script src="/JS/Common/Go.Music.Paging.js" type="text/javascript"></script>
+    <script src="/JS/Common/CheckInput.js?n=1" type="text/javascript"></script>
+    <%--<script src="/JS/Common/AjaxRequest.js" type="text/javascript"></script>--%>
+    <script src="/JS/Common/JSON.js" type="text/javascript"></script>
+    
+    <script src="/JS/Common/UploadHTML5/js/UploadHTML5.js" type="text/javascript"></script>
+
+    <script src="/JS/Common/Tinymce/tinymce.min.js" type="text/javascript"></script>
+    <script src="/JS/Common/Flexigrid-table/js/flexigrid.js" type="text/javascript"></script>
+    <script src="/JS/Common/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/JS/Common/Common.js" type="text/javascript"></script>
+    <script src="/JS/Common/jquery-jtemplates.js" type="text/javascript"></script>
+    <script src="/JS/Common/menu.js" type="text/javascript" language="javascript"></script>
+    <script src="/JS/Common/index.js" type="text/javascript" language="javascript"></script>
+    <script src="/JS/Common/NhaKhachChinhPhu_Common.js" type="text/javascript"></script>
+
+    <script src="/JS/SystemConfig.js" type="text/javascript"></script>
+    <script src="/JS/Common/Number/min/numeral.min.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () { Init_System_CMS(); });
+    </script>
+    
+    <!-- =================================================== --->
+    <!-- =================================================== --->
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmMain" action="#" runat="server" enctype="multipart/form-data">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="border-top" class="h_green">
+        <div>
+            <div>
+                <img alt="logo" id="SiteLogo" runat="server" src="~/Images/logo.png" height="36" style="padding-top:5px" />
+                <%--<span class="title" id="SiteTitle" runat="server"><%=  CORE.CORE_Language.GetText_MasterPage(0)%></span>--%>
+            </div>
+        </div>
+    </div>
+    <div id="header-box">
+        <%--<uc1:ucMenu ID="ucMenu1" runat="server" />--%>
+        <div id="module-menu">
+            <ul id="menu">
+
+                 <li class="node" id="Li1" runat="server"><a><%=  CORE.CORE_Language.GetText_MasterPage(15)%></a>
+                    <ul>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/Albums_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(16)%></a></li>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/Files_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(17)%></a></li>
+                    </ul>
+                </li>
+
+                <li class="node" id="Li3" runat="server"><a><%=  CORE.CORE_Language.GetText_MasterPage(20)%></a>
+                    <ul>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/Contents_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(21)%></a></li>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/CategoryLevel1_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(23)%></a></li>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/CategoryLevel2_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(24)%></a></li>
+                    </ul>
+                </li>
+
+                <li class="node" id="Li5" runat="server"><a><%=  CORE.CORE_Language.GetText_MasterPage(32)%></a>
+                     <ul>
+
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_001.aspx"> <%=  CORE.CORE_Language.GetText_MasterPage(33)%></a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_002.aspx"> <%=  CORE.CORE_Language.GetText_MasterPage(34)%></a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_003.aspx"> <%=  CORE.CORE_Language.GetText_MasterPage(35)%></a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_004.aspx"> <%=  CORE.CORE_Language.GetText_MasterPage(36)%></a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_005.aspx"> Bài viết về công nghệ</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_006.aspx"> Slide Banner trang Technology</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_007.aspx"> Hỏi đáp</a></li>
+
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_008.aspx"> Contact point</a></li>
+                         <%--<li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_009.aspx"> SelectListContents_ByCodeCategoryLevel1_009</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListContents_ByCodeCategoryLevel1_010.aspx"> SelectListContents_ByCodeCategoryLevel1_010</a></li>--%>
+                     </ul>
+                 </li>
+
+                 <li class="node" id="Li4" runat="server"><a>CategoryLevel1</a>
+                     <ul>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_001.aspx"> 4 nhóm sản phẩm</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_002.aspx"> NGK VIỆT NAM</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_003.aspx"> Thêm đại lý</a></li>
+                         <%--<li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_004.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_004</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_005.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_005</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_006.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_006</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_007.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_007</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_008.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_008</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_009.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_009</a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/SelectListCategoryLevel1_ByCodeCategoryLevel2_010.aspx"> SelectListCategoryLevel1_ByCodeCategoryLevel2_010</a></li>--%>
+                     </ul>
+                 </li>
+                 <li class="node" id="mnuSystem" runat="server"><a><%=  CORE.CORE_Language.GetText_MasterPage(25)%></a>
+                    <ul>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/SystemUsers_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(26)%></a></li>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/Permits_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(27)%></a></li>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/PermitDetails_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(28)%></a></li>
+                        <li><a class="icon-16-cpanel" href="/PagesAspx/PermitUserMappings_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(29)%></a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/Configs_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(30)%></a></li>
+                         <li><a class="icon-16-cpanel" href="/PagesAspx/Languages_Manager.aspx"><%=  CORE.CORE_Language.GetText_MasterPage(31)%></a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div style="float: right; vertical-align: middle; padding-right: 20px; padding-top: 5px">
+                <asp:Label runat="server" ID="lbCurrentUser"> </asp:Label>-
+                <asp:Label runat="server" ID="lbCurrentPaygateId"> </asp:Label>
+                <asp:LinkButton Text="Logout" runat="server" ID="btnLogout" OnClick="btnLogout_Click" />
+
+            </div>
+            
+         </div>
+        <div class="clr">
+        </div>
+        <%--========================================================--%>
+    </div>
+    <div id="content-box">
+        <div class="border">
+            <div class="padding">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <noscript>
+                    Warning! JavaScript must be enabled for proper operation of the Administrator back-end.
+                </noscript>
+                <div class="clr">
+                </div>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+    <div style="clear: both">
+    </div>
+    <div id="border-bottom">
+        <div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="copyright" id="SiteInformation" runat="server">
+            Copyright by RedMinsk 2011 - Developed by VietOpen</p>
+    </div>
+    </form>
+    <!-- =================Position show form===========================-->
+    <div id="ImageListBox" style="width: 600px">
+    </div>
+    <div id="PositionShowDialog" style="width: 500px">
+    </div>
+    <div id="PositionLoading" style="" title="xxxx">
+    </div>
+    <div id="PositionConfigs">
+       <input type="hidden" id="txtNumLang" name="txtNumLang" runat="server" clientidmode="Static" />
+       <input type="hidden" id="txtCurrentUser" name="txtCurrentUser" runat="server" clientidmode="Static" />
+       <input type="hidden" id="txtCurLang" name="txtCurLang" runat="server" clientidmode="Static" />
+       <input type="hidden" id="txtDefLang" name="txtDefLang" runat="server" clientidmode="Static" />
+       <input type="hidden" id="txtList_IDLang" name="txtList_IDLang" runat="server" clientidmode="Static" />
+
+       <input type="hidden" id="txtLANG_DATA_MASTER" name="txtLANG_DATA_MASTER" runat="server" clientidmode="Static" />
+       <%--<div id="Lang" clientidmode="Static" runat="server"> </div>--%>
+       
+    </div>
+    <!-- =================Position show form===========================-->
+</body>
+</html>

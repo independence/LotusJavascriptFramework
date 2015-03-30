@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+    Init_Dialog_Ins("#Div_CodeAlbum");
+    
+</script>
+
+<!--#############################################################-->
+<!--#############################################################-->
+<!--#############################################################-->
+
+<form id="frmIns_CategoryLevel2" enctype="multipart/form-data" method="post" action="">
+<input type="hidden" id="txt_Code" name="txt_Code" />
+          <fieldset>
+ 
+                <div class="widget fluid">
+                    <div class="whead"><h6>{sys_GetText(22)}</h6><div class="clear"></div></div>
+                    <!---------------------------------------->
+                    <div class="formRow">
+                        <div class="grid3"><label>{sys_GetText(29)}:</label></div>
+                        <div class="grid9"><div id="Div_CodeAlbum"></div></div>
+                        <div class="clear"></div>
+                    </div>
+                    <!---------------------------------------->
+                    <div class="formRow">
+                        <div class="grid3"><label>{sys_GetText(0)}</label></div>
+                        <div class="grid3">
+                           <select id="txt_Type" name="txt_Type">
+                                <option value="0" selected="selected">{sys_GetText(1)}</option>
+                                <option value="1">{sys_GetText(2)}</option>
+                                <option value="2">{sys_GetText(3)} </option>
+                                <option value="3">{sys_GetText(4)} </option>
+                                <option value="4">{sys_GetText(5)} </option>
+                            </select>
+                        </div>
+
+                        <div class="grid3"><label>{sys_GetText(6)}</label></div>
+                        <div class="grid3">
+                            <select id="txt_Status" name="txt_Status">
+                                <option value="0" selected="selected">{sys_GetText(7)} </option>
+                                <option value="1">{sys_GetText(8)}</option>
+                                <option value="2">{sys_GetText(9)}</option>
+                                <option value="3">{sys_GetText(10)} </option>
+                                <option value="4">{sys_GetText(11)}</option>
+                            </select>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <!---------------------------------------->
+                    <div class="formRow">
+                        <div class="grid3"><label>{sys_GetText(0)}</label></div>
+                        <div class="grid3">
+                            <select id="txt_Disable" name="txt_Disable">
+                                <option value="false" selected="selected">{sys_GetText(13)} </option>
+                                <option value="true">{sys_GetText(14)}</option>
+                            </select>
+                        </div>
+
+                        <div class="grid3"><label>{sys_GetText(39)}</label></div>
+                        <div class="grid3">
+                            <input type="text" id="txt_Note" name="txt_Note" />
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <!---------------------------------------->
+                    <div class="formRow">
+                        <div class="grid3"><label>{sys_GetText(40)}</label></div>
+                        <div class="grid3">
+                            <input type="text" id="txt_Tag" name="txt_Tag" />
+                        </div>
+
+                        <div class="grid3"><label>{sys_GetText(41)}</label></div>
+                        <div class="grid3">
+                           <input type="text" id="txt_ViewCount" name="txt_ViewCount" />
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <!---------------------------------------->
+                    <div class="formRow">
+                        <div class="grid3">
+                            <form></form>
+                            <input type="hidden" id="txt_Image_1" name="txt_Image_1" />
+                            <form id="Form_Upload_1" enctype="multipart/form-data" method="post" action="">
+                                <div style="width: 100%">
+                                    {sys_GetText(30)}<br />
+                                    <input style="width: 100%" type="file" name="image_file_1" id="image_file_1" onchange="fileSelected(1);" />
+
+                                    
+                                    <div class="fileinfo" id="fileinfo_1">
+                                        <div id="filename_1">
+                                        </div>
+                                        <div id="filesize_1">
+                                        </div>
+                                        <div id="filetype_1">
+                                        </div>
+                                        <div id="filedim_1">
+                                        </div>
+                                    </div>
+                                    <img id="preview_1" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                                    <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(1, 'Form_Upload_1', 'Contents_IMAGE', 'txt_Image_1', true, -1, -1, true)" />
+
+                                </div>
+
+                                <div style="width: 100%">
+                                    <div class="error" id="error_1">{sys_GetText(32)}</div>
+                                    <div class="error2" id="error2_1">{sys_GetText(33)}</div>
+                                    <div class="abort" id="abort_1">{sys_GetText(34)}</div>
+                                    <div class="warnsize" id="warnsize_1">{sys_GetText(35)}</div>
+
+                                    <div id="progress_info_1" class="progress_info">
+                                        <div id="progress_1" class="progress">
+                                        </div>
+                                        <div id="progress_percent_1" class="progress_percent">
+                                            &nbsp;
+                                        </div>
+                                        <div class="clear_both">
+                                        </div>
+                                        <div>
+                                            <div id="speed_1" class="speed">
+                                                &nbsp;
+                                            </div>
+                                            <div id="remaining_1" class="remaining">
+                                                &nbsp;
+                                            </div>
+                                            <div id="b_transfered_1" class="b_transfered">
+                                                &nbsp;
+                                            </div>
+                                            <div class="clear_both">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="upload_response_1" />
+
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="grid3">
+                            <input type="hidden" id="txt_Image_2" name="txt_Image_2" />
+                            <form id="Form_Upload_2" enctype="multipart/form-data" method="post" action="">
+                                <div style="width: 100%">
+                                    {sys_GetText(36)}<br />
+                                    <input style="width: 100%" type="file" name="image_file_2" id="image_file_2" onchange="fileSelected(2);" />
+
+                                    
+                                    <div class="fileinfo" id="fileinfo_2">
+                                        <div id="filename_2">
+                                        </div>
+                                        <div id="filesize_2">
+                                        </div>
+                                        <div id="filetype_2">
+                                        </div>
+                                        <div id="filedim_2">
+                                        </div>
+                                    </div>
+                                    <img id="preview_2" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                                    <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(2, 'Form_Upload_2', 'Contents_IMAGE', 'txt_Image_2', true, -1, -1, true)" />
+
+                                </div>
+
+                                <div style="width: 100%">
+                                    <div class="error" id="error_2">{sys_GetText(32)}</div>
+                                    <div class="error2" id="error2_2">{sys_GetText(33)}</div>
+                                    <div class="abort" id="abort_2">{sys_GetText(34)}</div>
+                                    <div class="warnsize" id="warnsize_2">{sys_GetText(35)}</div>
+
+                                    <div id="progress_info_2" class="progress_info">
+                                        <div id="progress_2" class="progress">
+                                        </div>
+                                        <div id="progress_percent_2">
+                                            &nbsp;
+                                        </div>
+                                        <div class="clear_both">
+                                        </div>
+                                        <div>
+                                            <div id="speed_2" class="speed">
+                                                &nbsp;
+                                            </div>
+                                            <div id="remaining_2" class="remaining">
+                                                &nbsp;
+                                            </div>
+                                            <div id="b_transfered_2">
+                                                &nbsp;
+                                            </div>
+                                            <div class="clear_both">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="upload_response_2" />
+                                        
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="grid3">
+                            <input type="hidden" id="txt_Image_3" name="txt_Image_3" />
+                            <form id="Form_Upload_3" enctype="multipart/form-data" method="post" action="">
+                                <div style="width: 100%">
+                                    {sys_GetText(37)}<br />
+                                    <input style="width: 100%" type="file" name="image_file_3" id="image_file_3" onchange="fileSelected(3);" />
+
+                                    
+                                    <div class="fileinfo" id="fileinfo_3">
+                                        <div id="filename_3">
+                                        </div>
+                                        <div id="filesize_3">
+                                        </div>
+                                        <div id="filetype_3">
+                                        </div>
+                                        <div id="filedim_3">
+                                        </div>
+                                    </div>
+                                    <img id="preview_3" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                                    <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(3, 'Form_Upload_3', 'Contents_IMAGE', 'txt_Image_3', true, -1, -1, true)" />
+
+                                </div>
+
+                                <div style="width: 100%">
+                                    <div class="error" id="error_3">{sys_GetText(32)}</div>
+                                    <div class="error2" id="error2_3">{sys_GetText(33)}</div>
+                                    <div class="abort" id="abort_3">{sys_GetText(34)}</div>
+                                    <div class="warnsize" id="warnsize_3">{sys_GetText(35)}</div>
+
+                                    <div id="progress_info_3" class="progress_info">
+                                        <div id="progress_3" class="progress">
+                                        </div>
+                                        <div id="progress_percent_3">
+                                            &nbsp;
+                                        </div>
+                                        <div class="clear_both">
+                                        </div>
+                                        <div>
+                                            <div id="speed_3" class="speed">
+                                                &nbsp;
+                                            </div>
+                                            <div id="remaining_3" class="remaining">
+                                                &nbsp;
+                                            </div>
+                                            <div id="b_transfered_3">
+                                                &nbsp;
+                                            </div>
+                                            <div class="clear_both">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="upload_response_3" />
+                                        <input type="hidden" id="txtImage_3" />
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="grid3">
+                            <input type="hidden" id="txt_Image_4" name="txt_Image_4" />
+                            <form id="Form_Upload_4" enctype="multipart/form-data" method="post" action="">
+                                <div style="width: 100%">
+                                    {sys_GetText(38)}<br />
+                                    <input style="width: 100%" type="file" name="image_file_4" id="image_file_4" onchange="fileSelected(4);" />
+
+                                    
+                                    <div class="fileinfo" id="fileinfo_4">
+                                        <div id="filename_4">
+                                        </div>
+                                        <div id="filesize_4">
+                                        </div>
+                                        <div id="filetype_4">
+                                        </div>
+                                        <div id="filedim_4">
+                                        </div>
+                                    </div>
+                                    <img id="preview_4" width="100%" style="margin-bottom: 10px; margin-top: 10px" />
+
+                                    <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(4, 'Form_Upload_4', 'Contents_IMAGE', 'txt_Image_4', true, -1, -1, true)" />
+
+                                </div>
+
+                                <div style="width: 100%">
+                                    <div class="error" id="error_4">{sys_GetText(32)}</div>
+                                    <div class="error2" id="error2_4">{sys_GetText(33)}</div>
+                                    <div class="abort" id="abort_4">{sys_GetText(34)}</div>
+                                    <div class="warnsize" id="warnsize_4">{sys_GetText(35)}</div>
+
+                                    <div id="progress_info_4" class="progress_info">
+                                        <div id="progress_4" class="progress">
+                                        </div>
+                                        <div id="progress_percent_4">
+                                            &nbsp;
+                                        </div>
+                                        <div class="clear_both">
+                                        </div>
+                                        <div>
+                                            <div id="speed_4" class="speed">
+                                                &nbsp;
+                                            </div>
+                                            <div id="remaining_4" class="remaining">
+                                                &nbsp;
+                                            </div>
+                                            <div id="b_transfered_4">
+                                                &nbsp;
+                                            </div>
+                                            <div class="clear_both">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="upload_response_4" />
+                                        <input type="hidden" id="txtImage_4" />
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formRow_Ext">
+                        <div class="grid12">
+                             <!--##############################################################-->
+                            <div class="tab-container" id="tab-container">
+                                <ul class="iconsLine ic6 etabs">
+                                    {#for index = 1 to $P.NumLang}
+                                    <li><a href="#tabs-{$T.index}">{sys_GetText(15)} {$T.index}</a></li>
+                                    {#/for}
+                                </ul>
+                                {#for index = 1 to $P.NumLang}
+                                 <div id="tabs-{$T.index}">
+                                     <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+                                     
+                                         <div class="formRow">
+                                             <div class="grid3">{sys_GetText(16)}</div>
+                                             <div class="grid9">
+                                                 <input type="text" id="txt_CategoryNameLevel2_Lang{$T.index}" name="txt_CategoryNameLevel2_Lang{$T.index}" />
+
+                                             </div>
+                                             <div class="clear"> </div>
+                                         </div>
+                                         
+                                         <div class="formRow">
+                                            <div class="grid3">{sys_GetText(48)}</div>
+                                            <div class="grid3">
+                                                <input type="text"  id="txt_ExtendProperties1_Lang{$T.index}" name="txt_ExtendProperties1_Lang{$T.index}"  />
+                                            </div>
+                                            <div class="grid3">
+                                                    <input type="text"  id="txt_ExtendProperties2_Lang{$T.index}" name="txt_ExtendProperties2_Lang{$T.index}" />
+                                            </div>
+                                            <div class="grid3">
+                                                <input type="text"  id="txt_ExtendProperties3_Lang{$T.index}" name="txt_ExtendProperties3_Lang{$T.index}" />
+                                            </div>
+                                            <div class="clear"> </div>
+                                        </div>
+                                         <div class="formRow">
+                                             <div class="grid3">{sys_GetText(27)}</div>
+                                             <div class="grid9">
+                                                 <textarea id="txt_Intro_Lang{$T.index}" name="txt_Intro_Lang{$T.index}" class="txt_Intro" style="width: 100%; height: 120px;" rows="10" cols="45"></textarea>
+                                             </div>
+                                             <div class="clear"></div>
+                                         </div>
+                                         <div class="formRow">
+                                             
+                                             <div class="grid12">
+                                                 <br /><br />
+                                                
+
+                                                 <textarea id="txt_Info_Lang{$T.index}" name="txt_Info_Lang{$T.index}" class="txt_Info" style=" width: 100%; height: 370px;" rows="10" cols="45"></textarea>
+                                             </div>
+                                         </div>
+                                     
+                                 </div>
+                                {#/for}
+                            </div>
+                            <!--##############################################################-->
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!---------------------------------------->
+                    <div class="formRow noBorderB">
+                        <div class="grid3"><label>Tags:</label></div>
+                        <div class="grid9">
+                            <input style="display: none;" id="tags" name="tags" class="tags" value="these,are,sample,tags" type="text"><div style="width: 100%;" id="tags_tagsinput" class="tagsinput"><span class="tag"><span>these&nbsp;&nbsp;</span><a title="Removing tag" href="#">x</a></span><span class="tag"><span>are&nbsp;&nbsp;</span><a title="Removing tag" href="#">x</a></span><span class="tag"><span>sample&nbsp;&nbsp;</span><a title="Removing tag" href="#">x</a></span><span class="tag"><span>tags&nbsp;&nbsp;</span><a title="Removing tag" href="#">x</a></span><div id="tags_addTag"><input style="color: rgb(102, 102, 102); width: 60px;" id="tags_tag" value="" data-default="add a tag"></div><div class="tags_clear"></div></div></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </fieldset>
+
+    </form>

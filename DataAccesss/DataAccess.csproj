@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F7D0EDC-E69C-4BDC-B156-9AF9DD9CBE82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccesss</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\DLLs\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5">
+      <HintPath>..\Library\DLLs\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\Library\DLLs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Albums.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryLevel1.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryLevel1_CategoryLevel2.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryLevel2.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Configs.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contents.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contents_CategoryLevel1.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendProperties.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Files.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllInfoLogin_ByIDUsers_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Languages.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermitDetails.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permits.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permits_SystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SplitStringToTable_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_CategoryLevel1ViewAll.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_CategoryLevel2ViewAll.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ContentViewAll.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FilesViewAll.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_PermitViewAll.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DatabaseDA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseDA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DatabaseDA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+      <LastGenOutput>DatabaseDA.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DatabaseDA.edmx.diagram">
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+    </None>
+    <None Include="DatabaseDA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+      <LastGenOutput>DatabaseDA.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{27D615F6-A77C-4CAE-B476-A8F9D71CC71E}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

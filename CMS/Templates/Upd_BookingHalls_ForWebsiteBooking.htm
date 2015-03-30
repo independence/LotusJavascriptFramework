@@ -1,0 +1,275 @@
+﻿<script language="javascript" type="text/javascript">
+    $(document).ready(function () { setTimeout('Init_EditForm_BookingHalls("#divCustomer", "#divHalls", "#IDCustomer", "#IDHall", "#Start", "#End");', 1000); });
+</script>
+
+<div>
+    <div class="col width-45" style="width: 100% !important">
+        <fieldset>
+            <legend>Booking từ website</legend>
+            <form action="" method="post" enctype="multipart/form-data" id="frmUpd_BookingHalls"
+            name="frmUpd_BookingHalls" onsubmit="return false;">
+            <input type="hidden" id="txt_Type" name="txt_Type" value="0" />
+
+            <input type="hidden" id="IDCustomer" name="IDCustomer" value="{$T.BookingHalls.IDCustomer}"/>
+            <input type="hidden" id="IDHall" name="IDHall" value="{$T.BookingHalls.IDHall}"/>
+            <input type="hidden" id="Start" name="Start" value="{$T.BookingHalls.StartTime}"/>
+            <input type="hidden" id="End" name="End" value="{$T.BookingHalls.EndTime}"/>
+
+            <div id="tabs">
+              <ul>
+                    <li><a href="#tabs-1">{$P.Lang[0].Text}</a></li>
+                    <li><a href="#tabs-2">{$P.Lang[1].Text}</a></li>
+                </ul>
+                <div id="tabs-1">
+                           <table class="admintable" width="100%">
+                                <tr>
+                                    <td class="key">
+                                       {$P.Lang[2].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <div id="divCustomer">
+                                        </div>
+                                    </td>
+                                    <td class="key">
+                                       {$P.Lang[3].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <div id="divHalls">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        {$P.Lang[4].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_Unit" name="txt_Unit" value="{$T.BookingHalls.Unit}"/>
+                                        <span id="lbWarning_Unit"></span>
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[5].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_TableOrPerson" name="txt_TableOrPerson">
+                                            <option value="1"  {#if $T.BookingHalls.TableOrPerson == 1} selected="selected"  {#/if}>{$P.Lang[6].Text}</option>
+                                            <option value="2"  {#if $T.BookingHalls.TableOrPerson == 2} selected="selected"  {#/if}>{$P.Lang[7].Text}</option>
+                                            <option value="0"  {#if $T.BookingHalls.TableOrPerson == 0} selected="selected"  {#/if}>{$P.Lang[8].Text}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        {$P.Lang[9].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_StartTime" name="txt_StartTime" value="{$T.BookingHalls.StartTime}" onchange="SetLunarDate();" />
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[10].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_EndTime" name="txt_EndTime" value="{$T.BookingHalls.EndTime}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                       {$P.Lang[11].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_LunarDate" name="txt_LunarDate" value="{$T.BookingHalls.LunarDate}" readonly="readonly" />
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[12].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_BookingStatus" name="txt_BookingStatus" >
+                                           <!-- <option value="0" {#if $T.BookingHalls.BookingStatus == 0} selected="selected"  {#/if}>Đã xong</option>
+                                            <option value="1" {#if $T.BookingHalls.BookingStatus == 1} selected="selected"  {#/if}>Tạm hoãn</option>-->
+                                            <option value="2" {#if $T.BookingHalls.BookingStatus == 2} selected="selected"  {#/if}>{$P.Lang[13].Text} </option>
+                                            <option value="3" {#if $T.BookingHalls.BookingStatus == 3} selected="selected"  {#/if}>{$P.Lang[14].Text}</option>
+                                            <!--<option value="4" {#if $T.BookingHalls.BookingStatus == 4} selected="selected"  {#/if}>VIP</option>-->
+                                        </select>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="key">
+                                        {$P.Lang[15].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_Subject" name="txt_Subject"  value="{$T.BookingHalls.Subject}"/>
+                                    </td>
+                                    <td class="key">
+                                       {$P.Lang[16].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_Location" name="txt_Location" value="{$T.BookingHalls.Location}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        {$P.Lang[17].Text}
+                                    </td>
+                                    <td class="paramlist_key" colspan="3">
+                                        <input type="text" id="txt_Description" name="txt_Description" value="{$T.BookingHalls.Description}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        {$P.Lang[18].Text}
+                                    </td>
+                                    <td class="paramlist_key" colspan="3">
+                                        <textarea style="width: 100%; height: 63px;" rows="10" cols="45" id="txt_Note" name="txt_Note">{$T.BookingHalls.Note}</textarea>
+                                    </td>
+                                </tr>
+
+                            </table>
+                 </div>
+                <div id="tabs-2">
+                            <table class="admintable" width="100%">
+                                <tr>
+                                    <td class="key">
+                                       {$P.Lang[19].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <input type="text" id="txt_Cost" name="txt_Cost" value="{$T.BookingHalls.Cost}" />
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[20].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_CostUnit" name="txt_CostUnit" >
+                                            <option value="1" {#if $T.BookingHalls.CostUnit == 1} selected="selected"  {#/if}>VND </option>
+                                            <option value="2" {#if $T.BookingHalls.CostUnit == 2} selected="selected"  {#/if}>USD </option>
+                                            <option value="3" {#if $T.BookingHalls.CostUnit == 3} selected="selected"  {#/if}>Yen </option>
+                                            <option value="4" {#if $T.BookingHalls.CostUnit == 4} selected="selected"  {#/if}>LB </option>
+                                            <option value="5" {#if $T.BookingHalls.CostUnit == 5} selected="selected"  {#/if}>Uero </option>
+                                            <option value="0" {#if $T.BookingHalls.CostUnit == 0} selected="selected"  {#/if}>{$P.Lang[8].Text} </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                       {$P.Lang[21].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_PayMethod" name="txt_PayMethod">
+                                            <option value="1" {#if $T.BookingHalls.PayMethod == 1} selected="selected"  {#/if}>{$P.Lang[22].Text} </option>
+                                            <option value="2" {#if $T.BookingHalls.PayMethod == 2} selected="selected"  {#/if}>{$P.Lang[23].Text}</option>
+                                            <option value="3" {#if $T.BookingHalls.PayMethod == 3} selected="selected"  {#/if}>{$P.Lang[24].Text} </option>
+                                            <option value="0" {#if $T.BookingHalls.PayMethod == 0} selected="selected"  {#/if}>{$P.Lang[8].Text}</option>
+                                        </select>
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[25].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_StatusPay" name="txt_StatusPay">
+                                            <option value="1" {#if $T.BookingHalls.StatusPay == 1} selected="selected"  {#/if}>{$P.Lang[26].Text}</option>
+                                            <option value="2" {#if $T.BookingHalls.StatusPay == 2} selected="selected"  {#/if} onclick="ShowTextboxBookingMoney();">{$P.Lang[27].Text}</option>
+                                            <option value="3" {#if $T.BookingHalls.StatusPay == 3} selected="selected"  {#/if}>{$P.Lang[28].Text}</option>
+                                            <option value="0" {#if $T.BookingHalls.StatusPay == 0} selected="selected"  {#/if}>{$P.Lang[8].Text} </option>
+                                        </select>
+                                        <div id="divBookingMoney" style="display: none; width: 100px" >{$P.Lang[29].Text}: <input type="text" id="txt_BookingMoney" name="txt_BookingMoney" value="{$T.BookingHalls.BookingMoney}" /></div>
+                                        <span id="lbWarning_BookingMoney"></span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="key">
+                                       {$P.Lang[30].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_IsAllDayEvent" name="txt_IsAllDayEvent">
+                                            <option value="0" {#if $T.BookingHalls.IsAllDayEvent == 0} selected="selected"  {#/if}>{$P.Lang[31].Text} </option>
+                                            <option value="1" {#if $T.BookingHalls.IsAllDayEvent == 1} selected="selected"  {#/if}>{$P.Lang[32].Text} </option>
+                                        </select>
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[33].Text} 
+
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_Status" name="txt_Status">
+                                            <option value="0" {#if $T.BookingHalls.Status == 0} selected="selected"  {#/if}>{$P.Lang[34].Text}</option>
+                                            <option value="1" {#if $T.BookingHalls.Status == 1} selected="selected"  {#/if}>{$P.Lang[35].Text} </option>
+                                            <option value="2" {#if $T.BookingHalls.Status == 2} selected="selected"  {#/if}>{$P.Lang[36].Text} </option>
+                                            <option value="3" {#if $T.BookingHalls.Status == 3} selected="selected"  {#/if}>{$P.Lang[37].Text}</option>
+                                            <option value="4" {#if $T.BookingHalls.Status == 4} selected="selected"  {#/if}>{$P.Lang[38].Text}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!--<td class="key">
+                                        Type [Dữ liệu dự phòng]
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_Type" name="txt_Type" disabled="disabled">
+                                            <option value="0" {#if $T.BookingHalls.Type == 0} selected="selected"  {#/if}>[Dữ liệu dự phòng]</option>
+                                            <option value="1" {#if $T.BookingHalls.Type == 1} selected="selected"  {#/if}>[Dữ liệu dự phòng]</option>
+                                            <option value="2" {#if $T.BookingHalls.Type == 2} selected="selected"  {#/if}>[Dữ liệu dự phòng]</option>
+                                            <option value="3" {#if $T.BookingHalls.Type == 3} selected="selected"  {#/if}>[Dữ liệu dự phòng]</option>
+                                        </select>
+                                    </td>-->
+                                    <td class="key">
+                                        {$P.Lang[39].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_IsEditable" name="txt_IsEditable">
+                                            <option value="0" {#if $T.BookingHalls.IsEditable == "0"} selected="selected"  {#/if}>{$P.Lang[48].Text} </option>
+                                            <option value="1" {#if $T.BookingHalls.IsEditable == "1"} selected="selected"  {#/if}>{$P.Lang[49].Text}</option>
+                                        </select>
+                                    </td>
+
+                                    <td class="key">
+                                        {$P.Lang[40].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_Disable" name="txt_Disable">
+                                            <option value="false" {#if $T.BookingHalls.Disable == "false"} selected="selected"  {#/if}>{$P.Lang[48].Text}</option>
+                                            <option value="true" {#if $T.BookingHalls.Disable == "true"} selected="selected"  {#/if}>{$P.Lang[49].Text} </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="key">
+                                        {$P.Lang[41].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+
+                                        <select id="txt_Color" name="txt_Color">
+                                         <option value="0" {#if $T.BookingHalls.Color == ""} selected="selected"  {#/if}>{$P.Lang[42].Text}</option>
+<!--                                        <option value="18" {#if $T.BookingHalls.Color == "18"} selected="selected"  {#/if}>Xám </option>
+                                            <option value="1" {#if $T.BookingHalls.Color == "1"} selected="selected"  {#/if}>Đỏ </option>
+                                            <option value="2" {#if $T.BookingHalls.Color == "2"} selected="selected"  {#/if}>Hồng </option>
+                                            <option value="3" {#if $T.BookingHalls.Color == "3"} selected="selected"  {#/if}>Tím </option>
+                                            <option value="4" {#if $T.BookingHalls.Color == "4"} selected="selected"  {#/if}>Tím xanh </option>
+                                            <option value="6" {#if $T.BookingHalls.Color == "6"} selected="selected"  {#/if}>Xanh biển </option>
+                                            <option value="7" {#if $T.BookingHalls.Color == "7"} selected="selected"  {#/if}>Xanh côban </option>-->
+                                            <option value="9" {#if $T.BookingHalls.Color == "9"} selected="selected"  {#/if}>{$P.Lang[43].Text} </option>
+                                            <option value="10" {#if $T.BookingHalls.Color == "10"} selected="selected"  {#/if}>{$P.Lang[44].Text}</option>
+                                            <option value="12" {#if $T.BookingHalls.Color == "12"} selected="selected"  {#/if}>{$P.Lang[45].Text}</option>
+                                            <option value="14" {#if $T.BookingHalls.Color == "14"} selected="selected"  {#/if}>{$P.Lang[46].Text}</option>
+
+                                        </select>
+                                    </td>
+                                    <td class="key">
+                                        {$P.Lang[47].Text}
+                                    </td>
+                                    <td class="paramlist_key">
+                                        <select id="txt_IsRecurring" name="txt_IsRecurring">
+                                            <option value="0"  {#if $T.BookingHalls.IsRecurring == "0"} selected="selected"  {#/if}>{$P.Lang[48].Text}  </option>
+                                            <option value="1"  {#if $T.BookingHalls.IsRecurring == "1"} selected="selected"  {#/if}>{$P.Lang[49].Text} </option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+
+                           </table>
+                </div>
+             </div>
+            </form>
+        </fieldset>
+    </div>
+</div>

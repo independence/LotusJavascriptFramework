@@ -1,0 +1,53 @@
+﻿<root>
+  <item Index="0">Trực thuộc nhóm cha</item>
+  <item Index="1">Loại</item>
+  <item Index="2">Loại 0</item>
+  <item Index="3">Loại 1</item>
+  <item Index="4">Loại 2</item>
+  <item Index="5">Loại 3</item>
+  <item Index="6">Loại 4</item>
+  <item Index="7">Trạng thái</item>
+  <item Index="8">Trạng thái 0</item>
+  <item Index="9">Trạng thái 1</item>
+  <item Index="10">Trạng thái 2</item>
+  <item Index="11">Trạng thái 3</item>
+  <item Index="12">Trạng thái 4</item>
+  <item Index="13">Tạm khóa</item>
+  <item Index="14">Không</item>
+  <item Index="15">Có</item>
+  <item Index="16">Ngôn ngữ</item>
+  <item Index="17">Tên nhóm tin cấp 1</item>
+
+  <item Index="18">Sửa</item>
+  <item Index="19">Xóa</item>
+  <item Index="20">ID</item>
+  <item Index="21">Khóa</item>
+  <item Index="22">CategoryLevel1</item>
+  <item Index="23">Thêm CategoryLevel1</item>
+  <item Index="24">Sửa CategoryLevel1</item>
+  <item Index="25">Bạn có chắc muốn xóa dòng này ?</item>
+  <item Index="26">Bạn có chắc muốn khóa dòng này ?</item>
+  <item Index="27">Mã</item>
+  <item Index="28">Lượt xem</item>
+  <item Index="29">Ảnh</item>
+  <item Index="30">Chọn ảnh mặc định</item>
+  <item Index="31"> Chọn thư mục ảnh</item>
+  <item Index="32">Chỉ chọn thư mục ảnh</item>
+  <item Index="33"> Có lỗi trong quá trình tải thư mục</item>
+  <item Index="34">Tải lên đã được ngừng bởi người dùng hoặc do đường truyền</item>
+  <item Index="35">Kích thước ảnh quá lớn</item>
+
+
+  <item Index="36">Chọn ảnh 1</item>
+  <item Index="37">Chọn ảnh 2</item>
+  <item Index="38">Chọn ảnh 3</item>
+
+  <item Index="39">Ghi chú</item>
+  <item Index="40">Tag</item>
+  <item Index="41">Lượt xem</item>
+  <item Index="42">Mã Album</item>
+  <item Index="43">Trích dẫn</item>
+  <item Index="44">Giới thiệu</item>
+
+
+</root>

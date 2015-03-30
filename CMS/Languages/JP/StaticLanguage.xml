@@ -1,0 +1,46 @@
+﻿<root>
+<item Index="0">www.Ngkntk.com.vn</item>
+<item Index="1">サービス</item>
+
+
+<item Index="2">VIP</item>
+<item Index="3">VIPのお客様のリスト</item>
+<item Index="4">VIPのホールのリスト</item>
+<item Index="5">VIPのホールを予約</item>
+
+
+<item Index="6">ホール</item>
+<item Index="7">ホールリスト</item>
+<item Index="8">ホールを予約</item>
+<item Index="9">インターネットでホールを予約</item>
+  
+  
+<item Index="10">ルーム</item>
+<item Index="11">ルームの情報</item>
+<item Index="12">ルームのタイプ</item>
+<item Index="13">ルームを予約</item>
+<item Index="14">インターネットでルームを予約</item>
+  
+  
+<item Index="15">アルバム</item>
+<item Index="16">アルバム</item>
+<item Index="17">写真をアップロード</item>
+<item Index="18">お客様</item>
+<item Index="19">お客様</item>
+  
+  
+<item Index="20">ニュース</item>
+  <item Index="21">ニュース</item>
+  <item Index="22">ヒストリー</item>
+  <item Index="23">レベル1のカテゴリ</item>
+  <item Index="24">レベル2のカテゴリ</item>
+  
+  <item Index="25">システム</item>
+  <item Index="26">ユーザー</item>
+  <item Index="27">パーミッション</item>
+  <item Index="28">パーミッションのリスト</item>
+  <item Index="29">ユーザーのパーミッション</item>
+  <item Index="30">コンフィギュレーション</item>
+  <item Index="31">言語</item>
+
+</root>

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div>
+    <div id="element-box">
+        <div class="m">
+            <div class="col width-45" style="width:  100% !important">
+                <fieldset>
+                    <legend>Sửa VIPCustomers</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_VIPCustomers"
+                    name="frmUpd_VIPCustomers" onsubmit="return false;">
+                    <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.Customers.ID}" />
+                    <input type="hidden" id="txt_Type" name="txt_Type" value="1" />
+                    <table class="admintable">
+                        <tr>
+                            <td class="key" width="20%">
+                                 {$P.Lang[0].Text}
+                            </td>
+                            <td class="paramlist_key" width="20%">
+                                <input type="text" id="txt_Name" name="txt_Name" value="{$T.Customers.Name}" />
+                            </td>
+                            <td class="key">
+                                {$P.Lang[1].Text}
+                            </td>
+                            <td class="paramlist_key">
+                          
+                                <select id="txt_Status" name="txt_Status" >
+                                   <option value="0" {#if $T.Customers.Status == 0} selected="selected" {#/if}> {$P.Lang[2].Text} </option>
+                                   <option value="1" {#if $T.Customers.Status == 1} selected="selected" {#/if}> {$P.Lang[3].Text} </option>
+                                   <option value="2" {#if $T.Customers.Status == 2} selected="selected" {#/if}> {$P.Lang[4].Text} </option>
+                                   <option value="3" {#if $T.Customers.Status == 3} selected="selected" {#/if}> {$P.Lang[5].Text} </option>
+                                   <option value="4" {#if $T.Customers.Status == 4} selected="selected" {#/if}> {$P.Lang[6].Text} </option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="key">
+                                {$P.Lang[7].Text}
+                            </td>
+                            <td class="paramlist_key">
+                    
+                                 <select id="txt_Disable" name="txt_Disable" >
+                                   <option value="false" {#if $T.Customers.Disable == false} selected="selected" {#/if}> {$P.Lang[8].Text} </option>
+                                   <option value="true" {#if $T.Customers.Disable == true} selected="selected" {#/if}> {$P.Lang[9].Text} </option>
+                                </select>
+
+                            </td>
+ 
+                            <td class="key" width="20%">
+                               {$P.Lang[10].Text}
+                            </td>
+                            <td class="paramlist_key" width="30%">
+                                <input type="text" id="txt_Regency" name="txt_Regency" value="{$T.Customers.Regency}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key">
+                                 {$P.Lang[11].Text}
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <input type="text" id="txt_Info" name="txt_Info" value="{$T.Customers.Info}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key">
+                                {$P.Lang[12].Text}
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                 <textarea id="txt_Description" name="txt_Description" class="txt_Description" rows="10"cols="50" style=" width: 100%; height: 100px;">{$T.Customers.Description}</textarea>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+</div>

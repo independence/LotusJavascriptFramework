@@ -1,0 +1,32 @@
+﻿<root>
+  <item Index="0">権限のコード</item>
+  <item Index="1">ユーザーのコード</item>
+  <item Index="2">見る</item>
+  <item Index="3">はい</item>
+  <item Index="4">いいえ</item>
+  <item Index="5">追加</item>
+  <item Index="6">変更</item>
+  <item Index="7">削除</item>
+  <item Index="8">特別</item>
+  <item Index="9">概要</item>
+  <item Index="10">ログ</item>
+  <item Index="11">タイプ</item>
+  <item Index="12">タイプ 0</item>
+  <item Index="13">タイプ 1</item>
+  <item Index="14">タイプ 2</item>
+  <item Index="15">タイプ 3</item>
+  <item Index="16">タイプ 4</item>
+  <item Index="17">状態</item>
+  <item Index="18">状態 0</item>
+  <item Index="19">状態 1</item>
+  <item Index="20">状態 2</item>
+  <item Index="21">変更</item>
+  <item Index="22">削除</item>
+  <item Index="23">コード</item>
+  <item Index="24">ロック</item>
+
+  <item Index="25">ユーザーのマッピングに許可する</item>
+  <item Index="26">ユーザーのマッピングに許可を追加 </item>
+  <item Index="27">ユーザーのマッピングに許可を変更</item>
+  <item Index="28">削除してもよろしいですか ?</item>
+</root>

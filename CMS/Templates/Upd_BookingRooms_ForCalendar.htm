@@ -1,0 +1,209 @@
+﻿
+<!--=======================================================-->
+<script language="javascript" type="text/javascript">
+
+
+    // Phải tách ra thế này không gán trực tiếp vào hàm Init_EditForm_BookingRooms vì Jquery sẽ xử lý chuỗi Jtemplate làm cho k fill đc kết quả vào
+    $(document).ready(function () { setTimeout('Init_Dialog_Upd("#divCustomer","#divRooms","#IDCustomer","#CodeRoom","#StartTime","#EndTime");', 1000); });
+
+</script>
+
+
+<form action="" method="post" enctype="multipart/form-data" id="frmUpd_BookingRooms" name="frmUpd_BookingRooms" onsubmit="return false;">
+                    
+<input type="hidden" id="IDCustomer" name="IDCustomer" value="{$T.BookingRooms.IDCustomer}" />
+<input type="hidden" id="CodeRoom" name="CodeRoom" value="{$T.BookingRooms.CodeRoom}" />
+<input type="hidden" id="StartTime" name="StartTime" value="{$T.BookingRooms.StartTime}" />
+<input type="hidden" id="EndTime" name="EndTime" value="{$T.BookingRooms.EndTime}" />
+<!--##############################################################-->
+<div id="tabs">
+    <ul>
+        {#for index = 1 to $P.NumLang}
+        <li><a href="#tabs-{$T.index}">{$P.Lang[43].Text} {$T.index}</a></li>{#/for}
+    </ul>
+    {#for index = 1 to $P.NumLang}
+    <div id="tabs-{$T.index}">
+        <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+        <table class="admintable" width="100%">
+            <tr>
+                <td class="key">
+                    {$P.Lang[0].Text}(*)
+                </td>
+                <td class="paramlist_key" colspan="3">
+                    <input type="text" id="txt_Subject_Lang{$T.index}" name="txt_Subject_Lang{$T.index}" value="{$T.BookingRooms_Group[$T.index-1].Subject}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key">
+                    {$P.Lang[5].Text}(*)
+                </td>
+                <td class="paramlist_key">
+                    <input type="text" id="txt_Cost_Lang{$T.index}" name="txt_Cost_Lang{$T.index}" value="{$T.BookingRooms_Group[$T.index-1].Cost}" />
+                </td>
+                <td class="key">
+                    {$P.Lang[6].Text}(*)
+                </td>
+                <td class="paramlist_key">
+                    <select id="txt_CostUnit_Lang{$T.index}" name="txt_CostUnit_Lang{$T.index}">
+
+                        <option value="1" {#if $T.BookingRooms_Group[$T.index-1].CostUnit == 1 } selected="selected" {#/if}>VND </option>
+                        <option value="2" {#if $T.BookingRooms_Group[$T.index-1].CostUnit == 2 } selected="selected" {#/if}>USD </option>
+                        <option value="3" {#if $T.BookingRooms_Group[$T.index-1].CostUnit == 3 } selected="selected" {#/if} >Yen </option>
+                        <option value="4" {#if $T.BookingRooms_Group[$T.index-1].CostUnit == 4 } selected="selected" {#/if}>LB </option>
+                        <option value="0" {#if $T.BookingRooms_Group[$T.index-1].CostUnit == 0 } selected="selected" {#/if}>{$P.Lang[7].Text} </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="key">
+                    {$P.Lang[8].Text}
+                </td>
+                <td class="paramlist_key" colspan="3">
+                    <textarea style="width: 100%; height: 63px;" rows="10" cols="45" id="txt_Note_Lang{$T.index}"
+                        name="txt_Note_Lang{$T.index}">{$T.BookingRooms_Group[$T.index-1].Note}</textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {#/for}
+</div>
+<!--##############################################################-->
+<table class="admintable" width="100%" style="">
+    <tr>
+        <td class="key">
+            {$P.Lang[1].Text}
+        </td>
+        <td class="paramlist_key">
+            <input type="text" id="txt_CheckInPlan" name="txt_CheckInPlan" onchange="FillAvaiableRoomsDataToDropdowList('#divRooms');" value="{$T.BookingRooms_Group[0].CheckInPlan}" />
+        </td>
+        <td class="key">
+            {$P.Lang[2].Text}
+        </td>
+        <td class="paramlist_key">
+            <input type="text" id="txt_CheckOutPlan" name="txt_CheckOutPlan" onchange="FillAvaiableRoomsDataToDropdowList('#divRooms');" value="{$T.BookingRooms_Group[0].CheckOutPlan}" />
+        </td>
+    </tr>
+    <tr>
+        <td class="key" width="20%">
+            {$P.Lang[3].Text}
+        </td>
+        <td class="paramlist_key" width="25%">
+            <div id="divRooms">
+            </div>
+        </td>
+        <td class="key" width="20%">
+            {$P.Lang[4].Text}
+        </td>
+        <td class="paramlist_key" width="25%">
+            <div id="divCustomer">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="key">
+            {$P.Lang[9].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_PayMethod" name="txt_PayMethod">
+                <option value="1"  {#if $T.BookingRooms_Group[0].PayMethod == 1 } selected="selected" {#/if} >{$P.Lang[10].Text} </option>
+                <option value="2"  {#if $T.BookingRooms_Group[0].PayMethod == 2 } selected="selected" {#/if}>{$P.Lang[11].Text} </option>
+                <option value="3"  {#if $T.BookingRooms_Group[0].PayMethod == 3 } selected="selected" {#/if}>{$P.Lang[12].Text}</option>
+                <option value="0"  {#if $T.BookingRooms_Group[0].PayMethod == 0 } selected="selected" {#/if}>{$P.Lang[7].Text} </option>
+            </select>
+        </td>
+        <td class="key">
+            {$P.Lang[13].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_StatusPay" name="txt_StatusPay">
+                <option value="1" {#if $T.BookingRooms_Group[0].StatusPay == 1 } selected="selected" {#/if}>{$P.Lang[14].Text}</option>
+                <option value="2" {#if $T.BookingRooms_Group[0].StatusPay == 2 } selected="selected" {#/if} onclick="ShowTextboxBookingMoney();">{$P.Lang[15].Text}</option>
+                <option value="3" {#if $T.BookingRooms_Group[0].StatusPay == 3 } selected="selected" {#/if}>{$P.Lang[16].Text}</option>
+                <option value="0" {#if $T.BookingRooms_Group[0].StatusPay == 0 } selected="selected" {#/if}>{$P.Lang[7].Text}</option>
+            </select>
+            {$P.Lang[17].Text}:
+            <input type="text" id="txt_BookingMoney" name="txt_BookingMoney" style="display: none; width: 100px"  value="{$T.BookingRooms_Group[0].BookingMoney}"  />
+        </td>
+    </tr>
+
+    <tr>
+        <td class="key">
+            {$P.Lang[27].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_BookingStatus" name="txt_BookingStatus">
+                <option value="0"  {#if $T.BookingRooms_Group[0].BookingStatus == 0 } selected="selected" {#/if}>{$P.Lang[28].Text}</option>
+                <option value="1"  {#if $T.BookingRooms_Group[0].BookingStatus == 1 } selected="selected" {#/if}>{$P.Lang[29].Text}</option>
+                <option value="2"  {#if $T.BookingRooms_Group[0].BookingStatus == 2 } selected="selected" {#/if}>{$P.Lang[30].Text}</option>
+                <option value="3"  {#if $T.BookingRooms_Group[0].BookingStatus == 3 } selected="selected" {#/if}>{$P.Lang[31].Text}</option>
+                <option value="4"  {#if $T.BookingRooms_Group[0].BookingStatus == 4 } selected="selected" {#/if}>{$P.Lang[32].Text}</option>
+            </select>
+        </td>
+        <td class="key">
+            {$P.Lang[18].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_Status" name="txt_Status">
+                <option value="0" {#if $T.BookingRooms_Group[0].Status == 0 } selected="selected" {#/if} >{$P.Lang[19].Text}</option>
+                <option value="1" {#if $T.BookingRooms_Group[0].Status == 1 } selected="selected" {#/if}>{$P.Lang[20].Text}</option>
+                <option value="2" {#if $T.BookingRooms_Group[0].Status == 2 } selected="selected" {#/if}>{$P.Lang[21].Text}</option>
+                <option value="3" {#if $T.BookingRooms_Group[0].Status == 3 } selected="selected" {#/if}>{$P.Lang[22].Text}</option>
+                <option value="4" {#if $T.BookingRooms_Group[0].Status == 4 } selected="selected" {#/if}>{$P.Lang[23].Text} </option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<a onclick="FullOption()" style="color: Blue; margin: 10 10 10 10">Show Full Option</a>
+<table class="admintable" id="tblFullOption" width="100%" style="display: none;">
+    <tr>
+        <td class="key">
+            {$P.Lang[56].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_IsEditable" name="txt_IsEditable">
+                <option value="0" {#if $T.BookingRooms_Group[0].IsEditable == 0 } selected="selected" {#/if}>{$P.Lang[57].Text} </option>
+                <option value="1" {#if $T.BookingRooms_Group[0].IsEditable == 1 } selected="selected" {#/if}>{$P.Lang[58].Text}</option>
+            </select>
+        </td>
+        <td class="key">
+            {$P.Lang[24].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_Disable" name="txt_Disable">
+                <option value="false" {#if $T.BookingRooms_Group[0].Disable == false } selected="selected" {#/if}>{$P.Lang[25].Text} </option>
+                <option value="true" {#if $T.BookingRooms_Group[0].Disable == true } selected="selected" {#/if}>{$P.Lang[26].Text}</option>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td class="key">
+            {$P.Lang[47].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_Color" name="txt_Color">
+                <option value="0" {#if $T.BookingRooms_Group[0].Color == 0 } selected="selected" {#/if}>{$P.Lang[48].Text}</option>
+                <option value="9" {#if $T.BookingRooms_Group[0].Color == 9 } selected="selected" {#/if}>{$P.Lang[49].Text} </option>
+                <option value="10" {#if $T.BookingRooms_Group[0].Color == 10 } selected="selected" {#/if}>{$P.Lang[50].Text}</option>
+                <option value="12" {#if $T.BookingRooms_Group[0].Color == 12 } selected="selected" {#/if}>{$P.Lang[51].Text}</option>
+                <option value="14" {#if $T.BookingRooms_Group[0].Color == 14 } selected="selected" {#/if}>{$P.Lang[52].Text}</option>
+            </select>
+        </td>
+        <td class="key">
+            {$P.Lang[53].Text}
+        </td>
+        <td class="paramlist_key">
+            <select id="txt_IsRecurring" name="txt_IsRecurring">
+                <option value="1" {#if $T.BookingRooms_Group[0].IsRecurring == 1 } selected="selected" {#/if}>{$P.Lang[54].Text} </option>
+                <option value="0" {#if $T.BookingRooms_Group[0].IsRecurring == 0 } selected="selected" {#/if}>{$P.Lang[55].Text} </option>
+            </select>
+        </td>
+    </tr>
+</table>
+<input type="hidden" id="txt_CheckOutActual" name="txt_CheckOutActual"  value="{$T.BookingRooms_Group[0].CheckOutActual}" />
+<input type="hidden" id="txt_CheckInActual" name="txt_CheckInActual"  value="{$T.BookingRooms_Group[0].CheckInActual}" />
+<input type="hidden" id="txt_Upd_Counter" name="txt_Upd_Counter"  value="{$T.BookingRooms_Group[0].Counter}" />
+<input type="hidden" id="txt_Date" name="txt_Date" />
+<input type="hidden" id="txt_IsAllDayEvent" name="txt_IsAllDayEvent" value="1" />
+</form>

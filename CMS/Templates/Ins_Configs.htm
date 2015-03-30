@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+</script>
+<div>
+    <div id="element-box">
+        <div class="col width-45" style="width: 100% !important">
+            <fieldset>
+                <legend>{$P.Lang[25].Text}</legend>
+                <form action="" method="post" enctype="multipart/form-data" id="frmIns_Configs" name="frmIns_Configs"
+                onsubmit="return false;">
+                <table class="admintable" width="100%">
+                    <tr>
+                        <td class="key" width="25%">
+                            {$P.Lang[0].Text}
+                        </td>
+                        <td class="paramlist_key" width="25%">
+                            <select id="txt_Status" name="txt_Status">
+                                <option value="0" selected="selected">{$P.Lang[1].Text} </option>
+                                <option value="1">{$P.Lang[2].Text} </option>
+                                <option value="2">{$P.Lang[3].Text} </option>
+                                <option value="3">{$P.Lang[4].Text} </option>
+                                <option value="4">{$P.Lang[5].Text} </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            {$P.Lang[6].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_AccessKey" name="txt_AccessKey" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            {$P.Lang[7].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Value" name="txt_Value" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key" width="25%">
+                            {$P.Lang[8].Text}
+                        </td>
+                        <td class="paramlist_key" width="25%">
+                            <select id="txt_Type" name="txt_Type">
+                                <option value="0" selected="selected">{$P.Lang[9].Text} </option>
+                                <option value="1">{$P.Lang[10].Text} </option>
+                                <option value="2">{$P.Lang[11].Text} </option>
+                                <option value="3">{$P.Lang[12].Text}</option>
+                                <option value="4">{$P.Lang[13].Text} </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key" width="25%">
+                            {$P.Lang[14].Text}
+                        </td>
+                        <td class="paramlist_key" width="25%">
+                            <select id="txt_Group" name="txt_Group">
+                                <option value="0" selected="selected">{$P.Lang[15].Text} </option>
+                                <option value="1">{$P.Lang[16].Text} </option>
+                                <option value="2">{$P.Lang[17].Text} </option>
+                                <option value="3">{$P.Lang[18].Text} </option>
+                                <option value="4">{$P.Lang[19].Text} </option>
+                            </select>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td class="key">
+                            {$P.Lang[28].Text}
+                        </td>
+                        <td class="paramlist_key">
+
+                            <textarea id="txt_Note" cols="30" rows="3" name="txt_Note"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>

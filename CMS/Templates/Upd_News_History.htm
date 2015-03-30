@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () { Init_Dialog_Upd("#Div_CodeAlbum", "#IDAlbum"); });
+</script>
+<div>
+    <div id="element-box">
+
+            <div class="col width-45" style="width: 100% !important">
+                <fieldset>
+                    <legend>{$P.Lang[34].Text}</legend>
+                    <form action="" method="post" enctype="multipart/form-data" id="frmUpd_Contents" name="frmUpd_Contents"
+                    onsubmit="return false;">
+                    <input type="hidden" id="txt_ID" name="txt_ID" value="{$T.Contents_Group[0].ID}" />
+                        <input type="hidden" id="CodeCategoryLevel1" name="CodeCategoryLevel1" value="{$T.Contents_Group[0].CodeCategoryLevel1}" />
+                <input type="hidden" id="IDAlbum" name="IDAlbum" value="{$T.Contents_Group[0].IDAlbum}" />
+                        <input type="hidden" id="txt_Code" name="txt_Code" value="{$T.Contents_Group[0].Code}" />
+					<!--<input type="hidden" id="txt_Type" name="txt_Type" value="{$T.Contents_Group[0].Type}" />-->
+                <!--##############################################################-->
+            <table class="admintable" width="100%">		 
+			 
+                <tr>
+                    <!--<td class="key">{$P.Lang[8].Text}</td>
+                    <td class="paramlist_key">
+                        <div id="Div_CategoryLevel1"></div>
+                -->
+                    <td class="key">{$P.Lang[9].Text}</td>
+                    <td class="paramlist_key" colspan="3">
+                        <div id="Div_CodeAlbum"></div>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[0].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_Type" name="txt_Type" value="{$T.Contents_Group[0].Type}" /></td>
+
+                    <td class="key">{$P.Lang[1].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_CreatedBy" name="txt_CreatedBy" value="{$T.Contents_Group[0].CreatedBy}" /></td>
+
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[2].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_Tag" name="txt_Tag" value="{$T.Contents_Group[0].Tag}" /></td>
+
+                    <td class="key">{$P.Lang[5].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_UpdateBy" name="txt_UpdateBy" value="{$T.Contents_Group[0].UpdateBy}" /></td>
+                </tr>
+                <tr>
+                    <td class="key">{$P.Lang[3].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_DateCreated" name="txt_DateCreated" value="{$T.Contents_Group[0].DateCreated}" /></td>
+
+                    <td class="key">{$P.Lang[4].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_DateEdited" name="txt_DateEdited" value="{$T.Contents_Group[0].DateEdited}" /></td>
+                </tr>
+               
+                <tr>
+                    <td class="key">{$P.Lang[6].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_PublishDate" name="txt_PublishDate" value="{$T.Contents_Group[0].PublishDate}" /></td>
+
+                    <td class="key">{$P.Lang[7].Text}</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_ExpireDate" name="txt_ExpireDate" value="{$T.Contents_Group[0].ExpireDate}" /></td>
+                </tr>
+                
+                        
+                <!--<tr>
+                    <td class="key">ExtendProperties1</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_ExtendProperties1" name="txt_ExtendProperties1" value="{$T.Contents_Group[0].ExtendProperties1}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">ExtendProperties2</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_ExtendProperties2" name="txt_ExtendProperties2" value="{$T.Contents_Group[0].ExtendProperties2}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="key">ExtendProperties3</td>
+                    <td class="paramlist_key">
+                        <input type="text" id="txt_ExtendProperties3" name="txt_ExtendProperties3" value="{$T.Contents_Group[0].ExtendProperties3}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>-->
+
+                <tr>
+                    <td class="key">
+                       {$P.Lang[10].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <label for="image_file">
+                            {$P.Lang[11].Text}</label>
+                        <input type="file" name="image_file" id="image_file" onchange="fileSelected();" />
+                        <input type="button"  style="width:100%;float:left" value="Upload" onclick="startUploading('frmUpd_Contents', 'Contents_IMAGE', 'txt_Image', true, -1, -1, true)" />
+                        <input type="hidden" id="txt_Image" name="txt_Image" value="{$T.Contents_Group[0].Image}"/>
+                    </td>
+                    <td class="paramlist_key" colspan="2">
+                        <div style="">
+                        
+                        <div id="fileinfo">
+                            <div id="filename">
+                            </div>
+                            <div id="filesize">
+                            </div>
+                            <div id="filetype">
+                            </div>
+                            <div id="filedim">
+                            </div>
+                        </div>
+                        <img id="preview" src="/Uploads/Contents/{$T.Contents_Group[0].Image}" alt="{$T.Contents_Group[0].Intro}" />
+                        </div>
+
+                        <div style="float:left; width:100%">
+                         <div id="error">{$P.Lang[12].Text}</div>
+                         <div id="error2"> {$P.Lang[13].Text}</div>
+                         <div id="abort">{$P.Lang[14].Text}</div>
+                         <div id="warnsize">{$P.Lang[15].Text}</div>    
+                        <div id="progress_info">
+                            <div id="progress">
+                            </div>
+                            <div id="progress_percent">
+                                &nbsp;</div>
+                            <div class="clear_both">
+                            </div>
+                            <div>
+                                <div id="speed">
+                                    &nbsp;</div>
+                                <div id="remaining">
+                                    &nbsp;</div>
+                                <div id="b_transfered">
+                                    &nbsp;</div>
+                                <div class="clear_both">
+                                </div>
+                            </div>
+                            <input type="hidden" id="upload_response" />
+                            <input type="hidden" id="txt_OldImage" name="txt_OldImage" value="{$T.Contents_Group[0].Image}" />
+
+                            
+                        </div>
+                       </div>
+                        
+                   </td>
+                </tr>
+                <tr>
+                    <td class="key">
+                        {$P.Lang[16].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <select id="txt_Status" name="txt_Status">
+                            <option value="0" {#if $T.Contents_Group[0].Status == 0} selected="selected"  {#/if}>{$P.Lang[17].Text}</option>
+                            <option value="1" {#if $T.Contents_Group[0].Status == 1} selected="selected"  {#/if}>{$P.Lang[18].Text}</option>
+                            <option value="2" {#if $T.Contents_Group[0].Status == 2} selected="selected"  {#/if}>{$P.Lang[19].Text} </option>
+                            <option value="3" {#if $T.Contents_Group[0].Status == 3} selected="selected"  {#/if}>{$P.Lang[20].Text} </option>
+                            <option value="4" {#if $T.Contents_Group[0].Status == 4} selected="selected"  {#/if}>{$P.Lang[21].Text} </option>
+                        </select>
+                    </td>
+                    <td class="key">
+                        {$P.Lang[22].Text}
+                    </td>
+                    <td class="paramlist_key">
+                        <select id="txt_Disable" name="txt_Disable">
+                            <option value="false"  {#if $T.Contents_Group[0].Disable == false} selected="selected"  {#/if}>{$P.Lang[23].Text} </option>
+                            <option value="true"   {#if $T.Contents_Group[0].Disable == true} selected="selected"  {#/if}>{$P.Lang[24].Text} </option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+                <!--##############################################################-->
+                <div id="tabs">
+                    <ul>
+                        {#for index = 1 to $P.NumLang} <li><a href="#tabs-{$T.index}">{$P.Lang[25].Text}  {$T.index}</a></li>{#/for}
+                    </ul>
+                    {#for index = 1 to $P.NumLang}
+                    <div id="tabs-{$T.index}">
+
+                     <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+                     <table class="admintable">
+                           <tr>
+                    <td class="key">{$P.Lang[26].Text}</td>
+                    <td class="paramlist_key">
+                       <input type="text" id="txt_Title_Lang{$T.index}" name="txt_Title_Lang{$T.index}"value="{$T.Contents_Group[0].Title}" /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                        <tr>
+                            <td class="key" width="10%">
+                                {$P.Lang[27].Text}
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <textarea id="txt_Intro_Lang{$T.index}" name="txt_Intro_Lang{$T.index}" class="txt_Intro" style="width:100%; height: 63px;" rows="10"cols="45">{$T.Contents_Group[$T.index-1].Intro}</textarea>
+                             
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key" width="10%">
+                                {$P.Lang[28].Text}
+                            </td>
+                            <td class="paramlist_key" colspan="3">
+                                <textarea id="txt_Info_Lang{$T.index}" name="txt_Info_Lang{$T.index}" class="txt_Info" rows="10"cols="45" style="width:100%; height: 63px;">{$T.Contents_Group[$T.index-1].Info}</textarea>
+                            </td>
+                        </tr>
+
+                    </table>
+                    </div>
+                    {#/for}
+                </div>
+                <!--##############################################################-->
+                    </form>
+                </fieldset>
+            </div>
+            <div class="clr">
+            </div>
+  
+    </div>
+</div>

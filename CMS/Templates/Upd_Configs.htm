@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+</script>
+<div>
+    <div id="element-box">
+        <div class="col width-45" style="width: 100% !important">
+            <fieldset>
+                <legend>{$P.Lang[26].Text}</legend>
+                <form action="" method="post" enctype="multipart/form-data" id="frmUpd_Configs" name="frmUpd_Configs"
+                onsubmit="return false;">
+                <table class="admintable" width="100%">
+                    <tr>
+                        <td class="key" >
+                           {$P.Lang[0].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <select id="txt_Status" name="txt_Status" >
+                                    <option value="0" {#if $T.Configs.Status == 0} selected="selected"  {#/if}>{$P.Lang[1].Text} </option>
+                                    <option value="1" {#if $T.Configs.Status == 1} selected="selected"  {#/if}>{$P.Lang[2].Text}</option>
+                                    <option value="2" {#if $T.Configs.Status == 2} selected="selected"  {#/if}>{$P.Lang[3].Text} </option>
+                                    <option value="3" {#if $T.Configs.Status == 3} selected="selected"  {#/if}>{$P.Lang[4].Text} </option>
+                                    <option value="4" {#if $T.Configs.Status == 4} selected="selected"  {#/if}>{$P.Lang[5].Text} </option>
+                                </select>
+                        </td>
+                        </tr>
+                    <tr>
+                        <td class="key">
+                             {$P.Lang[6].Text}
+                        </td>
+                        <td class="paramlist_key" >
+                            <input type="text" id="txt_AccessKey" name="txt_AccessKey" value="{$T.Configs.AccessKey}" />
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            {$P.Lang[7].Text}
+                        </td>
+                        <td class="paramlist_key" colspan="3">
+                            <input type="text" id="txt_Value" name="txt_Value" value="{$T.Configs.Value}" />
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="key" >
+                             {$P.Lang[8].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <select id="txt_Type" name="txt_Type" >
+                                    <option value="0" {#if $T.Configs.Type == 0} selected="selected"  {#/if}>{$P.Lang[9].Text} </option>
+                                    <option value="1" {#if $T.Configs.Type == 1} selected="selected"  {#/if}>{$P.Lang[10].Text} </option>
+                                    <option value="2" {#if $T.Configs.Type == 2} selected="selected"  {#/if}>{$P.Lang[11].Text} </option>
+                                    <option value="3" {#if $T.Configs.Type == 3} selected="selected"  {#/if}>{$P.Lang[12].Text} </option>
+                                    <option value="4" {#if $T.Configs.Type == 4} selected="selected"  {#/if}>{$P.Lang[13].Text}</option>
+                                </select>
+                        </td>
+                        </tr>                    
+                     <tr>
+                        <td class="key" >
+                            {$P.Lang[14].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <select id="Select1" name="txt_Group" >
+                                    <option value="0" {#if $T.Configs.Group == 0} selected="selected"  {#/if}>{$P.Lang[15].Text} </option>
+                                    <option value="1" {#if $T.Configs.Group == 1} selected="selected"  {#/if}>{$P.Lang[16].Text} </option>
+                                    <option value="2" {#if $T.Configs.Group == 2} selected="selected"  {#/if}>{$P.Lang[17].Text} </option>
+                                    <option value="3" {#if $T.Configs.Group == 3} selected="selected"  {#/if}>{$P.Lang[18].Text}</option>
+                                    <option value="4" {#if $T.Configs.Group == 4} selected="selected"  {#/if}>{$P.Lang[19].Text} </option>
+                                </select>
+                        </td>
+                        </tr>
+                     <tr>
+                        <td class="key">
+                            {$P.Lang[28].Text}
+                        </td>
+                        <td class="paramlist_key">
+
+                            <textarea id="txt_Note" cols="30" rows="3" name="txt_Note" >{$T.Configs.Note}</textarea>
+                        </td>
+                    </tr>
+                </table>
+
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿<root>
+  <item Index="0">名前</item>
+  <item Index="1">一応ロック</item>
+  <item Index="2">はい</item>
+  <item Index="3">いいえ</item>
+  <item Index="4">生年月日</item>
+  <item Index="5">電話番号</item>
+  <item Index="6">身分証明書</item>
+  <item Index="7">ビザ</item>
+  <item Index="8">備考</item>
+  <item Index="9">情報</item>
+  <item Index="10">概要</item>
+  <item Index="11">状態</item>
+  <item Index="12">状態 0</item>
+  <item Index="13">状態 1</item>
+  <item Index="14">状態 2</item>
+  <item Index="15">状態 3</item>
+  <item Index="16">状態 4</item>
+
+  <item Index="17">変更</item>
+  <item Index="18">削除</item>
+  <item Index="19">コード</item>
+</root>
+
+

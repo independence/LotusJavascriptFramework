@@ -1,0 +1,33 @@
+﻿<root>
+  <item Index="0">Trực thuộc nhóm cha</item>
+  <item Index="1">Group</item>
+  <item Index="2">Type 0</item>
+  <item Index="3">Type 1</item>
+  <item Index="4">Type 2</item>
+  <item Index="5">Type 3</item>
+  <item Index="6">Type 4</item>
+  <item Index="7">Status</item>
+  <item Index="8">Status 0</item>
+  <item Index="9">Status 1</item>
+  <item Index="10">Status 2</item>
+  <item Index="11">Status 3</item>
+  <item Index="12">Status 4</item>
+  <item Index="13">Lock</item>
+  <item Index="14">No</item>
+  <item Index="15">Yes</item>
+  <item Index="16">Language</item>
+  <item Index="17">Name of Contents group 1</item>
+
+  <item Index="18">Edit</item>
+  <item Index="19">Delete</item>
+  <item Index="20">Code</item>
+  <item Index="21">Lock</item>
+  <item Index="22">CategoryLevel1</item>
+  <item Index="23">Add CategoryLevel1</item>
+  <item Index="24">Edit CategoryLevel1</item>
+<item Index="25">Do you sure to delete this ?</item>
+  <item Index="26">Do you sure to delete this ?</item>
+  <item Index="27">Code</item>
+  
+  <item Index="48">Reserve Data</item>
+</root>

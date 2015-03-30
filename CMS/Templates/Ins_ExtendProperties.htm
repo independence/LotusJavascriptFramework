@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="javascript" type="text/javascript">
+    Init_Dialog_Ins();
+</script>
+
+<div>
+    <div id="element-box">
+        <fieldset>
+            <legend>{$P.Lang[25].Text}</legend>
+            <form id="frmIns_ExtendProperties" enctype="multipart/form-data" method="post" action="">
+                <!--<input type="hidden" id="txt_Type" name="txt_Type" value="" />-->
+                 <input type="hidden" id="txt_Code" name="txt_Code" value="{$T.ExtendProperties_Group[0].Code}" />
+                <!--##############################################################-->
+                <table class="admintable">
+
+
+                    <tr>
+                        <td class="key">{$P.Lang[0].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Name" name="txt_Name" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[1].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Value" name="txt_Value" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[2].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_ValueType" name="txt_ValueType"  /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                           
+                    <tr>
+                        <td class="key">{$P.Lang[3].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_IDObject" name="txt_IDObject" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[4].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_ObjectType" name="txt_ObjectType" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[5].Text}</td>
+                        <td class="paramlist_key">
+                            <select id="txt_Type" name="txt_Type">
+                                <option value="0" selected="selected">{$P.Lang[9].Text}</option>
+                                <option value="1">{$P.Lang[10].Text} </option>
+                                <option value="2">{$P.Lang[11].Text} </option>
+                                <option value="3">{$P.Lang[12].Text} </option>
+                                <option value="4">{$P.Lang[13].Text} </option>
+                            </select>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[6].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_Group" name="txt_Group"  /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[8].Text}</td>
+                        <td class="paramlist_key">
+                            <input type="text" id="txt_CodeObject" name="txt_CodeObject" /></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="key">{$P.Lang[7].Text}
+                        </td>
+                        <td class="paramlist_key">
+                            <select id="txt_Status" name="txt_Status">
+                                <option value="0" selected="selected">{$P.Lang[14].Text}</option>
+                                <option value="1">{$P.Lang[15].Text} </option>
+                                <option value="2">{$P.Lang[16].Text} </option>
+                                <option value="3">{$P.Lang[17].Text} </option>
+                                <option value="4">{$P.Lang[18].Text} </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <!--##############################################################-->
+                <div id="tabs">
+                    <ul>
+                        {#for index = 1 to $P.NumLang}
+                        <li><a href="#tabs-{$T.index}">{$P.Lang[24].Text} {$T.index}</a></li>
+                        {#/for}
+                    </ul>
+                    {#for index = 1 to $P.NumLang}
+                    <div id="tabs-{$T.index}">
+                        <input type="hidden" id="IDLang_{$T.index}" name="IDLang_{$T.index}" value="{$T.index}" />
+                        <table class="admintable" width="100%">
+
+
+                            <tr>
+                                <td class="key" width="10%">Trích dẫn
+                                </td>
+                                <td class="paramlist_key" colspan="3">
+                                    <textarea id="txt_Intro_Lang{$T.index}" name="txt_Intro_Lang{$T.index}" class="txt_Intro_Lang{$T.index}" style="width: 625px; height: 63px;" rows="10"
+                                        cols="45"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="key" width="10%">Giới thiệu
+                                </td>
+                                <td class="paramlist_key" colspan="3">
+                                    <textarea id="txt_Info_Lang{$T.index}" name="txt_Info_Lang{$T.index}" class="txt_Info" rows="10" cols="45"></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    {#/for}
+                </div>
+
+                <!--##############################################################-->
+            </form>
+        </fieldset>
+    </div>
+</div>
